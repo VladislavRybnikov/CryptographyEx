@@ -4,7 +4,7 @@ using System.Text;
 
 namespace CryptographyEx.Core.Base.Abstract
 {
-    interface IB64Encoder
+    public interface IByteEncoder : IBaseGenericEncoder<byte[]>
     {
     }
 }

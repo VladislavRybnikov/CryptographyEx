@@ -1,4 +1,5 @@
-﻿using CryptographyEx.Core.Base;
+﻿using CryptographyEx.Core.Alphabets;
+using CryptographyEx.Core.Base;
 using CryptographyEx.Core.Base.Abstract;
 using System;
 using System.Collections.Generic;
@@ -7,13 +8,13 @@ using System.Text;
 
 namespace CryptographyEx.Core.Encoders
 {
-    public class VigenereEncoder : IEncoder
+    public class VigenereEncoder : IAlphabetEncoder
     {
         private bool _configurated = false;
         private string _key;
-        private IPolyAlphabet _alphabet;
+        private IPolyAlphabet _alphabet = new VigenereTable();
 
-        public IEncoder Configure(params object[] args)
+        public IAlphabetEncoder Configure(params object[] args)
         {
             try
             {
@@ -93,12 +94,12 @@ namespace CryptographyEx.Core.Encoders
             return sb.ToString();
         }
 
-        public IEncoder SetMonoAlphabet(IMonoAlphabet alphabet)
+        public IAlphabetEncoder SetMonoAlphabet(IMonoAlphabet alphabet)
         {
             return this;
         }
 
-        public IEncoder SetPolyAplhabet(IPolyAlphabet alphabet)
+        public IAlphabetEncoder SetPolyAplhabet(IPolyAlphabet alphabet)
         {
             _alphabet = alphabet;
 

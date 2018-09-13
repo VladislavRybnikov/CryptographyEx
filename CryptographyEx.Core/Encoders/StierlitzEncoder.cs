@@ -7,11 +7,11 @@ using System.Text;
 
 namespace CryptographyEx.Core.Encoders
 {
-    public class StierlitzEncoder : IEncoder
+    public class StierlitzEncoder : IAlphabetEncoder
     {
         private IPolyAlphabet _alphabet;
 
-        public IEncoder Configure(params object[] args)
+        public IAlphabetEncoder Configure(params object[] args)
         {
             return this;
         }
@@ -84,12 +84,12 @@ namespace CryptographyEx.Core.Encoders
             return sb.ToString();
         }
 
-        public IEncoder SetMonoAlphabet(IMonoAlphabet alphabet)
+        public IAlphabetEncoder SetMonoAlphabet(IMonoAlphabet alphabet)
         {
             return this;
         }
 
-        public IEncoder SetPolyAplhabet(IPolyAlphabet alphabet)
+        public IAlphabetEncoder SetPolyAplhabet(IPolyAlphabet alphabet)
         {
             _alphabet = alphabet;
             return this;

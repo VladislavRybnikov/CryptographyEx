@@ -4,7 +4,9 @@ using System.Text;
 
 namespace CryptographyEx.Core.Base.Abstract
 {
-    interface IBaseGenericEncoder
+    public interface IBaseGenericEncoder<T>
     {
+        T Encode(T message);
+        T Decode(T message);
     }
 }

@@ -7,13 +7,13 @@ using System.Text;
 
 namespace CryptographyEx.Core.Encoders
 {
-    public class CaesarEncoder : IEncoder
+    public class CaesarEncoder : IAlphabetEncoder
     {
         private bool _configurated = false;
         private int _key = 0;
         private IMonoAlphabet _alphabet;
 
-        public IEncoder Configure(params object[] args)
+        public IAlphabetEncoder Configure(params object[] args)
         {
             try
             {
@@ -93,14 +93,14 @@ namespace CryptographyEx.Core.Encoders
             return new string(coded.ToArray());
         }
 
-        public IEncoder SetMonoAlphabet(IMonoAlphabet alphabet)
+        public IAlphabetEncoder SetMonoAlphabet(IMonoAlphabet alphabet)
         {
             _alphabet = alphabet;
 
             return this;
         }
 
-        public IEncoder SetPolyAplhabet(IPolyAlphabet alphabet)
+        public IAlphabetEncoder SetPolyAplhabet(IPolyAlphabet alphabet)
         {
             return this;
         }

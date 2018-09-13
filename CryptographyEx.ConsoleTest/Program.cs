@@ -16,19 +16,18 @@ namespace CryptographyEx.ConsoleTest
         {
             var ENG_ALPHA = Alphabet.CreateMono(MonoAlphabet.ENG);
 
-            IEncoder caesar = EncoderFactory
+            IAlphabetEncoder caesar = EncoderFactory
                 .CreateEncoder(EncodingType.Caesar)
                 .SetMonoAlphabet(ENG_ALPHA)
                 .Configure(2);
 
-            IEncoder trithemius = EncoderFactory
+            IAlphabetEncoder trithemius = EncoderFactory
                 .CreateEncoder(EncodingType.Trithemius)
                 .SetMonoAlphabet(ENG_ALPHA)
                 .Configure(2, new Func<int, int>(x => x + 1));
 
-            IEncoder vigener = EncoderFactory
+            IAlphabetEncoder vigener = EncoderFactory
                 .CreateEncoder(EncodingType.Vigenere)
-                .SetPolyAplhabet(new VigenereTable())
                 .Configure("Lemon");
 
             Console.WriteLine(caesar.Encode("Azb"));
@@ -36,6 +35,8 @@ namespace CryptographyEx.ConsoleTest
             Console.WriteLine(trithemius.Decode(trithemius.Encode("Azb")));
 
             Console.WriteLine(vigener.Encode("ATTACKATDAWN"));
+
+
             Console.ReadLine();
         }
     }

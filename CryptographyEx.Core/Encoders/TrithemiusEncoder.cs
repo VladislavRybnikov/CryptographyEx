@@ -7,14 +7,14 @@ using System.Text;
 
 namespace CryptographyEx.Core.Encoders
 {
-    public class TrithemiusEncoder : IEncoder
+    public class TrithemiusEncoder : IAlphabetEncoder
     {
         private bool _configurated = false;
         private int _key = 0;
         private Func<int, int> _encodeFunc;
         private IMonoAlphabet _alphabet;
 
-        public IEncoder Configure(params object[] args)
+        public IAlphabetEncoder Configure(params object[] args)
         {
             try
             {
@@ -110,14 +110,14 @@ namespace CryptographyEx.Core.Encoders
             return new string(coded.ToArray());
         }
 
-        public IEncoder SetMonoAlphabet(IMonoAlphabet alphabet)
+        public IAlphabetEncoder SetMonoAlphabet(IMonoAlphabet alphabet)
         {
             _alphabet = alphabet;
 
             return this;
         }
 
-        public IEncoder SetPolyAplhabet(IPolyAlphabet alphabet)
+        public IAlphabetEncoder SetPolyAplhabet(IPolyAlphabet alphabet)
         {
             return this;
         }
