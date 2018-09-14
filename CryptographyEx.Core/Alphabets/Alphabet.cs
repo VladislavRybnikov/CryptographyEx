@@ -14,6 +14,10 @@ namespace CryptographyEx.Core.Alphabets
             {
                 case MonoAlphabet.ENG:
                     return new ENGMonoAlphabet();
+                case MonoAlphabet.RU:
+                    return new RUMonoAlphabet();
+                case MonoAlphabet.UTF16:
+                    return new UTF16Alphabet();
             }
 
             return null;

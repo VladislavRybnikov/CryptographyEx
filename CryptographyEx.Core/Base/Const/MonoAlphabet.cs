@@ -7,6 +7,7 @@ namespace CryptographyEx.Core.Base.Const
     public enum MonoAlphabet
     {
         ENG, 
-        RU
+        RU,
+        UTF16
     }
 }
