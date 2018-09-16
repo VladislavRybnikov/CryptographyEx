@@ -8,5 +8,6 @@ namespace CryptographyEx.Core.Base.Abstract
     public interface IBitEncoder : IBaseGenericEncoder<BitMessage>,
         IBaseGenericEncoder<string>
     {
+        IBitEncoder Configure(params object[] args);
     }
 }

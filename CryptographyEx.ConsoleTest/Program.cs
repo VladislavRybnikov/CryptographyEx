@@ -31,12 +31,17 @@ namespace CryptographyEx.ConsoleTest
             IAlphabetEncoder vigener = EncoderFactory
                 .CreateEncoder(EncodingType.Vigenere)
                 .Configure("Lemon");
+
             IAlphabetEncoder diffiHelman = EncoderFactory
                 .CreateEncoder(EncodingType.DiffiHelman)
                 .Configure(5,23,new List<int>() {23,43 });
             IAlphabetEncoder elgamal = EncoderFactory
              .CreateEncoder(EncodingType.Elgamal)
              .Configure(11, 2,8,9); 
+
+            IBitEncoder des = EncoderFactory
+                .CreateBitEncoder(BitEncodingType.Des)
+                .Configure("чр3Ъ");
 
             Console.WriteLine(caesar.Encode("Azb12365.,&^%$@"));
 
@@ -55,6 +60,10 @@ namespace CryptographyEx.ConsoleTest
             string output = mess.ToString();
 
             Console.WriteLine($"\n{input}\n{binary}\n{output}");
+            byte[] b = new UnicodeEncoding().GetBytes(des.Encode("Do you know"));
+            string str = new UnicodeEncoding().GetString(b);
+            Console.WriteLine(str);
+            b.ToList().ForEach(x => Console.WriteLine(x));
 
             Console.ReadLine();
         }

@@ -98,5 +98,11 @@
   <ItemGroup>
     <None Include="Resources\key-icon-0.png" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CryptographyEx.Core\CryptographyEx.Core.csproj">
+      <Project>{0C07F32B-65F0-4013-B608-BB45E2C04847}</Project>
+      <Name>CryptographyEx.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

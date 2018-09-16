@@ -9,6 +9,11 @@ namespace CryptographyEx.Core.Encoders
 {
     public class DSAEncoder : IBitEncoder
     {
+        public IBitEncoder Configure(params object[] args)
+        {
+            throw new NotImplementedException();
+        }
+
         public BitMessage Decode(BitMessage message)
         {
             throw new NotImplementedException();

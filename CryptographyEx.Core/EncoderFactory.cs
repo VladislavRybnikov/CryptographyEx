@@ -9,9 +9,16 @@ namespace CryptographyEx.Core
 {
     public static class EncoderFactory
     {
-        public static IBitEncoder Create64Encoder()
+        public static IBitEncoder CreateBitEncoder
+            (BitEncodingType encoding)
         {
-            return null;
+            switch (encoding)
+            {
+                case BitEncodingType.Des:
+                    return new DESEncoder();
+            }
+
+            throw new Exception("Not implemented encoding.");
         }
 
         public static IAlphabetEncoder CreateEncoder(EncodingType encoding)

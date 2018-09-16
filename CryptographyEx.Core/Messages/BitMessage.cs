@@ -56,8 +56,17 @@ namespace CryptographyEx.Core.Messages
         public static BitMessage operator ^(BitMessage first,
             BitMessage second)
         {
-            return first ^ second;
+            return first.XOR(second);
         }
+
+        public static BitMessage operator +(BitMessage first,
+            BitMessage second)
+        {
+            return first.Concat(second).ToArray();
+        }
+
+        public static BitMessage ParseBinary(string fromString) 
+            => fromString.Select(x => Bit.Parse(x)).ToArray();
 
         public static BitMessage Parse(String fromString) 
             => new BitMessage(String.Concat(fromString.Select(x =>                                                                  
@@ -110,6 +119,11 @@ namespace CryptographyEx.Core.Messages
         IEnumerator IEnumerable.GetEnumerator()
         {
             return GetEnumerator();
+        }
+
+        public static implicit operator BitMessage(Bit[] bits)
+        {
+            return new BitMessage(bits);
         }
     }
 }

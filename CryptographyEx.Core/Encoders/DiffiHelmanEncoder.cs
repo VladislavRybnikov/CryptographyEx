@@ -25,7 +25,7 @@ namespace CryptographyEx.Core.Encoders
             }
             catch (Exception ex)
             {
-                throw new ArgumentException("Wring arguments", ex);
+                throw new ArgumentException("Wrong arguments", ex);
             }
 
             _configurated = true;
