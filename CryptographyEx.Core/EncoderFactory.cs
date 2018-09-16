@@ -9,7 +9,7 @@ namespace CryptographyEx.Core
 {
     public static class EncoderFactory
     {
-        public static IByteEncoder Create64Encoder()
+        public static IBitEncoder Create64Encoder()
         {
             return null;
         }

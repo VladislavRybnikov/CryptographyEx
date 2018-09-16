@@ -8,12 +8,12 @@ namespace CryptographyEx.Core.Alphabets
 {
     public class VigenereTable : DefaultPolyAlphabet, IPolyAlphabet
     {
-        public VigenereTable() : base(table())
+        public VigenereTable() : base(Table())
         {
 
         }
 
-        private static char[][] table()
+        private static char[][] Table()
         {
             var mono = new ENGMonoAlphabet().Value
                 .Take(new ENGMonoAlphabet().Length - 1);

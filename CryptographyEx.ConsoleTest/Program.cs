@@ -2,6 +2,7 @@
 using CryptographyEx.Core.Alphabets;
 using CryptographyEx.Core.Base.Abstract;
 using CryptographyEx.Core.Base.Const;
+using CryptographyEx.Core.Messages;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,11 +16,12 @@ namespace CryptographyEx.ConsoleTest
         static void Main(string[] args)
         {
             var ENG_ALPHA = Alphabet.CreateMono(MonoAlphabet.ENG);
+            var UTF16 = Alphabet.CreateMono(MonoAlphabet.UTF16);
 
             IAlphabetEncoder caesar = EncoderFactory
                 .CreateEncoder(EncodingType.Caesar)
-                .SetMonoAlphabet(ENG_ALPHA)
-                .Configure(2);
+                .SetMonoAlphabet(UTF16)
+                .Configure(1);
 
             IAlphabetEncoder trithemius = EncoderFactory
                 .CreateEncoder(EncodingType.Trithemius)
@@ -36,7 +38,7 @@ namespace CryptographyEx.ConsoleTest
              .CreateEncoder(EncodingType.Elgamal)
              .Configure(11, 2,8,9); 
 
-            Console.WriteLine(caesar.Encode("Azb"));
+            Console.WriteLine(caesar.Encode("Azb12365.,&^%$@"));
 
             Console.WriteLine(trithemius.Decode(trithemius.Encode("Azb")));
 
@@ -45,6 +47,14 @@ namespace CryptographyEx.ConsoleTest
             Console.WriteLine(elgamal.Decode("5"));
             Console.WriteLine(elgamal.Encode("6,9"));
 
+            string input = "Input";
+
+            BitMessage mess = BitMessage.Parse(input);
+            string binary = mess.ToBinaryString();
+
+            string output = mess.ToString();
+
+            Console.WriteLine($"\n{input}\n{binary}\n{output}");
 
             Console.ReadLine();
         }

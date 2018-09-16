@@ -21,6 +21,6 @@ namespace CryptographyEx.Core.Alphabets
             }
         }
 
-        public int Length => throw new NotImplementedException();
+        public int Length => Value.Length;
     }
 }
