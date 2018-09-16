@@ -9,6 +9,7 @@ namespace CryptographyEx.Core.Base.Const
         Caesar,
         Trithemius,
         Vigenere,
-        Stierlitz
+        Stierlitz,
+        DiffiHelman
     }
 }

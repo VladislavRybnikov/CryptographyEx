@@ -29,12 +29,16 @@ namespace CryptographyEx.ConsoleTest
             IAlphabetEncoder vigener = EncoderFactory
                 .CreateEncoder(EncodingType.Vigenere)
                 .Configure("Lemon");
+            IAlphabetEncoder diffiHelman = EncoderFactory
+                .CreateEncoder(EncodingType.DiffiHelman)
+                .Configure(5,23,new List<int>() {23,43 });
 
             Console.WriteLine(caesar.Encode("Azb"));
 
             Console.WriteLine(trithemius.Decode(trithemius.Encode("Azb")));
 
             Console.WriteLine(vigener.Encode("ATTACKATDAWN"));
+            Console.WriteLine(diffiHelman.Decode(null));
 
 
             Console.ReadLine();

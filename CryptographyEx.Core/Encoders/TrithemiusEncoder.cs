@@ -13,6 +13,7 @@ namespace CryptographyEx.Core.Encoders
         private int _key = 0;
         private Func<int, int> _encodeFunc;
         private IMonoAlphabet _alphabet;
+       
 
         public IAlphabetEncoder Configure(params object[] args)
         {
