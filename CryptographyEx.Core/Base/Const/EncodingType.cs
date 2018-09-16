@@ -10,6 +10,7 @@ namespace CryptographyEx.Core.Base.Const
         Trithemius,
         Vigenere,
         Stierlitz,
-        DiffiHelman
+        DiffiHelman,
+        Elgamal
     }
 }

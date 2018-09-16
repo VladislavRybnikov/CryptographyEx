@@ -31,6 +31,8 @@ namespace CryptographyEx.Core
                     return new VigenereEncoder();
                 case EncodingType.DiffiHelman:
                     return new DiffiHelmanEncoder();
+                case EncodingType.Elgamal:
+                    return new ElgamalEncoder();
             }
 
             throw new Exception("Not implemented encoding.");

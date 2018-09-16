@@ -32,6 +32,9 @@ namespace CryptographyEx.ConsoleTest
             IAlphabetEncoder diffiHelman = EncoderFactory
                 .CreateEncoder(EncodingType.DiffiHelman)
                 .Configure(5,23,new List<int>() {23,43 });
+            IAlphabetEncoder elgamal = EncoderFactory
+             .CreateEncoder(EncodingType.Elgamal)
+             .Configure(11, 2,8,9); 
 
             Console.WriteLine(caesar.Encode("Azb"));
 
@@ -39,6 +42,8 @@ namespace CryptographyEx.ConsoleTest
 
             Console.WriteLine(vigener.Encode("ATTACKATDAWN"));
             Console.WriteLine(diffiHelman.Decode(null));
+            Console.WriteLine(elgamal.Decode("5"));
+            Console.WriteLine(elgamal.Encode("6,9"));
 
 
             Console.ReadLine();
