@@ -15,7 +15,7 @@ namespace CryptographyEx.Core
         }
 
         public static IAlphabetEncoder CreateEncoder(EncodingType encoding)
-        {
+            {
             switch (encoding)
             {
                 case EncodingType.Caesar:
@@ -29,6 +29,8 @@ namespace CryptographyEx.Core
 
                 case EncodingType.Vigenere:
                     return new VigenereEncoder();
+                case EncodingType.DiffiHelman:
+                    return new DiffiHelmanEncoder();
             }
 
             throw new Exception("Not implemented encoding.");

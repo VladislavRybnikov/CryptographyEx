@@ -12,7 +12,12 @@ namespace CryptographyEx.Core.Encoders
     {
         private bool _configurated = false;
         private string _key;
-        private IPolyAlphabet _alphabet = new VigenereTable();
+        private IPolyAlphabet _alphabet;
+
+        public VigenereEncoder()
+        {
+            _alphabet = new VigenereTable();
+        }
 
         public IAlphabetEncoder Configure(params object[] args)
         {
