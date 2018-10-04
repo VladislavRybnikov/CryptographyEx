@@ -60,6 +60,42 @@
     <Compile Include="Holders\FormHolder.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\CaesarControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\CaesarControl.Designer.cs">
+      <DependentUpon>CaesarControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\DecodeEncodeControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\DecodeEncodeControl.Designer.cs">
+      <DependentUpon>DecodeEncodeControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\DiffiHelmanControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\DiffiHelmanControl.Designer.cs">
+      <DependentUpon>DiffiHelmanControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FinishControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\FinishControl.Designer.cs">
+      <DependentUpon>FinishControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\TrithemiusControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\TrithemiusControl.Designer.cs">
+      <DependentUpon>TrithemiusControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\VigenereControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\VigenereControl.Designer.cs">
+      <DependentUpon>VigenereControl.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="EncodersForm.resx">
       <DependentUpon>EncodersForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -76,6 +112,24 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="View\CaesarControl.resx">
+      <DependentUpon>CaesarControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\DecodeEncodeControl.resx">
+      <DependentUpon>DecodeEncodeControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\DiffiHelmanControl.resx">
+      <DependentUpon>DiffiHelmanControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FinishControl.resx">
+      <DependentUpon>FinishControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\TrithemiusControl.resx">
+      <DependentUpon>TrithemiusControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\VigenereControl.resx">
+      <DependentUpon>VigenereControl.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -104,5 +158,6 @@
       <Name>CryptographyEx.Core</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

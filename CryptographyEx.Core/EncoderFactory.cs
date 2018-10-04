@@ -37,7 +37,7 @@ namespace CryptographyEx.Core
                 case EncodingType.Vigenere:
                     return new VigenereEncoder();
                 case EncodingType.DiffiHelman:
-                    return new DiffiHelmanEncoder();
+                    return new DiffiHelmanEncoder();    
                 case EncodingType.Elgamal:
                     return new ElgamalEncoder();
             }
