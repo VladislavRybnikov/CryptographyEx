@@ -99,12 +99,12 @@ namespace CryptographyEx.Core.Encoders
 
         public IAlphabetEncoder SetMonoAlphabet(IMonoAlphabet alphabet)
         {
-            throw new NotImplementedException();
+            return this;
         }
 
         public IAlphabetEncoder SetPolyAplhabet(IPolyAlphabet alphabet)
         {
-            throw new NotImplementedException();
+            return this;
         }
     }
 }

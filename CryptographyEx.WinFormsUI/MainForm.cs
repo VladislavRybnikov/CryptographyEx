@@ -1,4 +1,6 @@
-﻿using CryptographyEx.WinFormsUI.Holders;
+﻿using CryptographyEx.Core.Base.Abstract;
+using CryptographyEx.Core.Presentation;
+using CryptographyEx.WinFormsUI.Holders;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,12 +16,14 @@ namespace CryptographyEx.WinFormsUI
     public partial class MainForm : Form
     {
         private List<KeyValuePair<Label, Panel>> _manuButtons;
+        private readonly IHistoryPresentation _historyPresentation;
 
         public MainForm()
         {
             InitializeComponent();
             FormHolder.MainForm = this;
-
+            _historyPresentation = new HistoryPresentation();
+            _historyPresentation.Deserialize();
             _manuButtons = new Dictionary<Label, Panel>
             {
                 { encodersLabel, encodersPanel },

@@ -2,8 +2,10 @@
 using CryptographyEx.Core.Base.Abstract;
 using CryptographyEx.Core.Base.Const;
 using CryptographyEx.Core.Holder;
+using CryptographyEx.Core.Presentation;
 using CryptographyEx.WinFormsUI.Holders;
 using CryptographyEx.WinFormsUI.View;
+using CryptographyEx.WinFormsUI.View.ViewHistory;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,6 +20,7 @@ namespace CryptographyEx.WinFormsUI
 {
     public partial class EncodersForm : Form
     {
+        private readonly IHistoryPresentation _historyPresentation;
         public EncodersForm()
         {
             InitializeComponent();
@@ -25,6 +28,8 @@ namespace CryptographyEx.WinFormsUI
 
             splitContainer1.SplitterMoved += ChangeSize;
             Resize += ChangeSize;
+            _historyPresentation = new HistoryPresentation();
+            _historyPresentation.Deserialize();
             Init();
 
         }
@@ -37,7 +42,25 @@ namespace CryptographyEx.WinFormsUI
 
         private void EncodersForm_Load(object sender, EventArgs e)
         {
+            int number = 1;
 
+            foreach (var entity in _historyPresentation.GetAllHistory())
+            {
+                ListViewItem listViewItem = new ListViewItem(entity.Item1);
+                listViewItem.SubItems.Add(entity.Item2.ToString());
+
+                if (number % 2 == 1)
+                {
+                    listViewItem.BackColor = Color.LightBlue;
+                }
+                else
+                {
+                    listViewItem.BackColor = Color.WhiteSmoke;
+                }
+
+                lvHistory.Items.Add(listViewItem);
+                number++;
+            }
         }
 
         private void SwithToMain(object sender, CancelEventArgs e)
@@ -58,17 +81,69 @@ namespace CryptographyEx.WinFormsUI
 
         private void comboBoxEncoding_SelectedIndexChanged(object sender, EventArgs e)
         {
+            lbNameEncoder.Text = $"Шифр : {(string)comboBoxEncoding.SelectedItem}";
+
             switch (EncodingNameHolder.GetEncodingType
                          ((string)comboBoxEncoding.SelectedItem))
             {
 
                 case EncodingType.Caesar:
+                    tabPage3.Controls.Clear();
                     tabPage3.Controls.Add(new DecodeEncodeControl(this));
                     break;
                 case EncodingType.Vigenere:
+                    tabPage3.Controls.Clear();
                     tabPage3.Controls.Add(new DecodeEncodeControl(this));
+                    break;
+                case EncodingType.DiffiHelman:
+                    tabPage3.Controls.Clear();
+                    tabPage3.Controls.Add(new DiffiHelmanControl(this));
                     break;
             }
         }
+
+        private void lvHistory_Click(object sender, EventArgs e)
+        {
+            
+            }
+
+        private void lvHistory_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (lvHistory.SelectedItems.Count > 0)
+            {
+                ListViewItem item = lvHistory.SelectedItems[0];
+                string name = item.SubItems[0].Text;
+                tPHistory.Controls.Clear();
+                   tPHistory.Controls.Add(new HistoryCoddingControl(name, _historyPresentation,this));
+            }
+
+        }
+
+        private void tabControl1_Click(object sender, EventArgs e)
+        {
+            tPHistory.Controls.Clear();
+            tPHistory.Controls.Add(lvHistory);
+
+            int number = 1;
+                lvHistory.Items.Clear();
+                foreach (var entity in _historyPresentation.GetAllHistory())
+                {
+                    ListViewItem listViewItem = new ListViewItem(entity.Item1);
+                    listViewItem.SubItems.Add(entity.Item2.ToString());
+
+                    if (number % 2 == 1)
+                    {
+                        listViewItem.BackColor = Color.LightBlue;
+                    }
+                    else
+                    {
+                        listViewItem.BackColor = Color.WhiteSmoke;
+                    }
+
+                    lvHistory.Items.Add(listViewItem);
+                    number++;
+                }
+        }
     }
-}
+    }
+

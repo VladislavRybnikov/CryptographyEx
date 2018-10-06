@@ -23,6 +23,22 @@ namespace CryptographyEx.Core.Base.Abstract.Entities
         string Description { get; set; }
     }
 
+    public interface IDiffiHelmanQuestion : IQuestionValue
+    {
+        int N { get; set; }
+        int Q { get; set; }
+        int X { get; set; }
+        int Y { get; set; }
+    }
+
+    public interface IElgamalQuestion : IQuestionValue
+    {
+        int P { get; set; }
+        int A { get; set; }
+        int B { get; set; }
+        int R { get; set; }
+    }
+
     public interface IAnswerValue
     {
         string Answer { get; set; }

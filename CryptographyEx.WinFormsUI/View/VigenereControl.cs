@@ -22,11 +22,15 @@ namespace CryptographyEx.WinFormsUI.View
         private DecodeEncodeControl _encodersForm;
         private int _countQuestion;
         private int _countCorrectQuestion;
+        private IHistoryPresentation _historyPresentation;
+        private Guid _guid;
 
         public VigenereControl
             (CodingType codingType, DecodeEncodeControl encodersForm)
         {
             InitializeComponent();
+            _historyPresentation = new HistoryPresentation();
+            _guid = Guid.NewGuid();
             _countQuestion = 0;
             _countCorrectQuestion = 0;
             _codingType = codingType;
@@ -107,6 +111,17 @@ namespace CryptographyEx.WinFormsUI.View
                 _countCorrectQuestion + 1 : _countCorrectQuestion;
             lbCorrectAnswer.Text = _countCorrectQuestion.ToString();
             lbCorrectAnsw.Text = answerType.Item2;
+
+            _historyPresentation.AddHistory(new RequestHistory()
+            {
+                CodingType = _codingType,
+                CorrectAnswer = answerType.Item2,
+                Answer = tbAnswer.Text,
+                Name = EncodingNameHolder.GetNameByType(EncodingType.Caesar),
+                GuidId = _guid,
+                Mark = AnswerType.Correct == answerType.Item1 ? 1 : 0,
+                Question = lbDescription.Text
+            });
 
             btnCheck.Visible = false;
             btnNext.Visible = true;

@@ -48,6 +48,9 @@ namespace CryptographyEx.WinFormsUI.View
                 case EncodingType.Vigenere:
                     panelQuestion.Controls.Add(new VigenereControl(codingType, this));
                     break;
+                case EncodingType.Elgamal:
+                    panelQuestion.Controls.Add(new ElgamalControl(codingType, this));
+                    break;
             }
         }
     }

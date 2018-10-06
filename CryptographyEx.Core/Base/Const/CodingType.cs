@@ -7,6 +7,7 @@ namespace CryptographyEx.Core.Base.Const
     public enum CodingType
     {
         Encoding=1,
-        Decoding
+        Decoding,
+        Test
     }
 }

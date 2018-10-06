@@ -78,6 +78,12 @@
     <Compile Include="View\DiffiHelmanControl.Designer.cs">
       <DependentUpon>DiffiHelmanControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\ElgamalControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ElgamalControl.Designer.cs">
+      <DependentUpon>ElgamalControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\FinishControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -89,6 +95,18 @@
     </Compile>
     <Compile Include="View\TrithemiusControl.Designer.cs">
       <DependentUpon>TrithemiusControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ViewHistory\HistoryAnswerControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ViewHistory\HistoryAnswerControl.Designer.cs">
+      <DependentUpon>HistoryAnswerControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ViewHistory\HistoryCoddingControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ViewHistory\HistoryCoddingControl.Designer.cs">
+      <DependentUpon>HistoryCoddingControl.cs</DependentUpon>
     </Compile>
     <Compile Include="View\VigenereControl.cs">
       <SubType>UserControl</SubType>
@@ -121,11 +139,20 @@
     <EmbeddedResource Include="View\DiffiHelmanControl.resx">
       <DependentUpon>DiffiHelmanControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\ElgamalControl.resx">
+      <DependentUpon>ElgamalControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\FinishControl.resx">
       <DependentUpon>FinishControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\TrithemiusControl.resx">
       <DependentUpon>TrithemiusControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ViewHistory\HistoryAnswerControl.resx">
+      <DependentUpon>HistoryAnswerControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ViewHistory\HistoryCoddingControl.resx">
+      <DependentUpon>HistoryCoddingControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\VigenereControl.resx">
       <DependentUpon>VigenereControl.cs</DependentUpon>

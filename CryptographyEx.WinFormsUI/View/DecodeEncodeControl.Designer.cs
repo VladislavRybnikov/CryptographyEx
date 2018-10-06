@@ -57,7 +57,7 @@
             // 
             this.panelQuestion.Location = new System.Drawing.Point(225, 164);
             this.panelQuestion.Name = "panelQuestion";
-            this.panelQuestion.Size = new System.Drawing.Size(526, 331);
+            this.panelQuestion.Size = new System.Drawing.Size(572, 429);
             this.panelQuestion.TabIndex = 4;
             // 
             // DecodeEncodeControl

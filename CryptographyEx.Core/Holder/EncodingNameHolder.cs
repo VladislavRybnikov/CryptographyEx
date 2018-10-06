@@ -39,6 +39,17 @@ namespace CryptographyEx.Core.Holder
             EncodingCount.Add(EncodingType.Vigenere, 4);
         }
 
+        public static string GetNameByType(EncodingType encodingType)
+        {
+
+            if (EncodingCount.ContainsKey(encodingType))
+            {
+                return Encoding[encodingType];
+            }
+
+            return null;
+        }
+
         public static List<string> GetNames()
         {
             return Encoding.Select(p => p.Value).ToList();

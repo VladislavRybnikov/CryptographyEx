@@ -20,6 +20,20 @@ namespace CryptographyEx.Core.Entities
         public string Description { get; set; }
     }
 
+    public class DiffiHelmanQuestion : QuestionValue,IDiffiHelmanQuestion
+    {
+      public  int N { get; set; }
+      public  int Q { get; set; }
+      public  int X { get; set; }
+      public  int Y { get; set; }
+    }
+    public class ElgamalQuestion : QuestionValue, IElgamalQuestion
+    {
+      public  int P { get; set; }
+      public  int A { get; set; }
+      public  int B { get; set; }
+      public  int R { get; set; }
+    }
     public class AnswerValue : IAnswerValue
     {
         public string Answer { get; set; }
