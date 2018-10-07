@@ -56,7 +56,7 @@ namespace CryptographyEx.WinFormsUI.View
         if (_countQuestion >= EncodingNameHolder.GetCountByTest
             (EncodingType.DiffiHelman))
         {
-                _encodersForm.tabPage3.Controls.Remove(this);
+                _encodersForm.tabPage1.Controls.Remove(this);
 
                // _encodersForm.tabPage3.Controls.Add(new FinishControl(_encodersForm));
             }

@@ -10,9 +10,23 @@ namespace CryptographyEx.Core.Entities
     {
        public IQuestionValue Description { get; set; }
        public IAnswerValue Answer { get; set; }
-      //  public AnswerType AnswerType { get; set; }
+
        public CodingType CodingType { get; set; }
        public EncodingType EncodingType { get; set; }
+    }
+
+    public class QuestionByTesting
+    {
+        public string Description { get; set; }
+
+        //public List<string> Questions { get; set; }
+
+        public Dictionary<int,string> Questions { get; set; }
+        public int Answer { get; set; }
+
+        public AnswerType AnswerType { get; set; }
+
+        public EncodingType EncodingType { get; set; }
     }
 
     public class QuestionValue : IQuestionValue

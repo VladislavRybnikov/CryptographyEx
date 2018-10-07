@@ -18,6 +18,8 @@ namespace CryptographyEx.Core.Base.Abstract.Entities
         EncodingType EncodingType { get; set; }
     }
 
+
+
     public interface IQuestionValue
     {
         string Description { get; set; }

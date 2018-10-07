@@ -12,12 +12,13 @@ namespace CryptographyEx.WinFormsUI.View
 {
     public partial class FinishControl : UserControl
     {
-        private DecodeEncodeControl _encodersForm;
+        private DecodeEncodeControl _dencodersForm;
+        private EncodersForm _encodersForm;
 
-        public FinishControl(DecodeEncodeControl encodersForm)
+        public FinishControl(DecodeEncodeControl dencodersForm, EncodersForm encodersForm)
         {
+            _dencodersForm =dencodersForm;
             _encodersForm = encodersForm;
-
             InitializeComponent();
         }
     }

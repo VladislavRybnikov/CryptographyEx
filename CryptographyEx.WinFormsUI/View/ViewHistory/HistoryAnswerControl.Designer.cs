@@ -47,8 +47,9 @@
             this.lvHistory.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lvHistory.GridLines = true;
             this.lvHistory.Location = new System.Drawing.Point(0, 0);
+            this.lvHistory.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.lvHistory.Name = "lvHistory";
-            this.lvHistory.Size = new System.Drawing.Size(811, 607);
+            this.lvHistory.Size = new System.Drawing.Size(1014, 759);
             this.lvHistory.TabIndex = 2;
             this.lvHistory.UseCompatibleStateImageBehavior = false;
             this.lvHistory.View = System.Windows.Forms.View.Details;
@@ -79,11 +80,13 @@
             // 
             // HistoryAnswerControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.lvHistory);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "HistoryAnswerControl";
-            this.Size = new System.Drawing.Size(811, 607);
+            this.Size = new System.Drawing.Size(1014, 759);
             this.ResumeLayout(false);
 
         }

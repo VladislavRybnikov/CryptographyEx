@@ -30,8 +30,8 @@
         {
             this.lvHistory = new System.Windows.Forms.ListView();
             this.NameCodding = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Mark = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.csdfsg = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Mark = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
@@ -43,6 +43,7 @@
             this.Mark,
             this.columnHeader1});
             this.lvHistory.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lvHistory.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.lvHistory.GridLines = true;
             this.lvHistory.Location = new System.Drawing.Point(0, 0);
             this.lvHistory.Name = "lvHistory";
@@ -57,17 +58,17 @@
             this.NameCodding.Text = "Назва алгоритма";
             this.NameCodding.Width = 214;
             // 
-            // Mark
-            // 
-            this.Mark.DisplayIndex = 1;
-            this.Mark.Text = "Оцінка";
-            this.Mark.Width = 217;
-            // 
             // csdfsg
             // 
             this.csdfsg.DisplayIndex = 2;
             this.csdfsg.Text = "Тип теста";
             this.csdfsg.Width = 262;
+            // 
+            // Mark
+            // 
+            this.Mark.DisplayIndex = 1;
+            this.Mark.Text = "Оцінка";
+            this.Mark.Width = 217;
             // 
             // columnHeader1
             // 

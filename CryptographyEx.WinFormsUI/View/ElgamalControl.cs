@@ -56,7 +56,7 @@ namespace CryptographyEx.WinFormsUI.View
             {
                 _encodersForm.panelQuestion.Controls.Remove(this);
 
-                _encodersForm.panelQuestion.Controls.Add(new FinishControl(_encodersForm));
+                _encodersForm.panelQuestion.Controls.Add(new FinishControl(_encodersForm,null));
             }
 
             IElgamalQuestion elgamalQuestion =(IElgamalQuestion)_mainPresentation
@@ -138,7 +138,7 @@ namespace CryptographyEx.WinFormsUI.View
                 CodingType = _codingType,
                 CorrectAnswer = answerType.Item2,
                 Answer = answer,
-                Name = EncodingNameHolder.GetNameByType(EncodingType.Caesar),
+                Name = EncodingNameHolder.GetNameByType(EncodingType.Elgamal),
                 GuidId = _guid,
                 Mark = AnswerType.Correct == answerType.Item1 ? 1 : 0,
                 Question = descript

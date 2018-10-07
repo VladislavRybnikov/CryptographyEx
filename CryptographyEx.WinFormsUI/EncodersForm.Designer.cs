@@ -42,12 +42,23 @@
             this.lvHistory = new System.Windows.Forms.ListView();
             this.NameCodding = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Mark = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.cLB = new System.Windows.Forms.CheckedListBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lbDescription = new System.Windows.Forms.Label();
+            this.lbCurrentTask = new System.Windows.Forms.Label();
+            this.lbAllQuestions = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lbCorrectAnswer = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             this.tabControl1.SuspendLayout();
+            this.tabPage3.SuspendLayout();
             this.tPHistory.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -171,6 +182,7 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.panel2);
             this.tabPage3.Location = new System.Drawing.Point(4, 25);
             this.tabPage3.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage3.Name = "tabPage3";
@@ -196,6 +208,7 @@
             this.NameCodding,
             this.Mark});
             this.lvHistory.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lvHistory.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.lvHistory.GridLines = true;
             this.lvHistory.Location = new System.Drawing.Point(0, 0);
             this.lvHistory.Name = "lvHistory";
@@ -214,6 +227,101 @@
             // 
             this.Mark.Text = "Загальна оцінка";
             // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.button1);
+            this.panel2.Controls.Add(this.cLB);
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.lbDescription);
+            this.panel2.Controls.Add(this.lbCurrentTask);
+            this.panel2.Controls.Add(this.lbAllQuestions);
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.lbCorrectAnswer);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(4, 4);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(803, 599);
+            this.panel2.TabIndex = 0;
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button1.Location = new System.Drawing.Point(696, 444);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(99, 37);
+            this.button1.TabIndex = 39;
+            this.button1.Text = "Далі";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // cLB
+            // 
+            this.cLB.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.cLB.FormattingEnabled = true;
+            this.cLB.Location = new System.Drawing.Point(3, 170);
+            this.cLB.Name = "cLB";
+            this.cLB.Size = new System.Drawing.Size(799, 236);
+            this.cLB.Sorted = true;
+            this.cLB.TabIndex = 38;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.Location = new System.Drawing.Point(68, 138);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(361, 29);
+            this.label2.TabIndex = 37;
+            this.label2.Text = "Виберіть правильну відповідь";
+            // 
+            // lbDescription
+            // 
+            this.lbDescription.AutoSize = true;
+            this.lbDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lbDescription.Location = new System.Drawing.Point(74, 76);
+            this.lbDescription.Name = "lbDescription";
+            this.lbDescription.Size = new System.Drawing.Size(0, 29);
+            this.lbDescription.TabIndex = 36;
+            // 
+            // lbCurrentTask
+            // 
+            this.lbCurrentTask.AutoSize = true;
+            this.lbCurrentTask.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lbCurrentTask.Location = new System.Drawing.Point(468, 18);
+            this.lbCurrentTask.Name = "lbCurrentTask";
+            this.lbCurrentTask.Size = new System.Drawing.Size(0, 24);
+            this.lbCurrentTask.TabIndex = 35;
+            // 
+            // lbAllQuestions
+            // 
+            this.lbAllQuestions.AutoSize = true;
+            this.lbAllQuestions.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lbAllQuestions.Location = new System.Drawing.Point(93, 18);
+            this.lbAllQuestions.Name = "lbAllQuestions";
+            this.lbAllQuestions.Size = new System.Drawing.Size(26, 29);
+            this.lbAllQuestions.TabIndex = 34;
+            this.lbAllQuestions.Text = "0";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Location = new System.Drawing.Point(74, 18);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(20, 29);
+            this.label1.TabIndex = 33;
+            this.label1.Text = "/";
+            // 
+            // lbCorrectAnswer
+            // 
+            this.lbCorrectAnswer.AutoSize = true;
+            this.lbCorrectAnswer.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lbCorrectAnswer.Location = new System.Drawing.Point(51, 18);
+            this.lbCorrectAnswer.Name = "lbCorrectAnswer";
+            this.lbCorrectAnswer.Size = new System.Drawing.Size(26, 29);
+            this.lbCorrectAnswer.TabIndex = 32;
+            this.lbCorrectAnswer.Text = "0";
+            // 
             // EncodersForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -230,7 +338,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
+            this.tabPage3.ResumeLayout(false);
             this.tPHistory.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -239,7 +350,7 @@
 
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage1;
+        public System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label encodersLabel;
@@ -251,5 +362,14 @@
         private System.Windows.Forms.ListView lvHistory;
         private System.Windows.Forms.ColumnHeader NameCodding;
         private System.Windows.Forms.ColumnHeader Mark;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.CheckedListBox cLB;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lbDescription;
+        private System.Windows.Forms.Label lbCurrentTask;
+        private System.Windows.Forms.Label lbAllQuestions;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbCorrectAnswer;
     }
 }

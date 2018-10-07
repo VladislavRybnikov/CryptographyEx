@@ -1,6 +1,7 @@
 ﻿using CryptographyEx.Core;
 using CryptographyEx.Core.Base.Abstract;
 using CryptographyEx.Core.Base.Const;
+using CryptographyEx.Core.Entities;
 using CryptographyEx.Core.Holder;
 using CryptographyEx.Core.Presentation;
 using CryptographyEx.WinFormsUI.Holders;
@@ -21,11 +22,14 @@ namespace CryptographyEx.WinFormsUI
     public partial class EncodersForm : Form
     {
         private readonly IHistoryPresentation _historyPresentation;
+        private QuestionByTesting _currentquestionByTesting;
+        private int _currentTask;
+        private Guid _guid;
         public EncodersForm()
         {
             InitializeComponent();
+            _currentTask = 0;
             FormClosing += SwithToMain;
-
             splitContainer1.SplitterMoved += ChangeSize;
             Resize += ChangeSize;
             _historyPresentation = new HistoryPresentation();
@@ -83,23 +87,49 @@ namespace CryptographyEx.WinFormsUI
         {
             lbNameEncoder.Text = $"Шифр : {(string)comboBoxEncoding.SelectedItem}";
 
+            QuestionByTestingHolder.UpdateResult();
+            _guid = Guid.NewGuid();
             switch (EncodingNameHolder.GetEncodingType
                          ((string)comboBoxEncoding.SelectedItem))
             {
 
                 case EncodingType.Caesar:
-                    tabPage3.Controls.Clear();
-                    tabPage3.Controls.Add(new DecodeEncodeControl(this));
+                    
+                    tabPage1.Controls.Clear();
+                    tabPage1.Controls.Add(new DecodeEncodeControl(this));
                     break;
                 case EncodingType.Vigenere:
-                    tabPage3.Controls.Clear();
-                    tabPage3.Controls.Add(new DecodeEncodeControl(this));
+                    tabPage1.Controls.Clear();
+                    tabPage1.Controls.Add(new DecodeEncodeControl(this));
                     break;
                 case EncodingType.DiffiHelman:
-                    tabPage3.Controls.Clear();
-                    tabPage3.Controls.Add(new DiffiHelmanControl(this));
+                    tabPage1.Controls.Clear();
+                    tabPage1.Controls.Add(new DiffiHelmanControl(this));
                     break;
             }
+            tabPage3.Controls.Clear();
+            _currentquestionByTesting =  QuestionByTestingHolder.GetQuestionByTestings(EncodingNameHolder.GetEncodingType
+                         ((string)comboBoxEncoding.SelectedItem)).FirstOrDefault(p => p.AnswerType == AnswerType.Defoult);
+
+            if(_currentquestionByTesting==null)
+            {
+                return;
+            }
+
+         
+            tabPage3.Controls.Add(panel2);
+            lbDescription.Text = _currentquestionByTesting.Description;
+            lbAllQuestions.Text = QuestionByTestingHolder.GetQuestionByTestings(EncodingNameHolder.GetEncodingType
+                         ((string)comboBoxEncoding.SelectedItem)).Count.ToString();
+            _currentTask++;
+            lbCurrentTask.Text = _currentTask.ToString();
+            cLB.Items.Clear();
+
+            foreach (var s in _currentquestionByTesting.Questions)
+            {
+                cLB.Items.Add($"{s.Key}-{s.Value}");
+            }           
+           
         }
 
         private void lvHistory_Click(object sender, EventArgs e)
@@ -121,8 +151,12 @@ namespace CryptographyEx.WinFormsUI
 
         private void tabControl1_Click(object sender, EventArgs e)
         {
-            tPHistory.Controls.Clear();
-            tPHistory.Controls.Add(lvHistory);
+            try
+            {
+                tPHistory.Controls.Clear();
+                tPHistory.Controls.Add(lvHistory);
+            }
+            catch { }
 
             int number = 1;
                 lvHistory.Items.Clear();
@@ -143,6 +177,80 @@ namespace CryptographyEx.WinFormsUI
                     lvHistory.Items.Add(listViewItem);
                     number++;
                 }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void cLB_ItemCheck(object sender, ItemCheckEventArgs e)
+        {
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+
+            if (_currentquestionByTesting == null)
+            {
+                return;
+            }
+
+            string answer = (string)cLB.SelectedItem;
+
+            if (answer != null)
+            {
+                string[] splitAnswe = answer.Split('-');
+                int index = int.Parse(splitAnswe[0]);
+
+                if (index == _currentquestionByTesting.Answer)
+                {
+                    _currentquestionByTesting.AnswerType = AnswerType.Correct;
+                }
+                else
+                {
+                    _currentquestionByTesting.AnswerType = AnswerType.NotCorrect;
+                }
+            }
+
+            _historyPresentation.AddHistory(new RequestHistory()
+            {
+                CodingType = CodingType.Test,
+                Question = _currentquestionByTesting.Description,
+                Answer = answer,
+                CorrectAnswer = _currentquestionByTesting.Questions
+                .FirstOrDefault(p => p.Key == _currentquestionByTesting.Answer).Value,
+                GuidId = _guid,
+                Mark = _currentquestionByTesting.AnswerType == AnswerType.Correct ? 1 : 0,
+                Name = (string)comboBoxEncoding.SelectedItem
+            });
+
+
+            lbCorrectAnswer.Text = QuestionByTestingHolder.GetQuestionByTestings(EncodingNameHolder.GetEncodingType
+                         ((string)comboBoxEncoding.SelectedItem)).Count(p => p.AnswerType == AnswerType.Correct).ToString();
+
+            _currentquestionByTesting = QuestionByTestingHolder.GetQuestionByTestings(EncodingNameHolder.GetEncodingType
+                       ((string)comboBoxEncoding.SelectedItem)).FirstOrDefault(p => p.AnswerType == AnswerType.Defoult);
+
+            if (_currentquestionByTesting == null)
+            {
+                tabPage3.Controls.Clear();
+                tabPage3.Controls.Add(new FinishControl(null, this));
+                _currentTask = 0;
+               // _currentquestionByTesting = null;
+
+                return;
+            }
+
+            _currentTask++;
+            lbCurrentTask.Text = _currentTask.ToString();
+            lbDescription.Text = _currentquestionByTesting.Description;
+            cLB.Items.Clear();
+
+            foreach (var s in _currentquestionByTesting.Questions)
+            {
+                cLB.Items.Add($"{s.Key}-{s.Value}");
+            }
         }
     }
     }
