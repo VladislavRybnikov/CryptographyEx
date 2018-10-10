@@ -31,45 +31,78 @@
             this.btnDecoding = new System.Windows.Forms.Button();
             this.btnEncoding = new System.Windows.Forms.Button();
             this.panelQuestion = new System.Windows.Forms.Panel();
+            this.lbNameEncoder = new System.Windows.Forms.Label();
+            this.nameLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnDecoding
             // 
-            this.btnDecoding.Location = new System.Drawing.Point(485, 64);
+            this.btnDecoding.BackColor = System.Drawing.SystemColors.Control;
+            this.btnDecoding.Location = new System.Drawing.Point(372, 64);
+            this.btnDecoding.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnDecoding.Name = "btnDecoding";
-            this.btnDecoding.Size = new System.Drawing.Size(121, 56);
+            this.btnDecoding.Size = new System.Drawing.Size(95, 33);
             this.btnDecoding.TabIndex = 3;
             this.btnDecoding.Text = "Декодування";
-            this.btnDecoding.UseVisualStyleBackColor = true;
+            this.btnDecoding.UseVisualStyleBackColor = false;
             this.btnDecoding.Click += new System.EventHandler(this.btnDecoding_Click);
             // 
             // btnEncoding
             // 
-            this.btnEncoding.Location = new System.Drawing.Point(120, 64);
+            this.btnEncoding.BackColor = System.Drawing.SystemColors.Control;
+            this.btnEncoding.Location = new System.Drawing.Point(156, 64);
+            this.btnEncoding.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnEncoding.Name = "btnEncoding";
-            this.btnEncoding.Size = new System.Drawing.Size(121, 56);
+            this.btnEncoding.Size = new System.Drawing.Size(97, 33);
             this.btnEncoding.TabIndex = 2;
             this.btnEncoding.Text = "Кодування";
-            this.btnEncoding.UseVisualStyleBackColor = true;
+            this.btnEncoding.UseVisualStyleBackColor = false;
             this.btnEncoding.Click += new System.EventHandler(this.btnEncoding_Click);
             // 
             // panelQuestion
             // 
-            this.panelQuestion.Location = new System.Drawing.Point(225, 164);
+            this.panelQuestion.Location = new System.Drawing.Point(105, 116);
+            this.panelQuestion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelQuestion.Name = "panelQuestion";
-            this.panelQuestion.Size = new System.Drawing.Size(572, 429);
+            this.panelQuestion.Size = new System.Drawing.Size(429, 349);
             this.panelQuestion.TabIndex = 4;
+            // 
+            // lbNameEncoder
+            // 
+            this.lbNameEncoder.AutoSize = true;
+            this.lbNameEncoder.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lbNameEncoder.ForeColor = System.Drawing.Color.DimGray;
+            this.lbNameEncoder.Location = new System.Drawing.Point(257, 25);
+            this.lbNameEncoder.Name = "lbNameEncoder";
+            this.lbNameEncoder.Size = new System.Drawing.Size(112, 20);
+            this.lbNameEncoder.TabIndex = 11;
+            this.lbNameEncoder.Text = "Оберіть режим";
+            // 
+            // nameLabel
+            // 
+            this.nameLabel.AutoSize = true;
+            this.nameLabel.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.nameLabel.ForeColor = System.Drawing.Color.DimGray;
+            this.nameLabel.Location = new System.Drawing.Point(33, 25);
+            this.nameLabel.Name = "nameLabel";
+            this.nameLabel.Size = new System.Drawing.Size(51, 20);
+            this.nameLabel.TabIndex = 12;
+            this.nameLabel.Text = "Шифр";
             // 
             // DecodeEncodeControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.nameLabel);
+            this.Controls.Add(this.lbNameEncoder);
             this.Controls.Add(this.panelQuestion);
             this.Controls.Add(this.btnDecoding);
             this.Controls.Add(this.btnEncoding);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "DecodeEncodeControl";
-            this.Size = new System.Drawing.Size(811, 607);
+            this.Size = new System.Drawing.Size(608, 493);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -78,5 +111,7 @@
         private System.Windows.Forms.Button btnDecoding;
         private System.Windows.Forms.Button btnEncoding;
         public System.Windows.Forms.Panel panelQuestion;
+        private System.Windows.Forms.Label lbNameEncoder;
+        private System.Windows.Forms.Label nameLabel;
     }
 }

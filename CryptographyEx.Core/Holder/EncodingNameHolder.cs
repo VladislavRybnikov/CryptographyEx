@@ -36,7 +36,7 @@ namespace CryptographyEx.Core.Holder
            EncodingCount.Add(EncodingType.Elgamal, 4);
            EncodingCount.Add(EncodingType.Stierlitz, 4);
            EncodingCount.Add(EncodingType.Trithemius, 4);
-            EncodingCount.Add(EncodingType.Vigenere, 4);
+           EncodingCount.Add(EncodingType.Vigenere, 4);
         }
 
         public static string GetNameByType(EncodingType encodingType)

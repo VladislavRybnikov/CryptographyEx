@@ -13,6 +13,7 @@ using CryptographyEx.Core.Presentation;
 using CryptographyEx.Core.Base.Abstract.Entities;
 using CryptographyEx.Core.Holder;
 using CryptographyEx.Core.Entities;
+using CryptographyEx.WinFormsUI.Const;
 
 namespace CryptographyEx.WinFormsUI.View
 {
@@ -40,17 +41,37 @@ namespace CryptographyEx.WinFormsUI.View
         }
 
         private void Init()
-        { 
+        {
             lbAllQuestions.Text = EncodingNameHolder.GetCountByTest
                 (EncodingType.Caesar).ToString();
             btnCheck.Visible = true;
             button1.Visible = false;
 
+            switch (_codingType)
+            {
+                case CodingType.Encoding:
+                    upLabel.Text = Messages.InMessage;
+                    downLabel.Text = Messages.OutMessage;
+                    break;
+                case CodingType.Decoding:
+                    upLabel.Text = Messages.OutMessage;
+                    downLabel.Text = Messages.InMessage;
+                    break;
+            }
+
             InitQuestion();
+        }
+
+        private void ClearAnswerInfo()
+        {
+            lblAnswerInfo.Text = "";
+            lbCorrectAnsw.Text = "";
         }
 
         private void InitQuestion()
         {
+            ClearAnswerInfo();
+
             if(_countQuestion >= EncodingNameHolder.GetCountByTest
                 (EncodingType.Caesar))
             {
@@ -69,7 +90,7 @@ namespace CryptographyEx.WinFormsUI.View
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            ClearAnswerInfo();
             btnCheck.Visible = true;
             button1.Visible = false;
           
@@ -97,14 +118,26 @@ namespace CryptographyEx.WinFormsUI.View
                 },
                 CodingType = _codingType,
                 EncodingType = EncodingType.Caesar
-            }, valueConfig);
-         
+            },
+            MonoAlphabet.ENG,
+            PolyAlphabet.Default,
+            valueConfig);
 
-            _countCorrectQuestion = AnswerType.Correct == answerType.Item1 ?
-                _countCorrectQuestion + 1 : _countCorrectQuestion;
-            lbCorrectAnswer.Text = _countCorrectQuestion.ToString();
-            lbCorrectAnsw.Text = answerType.Item2;
 
+            if (answerType.Item1 == AnswerType.Correct)
+            {
+                _countCorrectQuestion++;
+                lblAnswerInfo.ForeColor = Color.Green;
+                lblAnswerInfo.Text = Messages.Right;
+            }
+            else
+            {
+                lblAnswerInfo.ForeColor = Color.Red;
+                lblAnswerInfo.Text = Messages.Wrong;
+                lbCorrectAnsw.Text = $"{Messages.Answer} {answerType.Item2}";
+            }
+
+            //lbCorrectAnswer.Text = _countCorrectQuestion.ToString();
             _historyPresentation.AddHistory(new RequestHistory()
             {
                 CodingType = _codingType,
@@ -118,6 +151,11 @@ namespace CryptographyEx.WinFormsUI.View
 
             btnCheck.Visible = false;
             button1.Visible = true;
+        }
+
+        private void CaesarControl_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

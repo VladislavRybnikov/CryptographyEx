@@ -9,7 +9,11 @@ namespace CryptographyEx.Core.Base.Abstract
     public interface IMainPresentation
     {
 
-        Tuple<AnswerType, string> CheckAnswer(IQuestion currentQuestion, params object[] args);
+        Tuple<AnswerType, string> CheckAnswer(
+            IQuestion currentQuestion,
+            MonoAlphabet mono,
+            PolyAlphabet poly,
+            params object[] args);
 
         IQuestionValue GenerateQuestion(CodingType codingType, EncodingType encodingType);
     }

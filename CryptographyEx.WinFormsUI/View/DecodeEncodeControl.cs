@@ -20,18 +20,21 @@ namespace CryptographyEx.WinFormsUI.View
         {
             InitializeComponent();
             _encodersForm = encodersForm;
+            nameLabel.Text = _encodersForm.lbNameEncoder.Text;
         }
 
         private void btnEncoding_Click(object sender, EventArgs e)
         {
             HelpbtnClickByTest(CodingType.Encoding);
+            btnEncoding.BackColor = Color.Gray;
+            btnDecoding.BackColor = Color.LightGray;
         }
 
         private void btnDecoding_Click(object sender, EventArgs e)
         {
- 
             HelpbtnClickByTest(CodingType.Decoding);
-
+            btnEncoding.BackColor = Color.LightGray;
+            btnDecoding.BackColor = Color.Gray;
         }
 
         private void HelpbtnClickByTest(CodingType codingType)

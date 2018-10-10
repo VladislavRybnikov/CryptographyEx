@@ -29,7 +29,7 @@ namespace CryptographyEx.WinFormsUI
         {
             InitializeComponent();
             _currentTask = 0;
-            FormClosing += SwithToMain;
+            FormClosing += SwitсhToMain;
             splitContainer1.SplitterMoved += ChangeSize;
             Resize += ChangeSize;
             _historyPresentation = new HistoryPresentation();
@@ -67,7 +67,7 @@ namespace CryptographyEx.WinFormsUI
             }
         }
 
-        private void SwithToMain(object sender, CancelEventArgs e)
+        private void SwitсhToMain(object sender, CancelEventArgs e)
         {
             FormHolder.EncodersForm = null;
             FormHolder.MainForm.Show();

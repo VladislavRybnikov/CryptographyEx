@@ -104,7 +104,10 @@ namespace CryptographyEx.WinFormsUI.View
                 },
                 CodingType = _codingType,
                 EncodingType = EncodingType.Vigenere
-            }, valueConfig);
+            },
+            MonoAlphabet.ENG,
+            PolyAlphabet.Default,
+            valueConfig);
 
 
             _countCorrectQuestion = AnswerType.Correct == answerType.Item1 ?

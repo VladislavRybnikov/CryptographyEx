@@ -92,7 +92,8 @@ namespace CryptographyEx.WinFormsUI.View
                 },
                 CodingType = CodingType.Decoding,
                 EncodingType = EncodingType.DiffiHelman
-            }, Convert.ToInt32(tbN.Text), Convert.ToInt32(tbG.Text),
+            }, MonoAlphabet.ENG, PolyAlphabet.Default,
+            Convert.ToInt32(tbN.Text), Convert.ToInt32(tbG.Text),
             new List<int> (){ Convert.ToInt32(tbX.Text),
                 Convert.ToInt32(tbY.Text) });
 

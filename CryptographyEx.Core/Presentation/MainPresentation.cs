@@ -7,6 +7,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Linq;
+using CryptographyEx.Core.Base;
 
 namespace CryptographyEx.Core.Presentation
 {
@@ -80,15 +81,16 @@ namespace CryptographyEx.Core.Presentation
             return value;
         }
 
-        public Tuple<AnswerType,string> CheckAnswer(IQuestion currentQuestion,  params object[] args)
+        public Tuple<AnswerType,string> CheckAnswer(
+            IQuestion currentQuestion, 
+            MonoAlphabet mono, 
+            PolyAlphabet poly, 
+            params object[] args)
         {
-            var ENG_ALPHA = Alphabet.CreateMono(MonoAlphabet.ENG);
-            var UTF16 = Alphabet.CreateMono(MonoAlphabet.UTF16);
-
             IAlphabetEncoder encoder = EncoderFactory
                       .CreateEncoder(currentQuestion.EncodingType)
-                       .SetMonoAlphabet(UTF16)
-                        .Configure(args);
+                      .SetMonoAlphabet(Alphabet.CreateMono(mono))
+                      .Configure(args);
             string answer = String.Empty;
 
             switch (currentQuestion.CodingType)
@@ -118,103 +120,6 @@ namespace CryptographyEx.Core.Presentation
             }
 
        
-
-            //switch (currentQuestion.EncodingType)
-            //{
-            //    case EncodingType.Caesar:
-            //        IAlphabetEncoder caesar = EncoderFactory
-            //            .CreateEncoder(EncodingType.Caesar)
-            //             .SetMonoAlphabet(UTF16)
-            //              .Configure(args);
-
-            //        switch (currentQuestion.CodingType)
-            //        {
-            //            case CodingType.Decoding:
-            //                 answer =
-            //                    caesar.Decode(currentQuestion.Description.Description);
-                            
-            //                if(currentQuestion.Answer.Answer.ToLower()
-            //                    .Equals(answer.ToLower()))
-            //                {
-            //                    return new Tuple<AnswerType, string> 
-            //                        (AnswerType.Correct, answer);
-            //                }
-            //                break;
-            //            case CodingType.Encoding:
-            //                 answer =
-            //                     caesar.Encode(currentQuestion.Description.Description);
-
-            //                if (currentQuestion.Answer.Answer.ToLower()
-            //                    .Equals(answer.ToLower()))
-            //                {
-            //                    return new Tuple<AnswerType, string>
-            //                        (AnswerType.Correct, answer);
-            //                }
-            //                break;
-            //        }
-            //        break;
-
-            //    case EncodingType.Trithemius:
-            //        IAlphabetEncoder trithem = EncoderFactory
-            //           .CreateEncoder(EncodingType.Caesar)
-            //            .SetMonoAlphabet(ENG_ALPHA)
-            //             .Configure(args);
-            //        break;
-            //    case EncodingType.Vigenere:
-            //        IAlphabetEncoder vigener = EncoderFactory
-            //              .CreateEncoder(EncodingType.Vigenere)
-            //             .Configure(args);
-            //        switch (currentQuestion.CodingType)
-            //        {
-            //            case CodingType.Decoding:
-            //                //TODO Decode
-            //                answer =
-            //                   vigener.Encode(currentQuestion.Description.Description);
-
-            //                if (currentQuestion.Answer.Answer.ToLower()
-            //                    .Equals(answer.ToLower()))
-            //                {
-            //                    return new Tuple<AnswerType, string>
-            //                        (AnswerType.Correct, answer);
-            //                }
-            //                break;
-            //            case CodingType.Encoding:
-            //                answer =
-            //                    vigener.Encode(currentQuestion.Description.Description);
-
-            //                if (currentQuestion.Answer.Answer.ToLower()
-            //                    .Equals(answer.ToLower()))
-            //                {
-            //                    return new Tuple<AnswerType, string>
-            //                        (AnswerType.Correct, answer);
-            //                }
-            //                break;
-            //        }
-            //        break;
-            //    case EncodingType.DiffiHelman:
-            //        IAlphabetEncoder diffiHel = EncoderFactory
-            //           .CreateEncoder(EncodingType.DiffiHelman)
-            //             .Configure(args);
-            //        answer =
-            //                  diffiHel.Decode(null);
-
-            //        if (currentQuestion.Answer.Answer.ToLower()
-            //                  .Equals(answer.ToLower()))
-            //        {
-            //            return new Tuple<AnswerType, string>
-            //                (AnswerType.Correct, answer);
-            //        }
-
-            //        break;
-            //    case EncodingType.Elgamal:
-            //        IAlphabetEncoder elgamal = EncoderFactory
-            //           .CreateEncoder(EncodingType.Elgamal)
-            //             .Configure(args);
-            
-            //        break;
-
-            //}
-
             return new Tuple<AnswerType, string>
                                     (AnswerType.NotCorrect, answer);
         }

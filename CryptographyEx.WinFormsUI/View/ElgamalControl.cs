@@ -125,8 +125,9 @@ namespace CryptographyEx.WinFormsUI.View
                 },
                 CodingType = _codingType,
                 EncodingType = EncodingType.Elgamal
-            }, Convert.ToInt32(tbP.Text), Convert.ToInt32(tbA.Text),
-          Convert.ToInt32(tbB.Text),
+            },MonoAlphabet.ENG, PolyAlphabet.Default,
+            Convert.ToInt32(tbP.Text), Convert.ToInt32(tbA.Text),
+            Convert.ToInt32(tbB.Text),
                 Convert.ToInt32(tbR.Text));
 
             _countCorrectQuestion = AnswerType.Correct == answerType.Item1 ?
