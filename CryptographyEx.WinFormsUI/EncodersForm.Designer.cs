@@ -30,7 +30,6 @@
         {
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.lbNameEncoder = new System.Windows.Forms.Label();
-            this.loadBtn = new System.Windows.Forms.Button();
             this.comboBoxEncoding = new System.Windows.Forms.ComboBox();
             this.encodersLabel = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -71,7 +70,6 @@
             // splitContainer1.Panel1
             // 
             this.splitContainer1.Panel1.Controls.Add(this.lbNameEncoder);
-            this.splitContainer1.Panel1.Controls.Add(this.loadBtn);
             this.splitContainer1.Panel1.Controls.Add(this.comboBoxEncoding);
             this.splitContainer1.Panel1.Controls.Add(this.encodersLabel);
             this.splitContainer1.Panel1.Controls.Add(this.panel1);
@@ -88,29 +86,16 @@
             this.lbNameEncoder.AutoSize = true;
             this.lbNameEncoder.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.lbNameEncoder.ForeColor = System.Drawing.Color.DimGray;
-            this.lbNameEncoder.Location = new System.Drawing.Point(51, 384);
+            this.lbNameEncoder.Location = new System.Drawing.Point(47, 493);
             this.lbNameEncoder.Name = "lbNameEncoder";
             this.lbNameEncoder.Size = new System.Drawing.Size(135, 20);
             this.lbNameEncoder.TabIndex = 10;
             this.lbNameEncoder.Text = "Шифр: Не вибрано";
             // 
-            // loadBtn
-            // 
-            this.loadBtn.BackColor = System.Drawing.SystemColors.Control;
-            this.loadBtn.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.loadBtn.Font = new System.Drawing.Font("Cooper Black", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.loadBtn.ForeColor = System.Drawing.Color.Maroon;
-            this.loadBtn.Location = new System.Drawing.Point(68, 284);
-            this.loadBtn.Name = "loadBtn";
-            this.loadBtn.Size = new System.Drawing.Size(98, 39);
-            this.loadBtn.TabIndex = 9;
-            this.loadBtn.Text = "Загрузить";
-            this.loadBtn.UseVisualStyleBackColor = false;
-            // 
             // comboBoxEncoding
             // 
             this.comboBoxEncoding.FormattingEnabled = true;
-            this.comboBoxEncoding.Location = new System.Drawing.Point(55, 228);
+            this.comboBoxEncoding.Location = new System.Drawing.Point(40, 236);
             this.comboBoxEncoding.Name = "comboBoxEncoding";
             this.comboBoxEncoding.Size = new System.Drawing.Size(121, 21);
             this.comboBoxEncoding.TabIndex = 8;
@@ -121,7 +106,7 @@
             this.encodersLabel.AutoSize = true;
             this.encodersLabel.Font = new System.Drawing.Font("Impact", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.encodersLabel.ForeColor = System.Drawing.Color.DimGray;
-            this.encodersLabel.Location = new System.Drawing.Point(24, 175);
+            this.encodersLabel.Location = new System.Drawing.Point(24, 189);
             this.encodersLabel.Name = "encodersLabel";
             this.encodersLabel.Size = new System.Drawing.Size(158, 29);
             this.encodersLabel.TabIndex = 7;
@@ -353,7 +338,6 @@
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label encodersLabel;
-        private System.Windows.Forms.Button loadBtn;
         public System.Windows.Forms.ComboBox comboBoxEncoding;
         public System.Windows.Forms.TabPage tabPage3;
         public System.Windows.Forms.TabPage tPHistory;

@@ -33,7 +33,7 @@ namespace CryptographyEx.Core.Encoders
             {
                 var half = x.Length / 2;
 
-                return new Tuple<int, int>
+                return
                 ( 
                     Convert.ToInt32(x.Substring(0, half)),
                     Convert.ToInt32(x.Substring(half, half))

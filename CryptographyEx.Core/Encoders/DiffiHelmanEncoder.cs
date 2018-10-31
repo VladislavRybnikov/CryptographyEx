@@ -48,6 +48,7 @@ namespace CryptographyEx.Core.Encoders
             //    long result = (long)Math.Pow(_q, member) % _n;
             //   // results.Add(result);
             //}
+
             double result = (double)Math.Pow(_q, _members[1]) % _n;
 
             double key = (double)Math.Pow(result, _members[0]) % _n;
