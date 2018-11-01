@@ -109,6 +109,12 @@
     <Compile Include="View\ViewHistory\HistoryCoddingControl.Designer.cs">
       <DependentUpon>HistoryCoddingControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\ViewTheory\TextByImageControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ViewTheory\TextByImageControl.Designer.cs">
+      <DependentUpon>TextByImageControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\VigenereControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -155,6 +161,9 @@
     <EmbeddedResource Include="View\ViewHistory\HistoryCoddingControl.resx">
       <DependentUpon>HistoryCoddingControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\ViewTheory\TextByImageControl.resx">
+      <DependentUpon>TextByImageControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\VigenereControl.resx">
       <DependentUpon>VigenereControl.cs</DependentUpon>
     </EmbeddedResource>
@@ -184,6 +193,10 @@
     <ProjectReference Include="..\CryptographyEx.Core\CryptographyEx.Core.csproj">
       <Project>{0C07F32B-65F0-4013-B608-BB45E2C04847}</Project>
       <Name>CryptographyEx.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CryptographyEx.Theory\CryptographyEx.Theory.csproj">
+      <Project>{95F73883-85E6-4947-B582-5DDE979F1987}</Project>
+      <Name>CryptographyEx.Theory</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup />
