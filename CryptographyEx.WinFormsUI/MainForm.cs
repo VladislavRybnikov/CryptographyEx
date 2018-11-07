@@ -60,5 +60,10 @@ namespace CryptographyEx.WinFormsUI
         {
             btn.Key.ForeColor = Color.DimGray;
         }
+
+        private void exitLabel_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

@@ -51,7 +51,7 @@
             // 
             this.tbAnswer.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.tbAnswer.Location = new System.Drawing.Point(105, 164);
-            this.tbAnswer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbAnswer.Margin = new System.Windows.Forms.Padding(2);
             this.tbAnswer.Name = "tbAnswer";
             this.tbAnswer.Size = new System.Drawing.Size(213, 28);
             this.tbAnswer.TabIndex = 1;
@@ -70,7 +70,7 @@
             // 
             this.button1.BackColor = System.Drawing.Color.MediumAquamarine;
             this.button1.Location = new System.Drawing.Point(187, 314);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(70, 24);
             this.button1.TabIndex = 3;
@@ -126,7 +126,7 @@
             // 
             this.numericUpDownStep.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.numericUpDownStep.Location = new System.Drawing.Point(228, 196);
-            this.numericUpDownStep.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numericUpDownStep.Margin = new System.Windows.Forms.Padding(2);
             this.numericUpDownStep.Minimum = new decimal(new int[] {
             1,
             0,
@@ -156,7 +156,7 @@
             // btnCheck
             // 
             this.btnCheck.Location = new System.Drawing.Point(180, 314);
-            this.btnCheck.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCheck.Margin = new System.Windows.Forms.Padding(2);
             this.btnCheck.Name = "btnCheck";
             this.btnCheck.Size = new System.Drawing.Size(83, 24);
             this.btnCheck.TabIndex = 11;
@@ -168,7 +168,7 @@
             // 
             this.lbCurrentTask.AutoSize = true;
             this.lbCurrentTask.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lbCurrentTask.Location = new System.Drawing.Point(364, 44);
+            this.lbCurrentTask.Location = new System.Drawing.Point(356, 42);
             this.lbCurrentTask.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbCurrentTask.Name = "lbCurrentTask";
             this.lbCurrentTask.Size = new System.Drawing.Size(16, 18);
@@ -190,7 +190,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label4.Location = new System.Drawing.Point(336, 44);
+            this.label4.Location = new System.Drawing.Point(328, 42);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(24, 20);
@@ -202,7 +202,7 @@
             this.upLabel.AutoSize = true;
             this.upLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.upLabel.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.upLabel.Location = new System.Drawing.Point(122, 74);
+            this.upLabel.Location = new System.Drawing.Point(140, 69);
             this.upLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.upLabel.Name = "upLabel";
             this.upLabel.Size = new System.Drawing.Size(146, 16);
@@ -214,7 +214,7 @@
             this.downLabel.AutoSize = true;
             this.downLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.downLabel.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.downLabel.Location = new System.Drawing.Point(122, 130);
+            this.downLabel.Location = new System.Drawing.Point(119, 137);
             this.downLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.downLabel.Name = "downLabel";
             this.downLabel.Size = new System.Drawing.Size(184, 16);
@@ -252,7 +252,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.lbDescription);
             this.Controls.Add(this.tbAnswer);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "CaesarControl";
             this.Size = new System.Drawing.Size(438, 354);
             this.Load += new System.EventHandler(this.CaesarControl_Load);

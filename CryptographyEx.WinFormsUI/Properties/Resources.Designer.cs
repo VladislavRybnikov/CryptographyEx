@@ -73,6 +73,16 @@ namespace CryptographyEx.WinFormsUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap arrow_35800_960_720 {
+            get {
+                object obj = ResourceManager.GetObject("arrow-35800_960_720", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Header_Encryption {
             get {
                 object obj = ResourceManager.GetObject("Header_Encryption", resourceCulture);

@@ -12,6 +12,7 @@ using CryptographyEx.Core.Base.Const;
 using CryptographyEx.Core.Holder;
 using CryptographyEx.Core.Entities;
 using CryptographyEx.Core.Presentation;
+using System.Diagnostics;
 
 namespace CryptographyEx.WinFormsUI.View
 {
@@ -128,6 +129,12 @@ namespace CryptographyEx.WinFormsUI.View
 
             btnCheck.Visible = false;
             btnNext.Visible = true;
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            var info = new ProcessStartInfo(linkLabel1.Text);
+            Process.Start(info);
         }
     }
 }
