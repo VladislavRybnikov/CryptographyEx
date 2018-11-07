@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Blend for Visual Studio 15
+# Visual Studio 15
 VisualStudioVersion = 15.0.27703.2026
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CryptographyEx.Core", "CryptographyEx.Core\CryptographyEx.Core.csproj", "{0C07F32B-65F0-4013-B608-BB45E2C04847}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CryptographyEx.Core", "CryptographyEx.Core\CryptographyEx.Core.csproj", "{0C07F32B-65F0-4013-B608-BB45E2C04847}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CryptographyEx.ConsoleTest", "CryptographyEx.ConsoleTest\CryptographyEx.ConsoleTest.csproj", "{9E43039B-D333-4C33-A0B7-835FD7072177}"
 EndProject
