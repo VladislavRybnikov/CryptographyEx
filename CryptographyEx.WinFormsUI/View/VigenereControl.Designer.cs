@@ -62,11 +62,11 @@
             // btnCheck
             // 
             this.btnCheck.Location = new System.Drawing.Point(210, 331);
-            this.btnCheck.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCheck.Margin = new System.Windows.Forms.Padding(2);
             this.btnCheck.Name = "btnCheck";
-            this.btnCheck.Size = new System.Drawing.Size(70, 24);
+            this.btnCheck.Size = new System.Drawing.Size(80, 24);
             this.btnCheck.TabIndex = 22;
-            this.btnCheck.Text = "Провереть";
+            this.btnCheck.Text = "Перевірити";
             this.btnCheck.UseVisualStyleBackColor = true;
             this.btnCheck.Click += new System.EventHandler(this.btnCheck_Click);
             // 
@@ -116,7 +116,7 @@
             // btnNext
             // 
             this.btnNext.Location = new System.Drawing.Point(294, 331);
-            this.btnNext.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnNext.Margin = new System.Windows.Forms.Padding(2);
             this.btnNext.Name = "btnNext";
             this.btnNext.Size = new System.Drawing.Size(70, 24);
             this.btnNext.TabIndex = 15;
@@ -138,7 +138,7 @@
             // 
             this.tbAnswer.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.tbAnswer.Location = new System.Drawing.Point(107, 210);
-            this.tbAnswer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbAnswer.Margin = new System.Windows.Forms.Padding(2);
             this.tbAnswer.Name = "tbAnswer";
             this.tbAnswer.Size = new System.Drawing.Size(213, 28);
             this.tbAnswer.TabIndex = 13;
@@ -271,7 +271,7 @@
             this.Controls.Add(this.btnNext);
             this.Controls.Add(this.lbDescription);
             this.Controls.Add(this.tbAnswer);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "VigenereControl";
             this.Size = new System.Drawing.Size(410, 371);
             this.ResumeLayout(false);

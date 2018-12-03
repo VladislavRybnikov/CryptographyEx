@@ -49,11 +49,11 @@
             this.encodersLabel.AutoSize = true;
             this.encodersLabel.Font = new System.Drawing.Font("Impact", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.encodersLabel.ForeColor = System.Drawing.Color.DimGray;
-            this.encodersLabel.Location = new System.Drawing.Point(267, 129);
+            this.encodersLabel.Location = new System.Drawing.Point(287, 135);
             this.encodersLabel.Name = "encodersLabel";
-            this.encodersLabel.Size = new System.Drawing.Size(95, 29);
+            this.encodersLabel.Size = new System.Drawing.Size(58, 29);
             this.encodersLabel.TabIndex = 1;
-            this.encodersLabel.Text = "Шифры";
+            this.encodersLabel.Text = "Тест";
             this.encodersLabel.Click += new System.EventHandler(this.EncodersLabel_Click);
             // 
             // theoryLabel
@@ -61,29 +61,30 @@
             this.theoryLabel.AutoSize = true;
             this.theoryLabel.Font = new System.Drawing.Font("Impact", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.theoryLabel.ForeColor = System.Drawing.Color.DimGray;
-            this.theoryLabel.Location = new System.Drawing.Point(272, 179);
+            this.theoryLabel.Location = new System.Drawing.Point(252, 180);
             this.theoryLabel.Name = "theoryLabel";
-            this.theoryLabel.Size = new System.Drawing.Size(85, 29);
+            this.theoryLabel.Size = new System.Drawing.Size(146, 29);
             this.theoryLabel.TabIndex = 2;
-            this.theoryLabel.Text = "Теория";
+            this.theoryLabel.Text = "Калькулятор";
+            this.theoryLabel.Click += new System.EventHandler(this.theoryLabel_Click);
             // 
             // aboutLabel
             // 
             this.aboutLabel.AutoSize = true;
             this.aboutLabel.Font = new System.Drawing.Font("Impact", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.aboutLabel.ForeColor = System.Drawing.Color.DimGray;
-            this.aboutLabel.Location = new System.Drawing.Point(248, 231);
+            this.aboutLabel.Location = new System.Drawing.Point(245, 230);
             this.aboutLabel.Name = "aboutLabel";
-            this.aboutLabel.Size = new System.Drawing.Size(143, 29);
+            this.aboutLabel.Size = new System.Drawing.Size(166, 29);
             this.aboutLabel.TabIndex = 3;
-            this.aboutLabel.Text = "О Программе";
+            this.aboutLabel.Text = "Про программу";
             // 
             // exitLabel
             // 
             this.exitLabel.AutoSize = true;
             this.exitLabel.Font = new System.Drawing.Font("Impact", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.exitLabel.ForeColor = System.Drawing.Color.DimGray;
-            this.exitLabel.Location = new System.Drawing.Point(278, 287);
+            this.exitLabel.Location = new System.Drawing.Point(277, 278);
             this.exitLabel.Name = "exitLabel";
             this.exitLabel.Size = new System.Drawing.Size(81, 29);
             this.exitLabel.TabIndex = 4;
@@ -117,7 +118,7 @@
             // 
             this.exitPanel.BackgroundImage = global::CryptographyEx.WinFormsUI.Properties.Resources.arrow_35800_960_720;
             this.exitPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.exitPanel.Location = new System.Drawing.Point(233, 281);
+            this.exitPanel.Location = new System.Drawing.Point(232, 272);
             this.exitPanel.Name = "exitPanel";
             this.exitPanel.Size = new System.Drawing.Size(42, 38);
             this.exitPanel.TabIndex = 10;
@@ -126,7 +127,7 @@
             // 
             this.aboutPanel.BackgroundImage = global::CryptographyEx.WinFormsUI.Properties.Resources.arrow_35800_960_720;
             this.aboutPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.aboutPanel.Location = new System.Drawing.Point(205, 226);
+            this.aboutPanel.Location = new System.Drawing.Point(202, 225);
             this.aboutPanel.Name = "aboutPanel";
             this.aboutPanel.Size = new System.Drawing.Size(42, 39);
             this.aboutPanel.TabIndex = 10;
@@ -135,7 +136,7 @@
             // 
             this.theoryPanel.BackgroundImage = global::CryptographyEx.WinFormsUI.Properties.Resources.arrow_35800_960_720;
             this.theoryPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.theoryPanel.Location = new System.Drawing.Point(226, 175);
+            this.theoryPanel.Location = new System.Drawing.Point(206, 176);
             this.theoryPanel.Name = "theoryPanel";
             this.theoryPanel.Size = new System.Drawing.Size(42, 38);
             this.theoryPanel.TabIndex = 10;
@@ -144,7 +145,7 @@
             // 
             this.encodersPanel.BackgroundImage = global::CryptographyEx.WinFormsUI.Properties.Resources.arrow_35800_960_720;
             this.encodersPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.encodersPanel.Location = new System.Drawing.Point(219, 125);
+            this.encodersPanel.Location = new System.Drawing.Point(239, 131);
             this.encodersPanel.Name = "encodersPanel";
             this.encodersPanel.Size = new System.Drawing.Size(42, 39);
             this.encodersPanel.TabIndex = 9;

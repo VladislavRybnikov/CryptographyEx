@@ -11,6 +11,7 @@ namespace CryptographyEx.WinFormsUI.Holders
     {
         private static Form _mainForm;
         private static Form _encodersForm;
+        private static Form _calcForm;
 
         public static Form MainForm
         {
@@ -39,6 +40,20 @@ namespace CryptographyEx.WinFormsUI.Holders
                 return _encodersForm;
             }
             set { _encodersForm = value; }
+        }
+
+        public static Form CalculatorForm
+        {
+            get
+            {
+                if (_calcForm == null)
+                {
+                    _calcForm = new EncodersCalculatorForm();
+                }
+
+                return _calcForm;
+            }
+            set { _calcForm = value; }
         }
     }
 }

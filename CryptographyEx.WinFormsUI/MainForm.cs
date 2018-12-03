@@ -65,5 +65,11 @@ namespace CryptographyEx.WinFormsUI
         {
             Close();
         }
+
+        private void theoryLabel_Click(object sender, EventArgs e)
+        {
+            Hide();
+            FormHolder.CalculatorForm.Show();
+        }
     }
 }

@@ -73,9 +73,39 @@ namespace CryptographyEx.WinFormsUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _202_2023990_free_turquoise_equal_sign_icon_flat_icon_gif_equal {
+            get {
+                object obj = ResourceManager.GetObject("202-2023990_free-turquoise-equal-sign-icon-flat-icon-gif-equal", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _202_2023990_free_turquoise_equal_sign_icon_flat_icon_gif_equal1 {
+            get {
+                object obj = ResourceManager.GetObject("202-2023990_free-turquoise-equal-sign-icon-flat-icon-gif-equal1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap arrow_35800_960_720 {
             get {
                 object obj = ResourceManager.GetObject("arrow-35800_960_720", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Calculator_PNG_Picture {
+            get {
+                object obj = ResourceManager.GetObject("Calculator-PNG-Picture", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -96,6 +126,16 @@ namespace CryptographyEx.WinFormsUI.Properties {
         internal static System.Drawing.Bitmap key_icon_0 {
             get {
                 object obj = ResourceManager.GetObject("key-icon-0", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap terminal_512 {
+            get {
+                object obj = ResourceManager.GetObject("terminal-512", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

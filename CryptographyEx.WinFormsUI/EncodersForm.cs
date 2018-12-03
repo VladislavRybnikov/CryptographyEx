@@ -35,7 +35,8 @@ namespace CryptographyEx.WinFormsUI
             _historyPresentation = new HistoryPresentation();
             _historyPresentation.Deserialize();
             Init();
-
+            var year = DateTime.Now.Year;
+            yearLbl.Text = year.ToString();
         }
 
         private void Init()
@@ -92,9 +93,7 @@ namespace CryptographyEx.WinFormsUI
             switch (EncodingNameHolder.GetEncodingType
                          ((string)comboBoxEncoding.SelectedItem))
             {
-
                 case EncodingType.Caesar:
-                    
                     tabPage1.Controls.Clear();
                     tabPage1.Controls.Add(new DecodeEncodeControl(this));
                     break;
@@ -105,6 +104,10 @@ namespace CryptographyEx.WinFormsUI
                 case EncodingType.DiffiHelman:
                     tabPage1.Controls.Clear();
                     tabPage1.Controls.Add(new DiffiHelmanControl(this));
+                    break;
+                default:
+                    tabPage1.Controls.Clear();
+                    tabPage1.Controls.Add(new EmptyEncoderControl());
                     break;
             }
             tabPage3.Controls.Clear();
@@ -251,6 +254,11 @@ namespace CryptographyEx.WinFormsUI
             {
                 cLB.Items.Add($"{s.Key}-{s.Value}");
             }
+        }
+
+        private void yearLbl_Click(object sender, EventArgs e)
+        {
+
         }
     }
     }

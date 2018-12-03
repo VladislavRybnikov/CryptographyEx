@@ -50,6 +50,8 @@
             this.lvHistory = new System.Windows.Forms.ListView();
             this.NameCodding = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Mark = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.label3 = new System.Windows.Forms.Label();
+            this.yearLbl = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -69,6 +71,8 @@
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.Controls.Add(this.yearLbl);
+            this.splitContainer1.Panel1.Controls.Add(this.label3);
             this.splitContainer1.Panel1.Controls.Add(this.lbNameEncoder);
             this.splitContainer1.Panel1.Controls.Add(this.comboBoxEncoding);
             this.splitContainer1.Panel1.Controls.Add(this.encodersLabel);
@@ -95,7 +99,7 @@
             // comboBoxEncoding
             // 
             this.comboBoxEncoding.FormattingEnabled = true;
-            this.comboBoxEncoding.Location = new System.Drawing.Point(40, 236);
+            this.comboBoxEncoding.Location = new System.Drawing.Point(51, 242);
             this.comboBoxEncoding.Name = "comboBoxEncoding";
             this.comboBoxEncoding.Size = new System.Drawing.Size(121, 21);
             this.comboBoxEncoding.TabIndex = 8;
@@ -106,7 +110,7 @@
             this.encodersLabel.AutoSize = true;
             this.encodersLabel.Font = new System.Drawing.Font("Impact", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.encodersLabel.ForeColor = System.Drawing.Color.DimGray;
-            this.encodersLabel.Location = new System.Drawing.Point(24, 189);
+            this.encodersLabel.Location = new System.Drawing.Point(35, 195);
             this.encodersLabel.Name = "encodersLabel";
             this.encodersLabel.Size = new System.Drawing.Size(158, 29);
             this.encodersLabel.TabIndex = 7;
@@ -116,7 +120,7 @@
             // 
             this.panel1.BackgroundImage = global::CryptographyEx.WinFormsUI.Properties.Resources._2000px_KPI_wiki_logo_svg;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel1.Location = new System.Drawing.Point(87, 25);
+            this.panel1.Location = new System.Drawing.Point(87, 26);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(52, 55);
             this.panel1.TabIndex = 6;
@@ -307,6 +311,29 @@
             // 
             this.Mark.Text = "Загальна оцінка";
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Impact", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label3.ForeColor = System.Drawing.Color.DimGray;
+            this.label3.Location = new System.Drawing.Point(70, 82);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(56, 29);
+            this.label3.TabIndex = 11;
+            this.label3.Text = "KPI -";
+            // 
+            // yearLbl
+            // 
+            this.yearLbl.AutoSize = true;
+            this.yearLbl.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.yearLbl.ForeColor = System.Drawing.Color.DimGray;
+            this.yearLbl.Location = new System.Drawing.Point(120, 87);
+            this.yearLbl.Name = "yearLbl";
+            this.yearLbl.Size = new System.Drawing.Size(41, 20);
+            this.yearLbl.TabIndex = 12;
+            this.yearLbl.Text = "2018";
+            this.yearLbl.Click += new System.EventHandler(this.yearLbl_Click);
+            // 
             // EncodersForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -354,5 +381,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lbCorrectAnswer;
         public System.Windows.Forms.Label lbNameEncoder;
+        private System.Windows.Forms.Label yearLbl;
+        private System.Windows.Forms.Label label3;
     }
 }

@@ -45,7 +45,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AboutAppForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutAppForm.Designer.cs">
+      <DependentUpon>AboutAppForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Const\Messages.cs" />
+    <Compile Include="EncodersCalculatorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EncodersCalculatorForm.Designer.cs">
+      <DependentUpon>EncodersCalculatorForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="EncodersForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -67,6 +79,18 @@
     <Compile Include="View\CaesarControl.Designer.cs">
       <DependentUpon>CaesarControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\Calculators\Base\BaseCalculatorControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Calculators\Base\BaseCalculatorControl.Designer.cs">
+      <DependentUpon>BaseCalculatorControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Calculators\CaesarCalculatorControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Calculators\CaesarCalculatorControl.Designer.cs">
+      <DependentUpon>CaesarCalculatorControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\DecodeEncodeControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -84,6 +108,12 @@
     </Compile>
     <Compile Include="View\ElgamalControl.Designer.cs">
       <DependentUpon>ElgamalControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\EmptyEncoderControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\EmptyEncoderControl.Designer.cs">
+      <DependentUpon>EmptyEncoderControl.cs</DependentUpon>
     </Compile>
     <Compile Include="View\FinishControl.cs">
       <SubType>UserControl</SubType>
@@ -121,6 +151,9 @@
     <Compile Include="View\VigenereControl.Designer.cs">
       <DependentUpon>VigenereControl.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="EncodersCalculatorForm.resx">
+      <DependentUpon>EncodersCalculatorForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EncodersForm.resx">
       <DependentUpon>EncodersForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -140,6 +173,12 @@
     <EmbeddedResource Include="View\CaesarControl.resx">
       <DependentUpon>CaesarControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\Calculators\Base\BaseCalculatorControl.resx">
+      <DependentUpon>BaseCalculatorControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Calculators\CaesarCalculatorControl.resx">
+      <DependentUpon>CaesarCalculatorControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\DecodeEncodeControl.resx">
       <DependentUpon>DecodeEncodeControl.cs</DependentUpon>
     </EmbeddedResource>
@@ -148,6 +187,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\ElgamalControl.resx">
       <DependentUpon>ElgamalControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\EmptyEncoderControl.resx">
+      <DependentUpon>EmptyEncoderControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\FinishControl.resx">
       <DependentUpon>FinishControl.cs</DependentUpon>
@@ -201,6 +243,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\arrow-35800_960_720.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Calculator-PNG-Picture.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\terminal-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\202-2023990_free-turquoise-equal-sign-icon-flat-icon-gif-equal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\202-2023990_free-turquoise-equal-sign-icon-flat-icon-gif-equal1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
