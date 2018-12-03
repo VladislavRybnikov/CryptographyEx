@@ -38,5 +38,7 @@ namespace CryptographyEx.WinFormsUI.View.ViewTheory
                 label.Margin = new Padding(thick.Left, thick.Top, thick.Right, thick.Bottom);
             }
         }
+
+      
     }
 }
