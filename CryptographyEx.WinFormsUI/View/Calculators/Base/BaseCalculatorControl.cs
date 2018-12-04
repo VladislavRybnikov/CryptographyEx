@@ -22,6 +22,7 @@ namespace CryptographyEx.WinFormsUI.View.Calculators.Base
             InitializeComponent();
             _control = cntrl;
             _parrent = parrent;
+            label1.Text = "Шифр Цезаря";
         }
 
         private void button1_Click(object sender, EventArgs e)

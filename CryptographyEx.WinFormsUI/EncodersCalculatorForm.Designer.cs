@@ -39,17 +39,20 @@
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.AnswerLbl = new System.Windows.Forms.Label();
+            this.panel6 = new System.Windows.Forms.Panel();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
+            this.panel6.SuspendLayout();
             this.SuspendLayout();
             // 
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(339, 66);
+            this.comboBox1.Location = new System.Drawing.Point(2, 16);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(124, 21);
+            this.comboBox1.Size = new System.Drawing.Size(131, 21);
             this.comboBox1.TabIndex = 1;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // panel2
             // 
@@ -74,6 +77,7 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel3.Controls.Add(this.AnswerLbl);
             this.panel3.Location = new System.Drawing.Point(82, 28);
             this.panel3.Name = "panel3";
@@ -121,7 +125,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(350, 50);
+            this.label2.Location = new System.Drawing.Point(13, 1);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(82, 13);
             this.label2.TabIndex = 6;
@@ -145,18 +149,27 @@
             this.AnswerLbl.Size = new System.Drawing.Size(0, 18);
             this.AnswerLbl.TabIndex = 6;
             // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel6.Controls.Add(this.label2);
+            this.panel6.Controls.Add(this.comboBox1);
+            this.panel6.Location = new System.Drawing.Point(335, 47);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(135, 40);
+            this.panel6.TabIndex = 1;
+            // 
             // EncodersCalculatorForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(478, 542);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.panel6);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.panel1);
             this.Name = "EncodersCalculatorForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -166,6 +179,8 @@
             this.panel3.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -184,5 +199,6 @@
         private System.Windows.Forms.Label label3;
         public System.Windows.Forms.ListBox listBox1;
         public System.Windows.Forms.Label AnswerLbl;
+        private System.Windows.Forms.Panel panel6;
     }
 }
