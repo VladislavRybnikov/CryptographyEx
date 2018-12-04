@@ -10,11 +10,18 @@ namespace CryptographyEx.Core.Calculators
 {
     public class CaesarCalculator : IEncoderCalculator
     {
-        private int _key;
-        
+        private int _key = 5;
+        private MonoAlphabet _monoAlphabet = MonoAlphabet.ENG;
+
         public CaesarCalculator SetKey(int key)
         {
             _key = key;
+            return this;
+        }
+
+        public CaesarCalculator SetAlphabet(MonoAlphabet alphabet)
+        {
+            _monoAlphabet = alphabet;
             return this;
         }
 

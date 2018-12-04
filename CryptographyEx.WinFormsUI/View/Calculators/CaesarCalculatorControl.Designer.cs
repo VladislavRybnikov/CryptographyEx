@@ -32,6 +32,8 @@
             this.numericUpDownStep = new System.Windows.Forms.NumericUpDown();
             this.label2 = new System.Windows.Forms.Label();
             this.inputTextBox = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownStep)).BeginInit();
             this.SuspendLayout();
             // 
@@ -88,16 +90,39 @@
             this.inputTextBox.TabIndex = 17;
             this.inputTextBox.TextChanged += new System.EventHandler(this.inputTextBox_TextChanged);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.label1.Location = new System.Drawing.Point(181, 10);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(61, 16);
+            this.label1.TabIndex = 22;
+            this.label1.Text = "алфавіт";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(155, 29);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 23;
+            // 
             // CaesarCalculatorControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.upLabel);
             this.Controls.Add(this.numericUpDownStep);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.inputTextBox);
             this.Name = "CaesarCalculatorControl";
             this.Size = new System.Drawing.Size(444, 220);
+            this.Load += new System.EventHandler(this.CaesarCalculatorControl_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownStep)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -110,5 +135,7 @@
         private System.Windows.Forms.NumericUpDown numericUpDownStep;
         private System.Windows.Forms.Label label2;
         public System.Windows.Forms.TextBox inputTextBox;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
