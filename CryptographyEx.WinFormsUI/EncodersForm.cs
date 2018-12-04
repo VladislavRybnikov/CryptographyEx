@@ -12,6 +12,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -90,10 +91,21 @@ namespace CryptographyEx.WinFormsUI
 
             QuestionByTestingHolder.UpdateResult();
             _guid = Guid.NewGuid();
+            FileStream fs = null;
+
+            EncodingType enc = EncodingNameHolder.GetEncodingType
+                         ((string)comboBoxEncoding.SelectedItem);
+            fs = new FileStream($"Theory/{enc.ToString()}.txt", FileMode.Open);
+
+            using (StreamReader sr = new StreamReader(fs))
+            {
+                tbTheory.Text = sr.ReadToEnd();
+            }
             switch (EncodingNameHolder.GetEncodingType
                          ((string)comboBoxEncoding.SelectedItem))
             {
                 case EncodingType.Caesar:
+                    
                     tabPage1.Controls.Clear();
                     tabPage1.Controls.Add(new DecodeEncodeControl(this));
                     break;
@@ -111,15 +123,15 @@ namespace CryptographyEx.WinFormsUI
                     break;
             }
             tabPage3.Controls.Clear();
-            _currentquestionByTesting =  QuestionByTestingHolder.GetQuestionByTestings(EncodingNameHolder.GetEncodingType
+            _currentquestionByTesting = QuestionByTestingHolder.GetQuestionByTestings(EncodingNameHolder.GetEncodingType
                          ((string)comboBoxEncoding.SelectedItem)).FirstOrDefault(p => p.AnswerType == AnswerType.Defoult);
 
-            if(_currentquestionByTesting==null)
+            if (_currentquestionByTesting == null)
             {
                 return;
             }
 
-         
+
             tabPage3.Controls.Add(panel2);
             lbDescription.Text = _currentquestionByTesting.Description;
             lbAllQuestions.Text = QuestionByTestingHolder.GetQuestionByTestings(EncodingNameHolder.GetEncodingType
@@ -131,14 +143,14 @@ namespace CryptographyEx.WinFormsUI
             foreach (var s in _currentquestionByTesting.Questions)
             {
                 cLB.Items.Add($"{s.Key}-{s.Value}");
-            }           
-           
+            }
+
         }
 
         private void lvHistory_Click(object sender, EventArgs e)
         {
-            
-            }
+
+        }
 
         private void lvHistory_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -147,7 +159,7 @@ namespace CryptographyEx.WinFormsUI
                 ListViewItem item = lvHistory.SelectedItems[0];
                 string name = item.SubItems[0].Text;
                 tPHistory.Controls.Clear();
-                   tPHistory.Controls.Add(new HistoryCoddingControl(name, _historyPresentation,this));
+                tPHistory.Controls.Add(new HistoryCoddingControl(name, _historyPresentation, this));
             }
 
         }
@@ -162,24 +174,24 @@ namespace CryptographyEx.WinFormsUI
             catch { }
 
             int number = 1;
-                lvHistory.Items.Clear();
-                foreach (var entity in _historyPresentation.GetAllHistory())
+            lvHistory.Items.Clear();
+            foreach (var entity in _historyPresentation.GetAllHistory())
+            {
+                ListViewItem listViewItem = new ListViewItem(entity.Item1);
+                listViewItem.SubItems.Add(entity.Item2.ToString());
+
+                if (number % 2 == 1)
                 {
-                    ListViewItem listViewItem = new ListViewItem(entity.Item1);
-                    listViewItem.SubItems.Add(entity.Item2.ToString());
-
-                    if (number % 2 == 1)
-                    {
-                        listViewItem.BackColor = Color.LightBlue;
-                    }
-                    else
-                    {
-                        listViewItem.BackColor = Color.WhiteSmoke;
-                    }
-
-                    lvHistory.Items.Add(listViewItem);
-                    number++;
+                    listViewItem.BackColor = Color.LightBlue;
                 }
+                else
+                {
+                    listViewItem.BackColor = Color.WhiteSmoke;
+                }
+
+                lvHistory.Items.Add(listViewItem);
+                number++;
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -240,7 +252,7 @@ namespace CryptographyEx.WinFormsUI
                 tabPage3.Controls.Clear();
                 tabPage3.Controls.Add(new FinishControl(null, this));
                 _currentTask = 0;
-               // _currentquestionByTesting = null;
+                // _currentquestionByTesting = null;
 
                 return;
             }
@@ -261,5 +273,5 @@ namespace CryptographyEx.WinFormsUI
 
         }
     }
-    }
+}
 
