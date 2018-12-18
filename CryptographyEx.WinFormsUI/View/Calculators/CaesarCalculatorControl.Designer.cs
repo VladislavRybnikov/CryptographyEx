@@ -34,6 +34,8 @@
             this.inputTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.CalculationsTypeCmbBx = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownStep)).BeginInit();
             this.SuspendLayout();
             // 
@@ -42,12 +44,12 @@
             this.upLabel.AutoSize = true;
             this.upLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.upLabel.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.upLabel.Location = new System.Drawing.Point(143, 63);
+            this.upLabel.Location = new System.Drawing.Point(160, 63);
             this.upLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.upLabel.Name = "upLabel";
-            this.upLabel.Size = new System.Drawing.Size(146, 16);
+            this.upLabel.Size = new System.Drawing.Size(102, 16);
             this.upLabel.TabIndex = 21;
-            this.upLabel.Text = "вхідне повідомлення:";
+            this.upLabel.Text = "повідомлення:";
             // 
             // numericUpDownStep
             // 
@@ -95,7 +97,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label1.Location = new System.Drawing.Point(181, 10);
+            this.label1.Location = new System.Drawing.Point(84, 10);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(61, 16);
@@ -105,15 +107,39 @@
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(155, 29);
+            this.comboBox1.Location = new System.Drawing.Point(58, 29);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
             this.comboBox1.TabIndex = 23;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // CalculationsTypeCmbBx
+            // 
+            this.CalculationsTypeCmbBx.FormattingEnabled = true;
+            this.CalculationsTypeCmbBx.Location = new System.Drawing.Point(244, 29);
+            this.CalculationsTypeCmbBx.Name = "CalculationsTypeCmbBx";
+            this.CalculationsTypeCmbBx.Size = new System.Drawing.Size(121, 21);
+            this.CalculationsTypeCmbBx.TabIndex = 25;
+            this.CalculationsTypeCmbBx.SelectedIndexChanged += new System.EventHandler(this.CalculationsTypeCmbBx_SelectedIndexChanged);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label3.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.label3.Location = new System.Drawing.Point(262, 10);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(88, 16);
+            this.label3.TabIndex = 24;
+            this.label3.Text = "тип операції";
             // 
             // CaesarCalculatorControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.CalculationsTypeCmbBx);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.upLabel);
@@ -137,5 +163,7 @@
         public System.Windows.Forms.TextBox inputTextBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox CalculationsTypeCmbBx;
+        private System.Windows.Forms.Label label3;
     }
 }

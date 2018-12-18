@@ -7,8 +7,23 @@ namespace CryptographyEx.Core.Alphabets
 {
     public class RUMonoAlphabet : IMonoAlphabet
     {
-        public char[] Value => throw new NotImplementedException();
+        public char[] Value
+        {
+            get
+            {
+                List<char> value = new List<char>();
 
-        public int Length => throw new NotImplementedException();
+                for (int i = 'А'; i <= 'Я'; i++)
+                {
+                    value.Add((char)i);
+                }
+
+                value.Add(' ');
+
+                return value.ToArray();
+            }
+        }
+
+        public int Length => Value.Length;
     }
 }

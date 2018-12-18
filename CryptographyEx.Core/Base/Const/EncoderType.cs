@@ -4,7 +4,7 @@ using System.Text;
 
 namespace CryptographyEx.Core.Base.Const
 {
-    public enum EncodingType
+    public enum EncoderType
     {
         Caesar,
         Trithemius,

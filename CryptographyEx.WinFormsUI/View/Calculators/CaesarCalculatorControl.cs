@@ -11,14 +11,14 @@ using CryptographyEx.Core.Base.Abstract;
 using CryptographyEx.Core.Calculators;
 using CryptographyEx.Core.Base.Const;
 
+using static CryptographyEx.Core.Base.Const.StringConstants;
 namespace CryptographyEx.WinFormsUI.View.Calculators
 {
     public partial class CaesarCalculatorControl : UserControl
     {
-        private readonly IEncoderCalculator _calc;
-
         public MonoAlphabet MonoAlphabet { get; set; }
         public int Key { get; set; } = 5;
+        public CodingType CodingType { get; set; }
         public string Input { get; set; }
 
         public CaesarCalculatorControl()
@@ -38,9 +38,22 @@ namespace CryptographyEx.WinFormsUI.View.Calculators
 
         private void CaesarCalculatorControl_Load(object sender, EventArgs e)
         {
-            MonoAlphabet = MonoAlphabet.ENG;
-            comboBox1.Items.AddRange(new string[] {"ENG", "RU", "UTF16"});
+            MonoAlphabet = MonoAlphabets.Default().Alphabet;
+
+            comboBox1.Items.AddRange(MonoAlphabets.GetAllNames());
+            CalculationsTypeCmbBx.Items.AddRange(CodingTypes.GetAllNames());
             comboBox1.SelectedIndex = 0;
+            CalculationsTypeCmbBx.SelectedIndex = 0;
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            MonoAlphabet = MonoAlphabets.GetMonoAlphabet(comboBox1.Text);
+        }
+
+        private void CalculationsTypeCmbBx_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            CodingType = CodingTypes.GetCodingType(CalculationsTypeCmbBx.Text);
         }
     }
 }

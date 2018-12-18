@@ -9,7 +9,7 @@ namespace CryptographyEx.Theory.Entity
 {
     public class TheoryEntity
     {
-        public EncodingType EncodingType { get; set; }
+        public EncoderType EncodingType { get; set; }
 
         public TheoryTextEntity Title { get; set; }
 

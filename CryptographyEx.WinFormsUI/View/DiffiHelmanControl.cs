@@ -44,7 +44,7 @@ namespace CryptographyEx.WinFormsUI.View
         {
 
             lbAllQuestions.Text = EncodingNameHolder.GetCountByTest
-                (EncodingType.DiffiHelman).ToString();
+                (EncoderType.DiffiHelman).ToString();
         btnCheck.Visible = true;
             btnNext.Visible = false;
 
@@ -54,7 +54,7 @@ namespace CryptographyEx.WinFormsUI.View
     private void InitQuestion()
     {
         if (_countQuestion >= EncodingNameHolder.GetCountByTest
-            (EncodingType.DiffiHelman))
+            (EncoderType.DiffiHelman))
         {
                 _encodersForm.tabPage1.Controls.Remove(this);
 
@@ -62,7 +62,7 @@ namespace CryptographyEx.WinFormsUI.View
             }
             IDiffiHelmanQuestion diffiHelmanQuestion = (IDiffiHelmanQuestion
                 )_mainPresentation.GenerateQuestion
-                    (CodingType.Decoding, EncodingType.DiffiHelman);
+                    (CodingType.Decoding, EncoderType.DiffiHelman);
             tbN.Text = diffiHelmanQuestion.N.ToString();
             tbG.Text = diffiHelmanQuestion.Q.ToString();
             tbX.Text = diffiHelmanQuestion.X.ToString();
@@ -91,7 +91,7 @@ namespace CryptographyEx.WinFormsUI.View
                     Answer = tbKey.Text
                 },
                 CodingType = CodingType.Decoding,
-                EncodingType = EncodingType.DiffiHelman
+                EncodingType = EncoderType.DiffiHelman
             }, MonoAlphabet.ENG, PolyAlphabet.Default,
             Convert.ToInt32(tbN.Text), Convert.ToInt32(tbG.Text),
             new List<int> (){ Convert.ToInt32(tbX.Text),
@@ -107,7 +107,7 @@ namespace CryptographyEx.WinFormsUI.View
                 CodingType = CodingType.Decoding,
                 CorrectAnswer = answerType.Item2,
                 Answer = tbKey.Text,
-                Name = EncodingNameHolder.GetNameByType(EncodingType.DiffiHelman),
+                Name = EncodingNameHolder.GetNameByType(EncoderType.DiffiHelman),
                 GuidId = _guid,
                 Mark = AnswerType.Correct == answerType.Item1 ? 1 : 0,
             });

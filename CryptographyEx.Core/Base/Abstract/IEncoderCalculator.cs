@@ -7,6 +7,7 @@ namespace CryptographyEx.Core.Base.Abstract
 {
     public interface IEncoderCalculator
     {
+        
         CalculationResult Calculate(string input);
     }
 }

@@ -7,6 +7,6 @@ namespace CryptographyEx.Core.Base.Abstract
 {
     public interface IEncoderFactory
     {
-        IAlphabetEncoder CreateEncoder(EncodingType encoding);
+        IAlphabetEncoder CreateEncoder(EncoderType encoding);
     }
 }

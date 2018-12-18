@@ -1,10 +1,12 @@
 ﻿using CryptographyEx.Core.Alphabets;
+using CryptographyEx.Core.Base;
 using CryptographyEx.Core.Base.Abstract;
 using CryptographyEx.Core.Base.Const;
 using CryptographyEx.Core.Entities;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using static CryptographyEx.Core.Base.Const.StringConstants;
 
 namespace CryptographyEx.Core.Calculators
 {
@@ -12,6 +14,7 @@ namespace CryptographyEx.Core.Calculators
     {
         private int _key = 5;
         private MonoAlphabet _monoAlphabet = MonoAlphabet.ENG;
+        private CodingType _codingType;
 
         public CaesarCalculator SetKey(int key)
         {
@@ -25,31 +28,26 @@ namespace CryptographyEx.Core.Calculators
             return this;
         }
 
+        public CaesarCalculator SetCodingType(CodingType type)
+        {
+            _codingType = type;
+            return this;
+        }
+
         public CalculationResult Calculate(string input)
         {
+            var result = CalculationResult.StartCalculations
+                (input, _monoAlphabet, EncoderType.Caesar, _codingType, out IMonoAlphabet alpha);
             
-            var result = new CalculationResult();
-            result.CalculationsPipeline.Add("  --  ");
-
-            result.CalculationsPipeline.Add("Початок обчислень...");
-            result.CalculationsPipeline.Add("Тип шифрування: Шифр Цезаря");
-
-            var Eng = Alphabet.CreateMono(MonoAlphabet.ENG);
-            result.CalculationsPipeline.Add("Задамо моно алфавіт: Eng");
-            result.CalculationsPipeline.Add($"Повідомлення: {input}");
-
             IAlphabetEncoder caesar = EncoderFactory
-                .CreateEncoder(EncodingType.Caesar)
-                .SetMonoAlphabet(Eng)
+                .CreateEncoder(EncoderType.Caesar)
+                .SetMonoAlphabet(alpha)
                 .Configure(_key);
-            result.CalculationsPipeline.Add($"Створимо алгоритм шифрування для ключа: {_key}");
-            result.CalculationsPipeline.Add("...");
+            
+            var output = _codingType == CodingType.Encoding 
+                ? caesar.Encode(input) : caesar.Decode(input);
 
-            result.Encoded = caesar.Encode(input);
-            result.CalculationsPipeline.Add($"Результат обчислень: {result.Encoded}.");
-            result.CalculationsPipeline.Add("");
-
-            return result;
+            return result.WithKey(_key.ToString()).EndCalculations(output);
         }
     }
 }

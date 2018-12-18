@@ -8,11 +8,11 @@ namespace CryptographyEx.Core.Holder
 {
     public static class QuestionByTestingHolder
     {
-        public static Dictionary<EncodingType, List<QuestionByTesting>> Testings { get; set; }
+        public static Dictionary<EncoderType, List<QuestionByTesting>> Testings { get; set; }
 
         static QuestionByTestingHolder()
         {
-            Testings = new Dictionary<EncodingType, List<QuestionByTesting>>();
+            Testings = new Dictionary<EncoderType, List<QuestionByTesting>>();
             Init();
         }
 
@@ -24,7 +24,7 @@ namespace CryptographyEx.Core.Holder
             }
         }
 
-        public static List<QuestionByTesting> GetQuestionByTestings(EncodingType encodingType)
+        public static List<QuestionByTesting> GetQuestionByTestings(EncoderType encodingType)
         {
             if(Testings.ContainsKey(encodingType))
             {
@@ -39,21 +39,21 @@ namespace CryptographyEx.Core.Holder
             List<QuestionByTesting> questionByTestings =
               GetQuestinByCaesar();
 
-            Testings.Add(EncodingType.Caesar, questionByTestings);
+            Testings.Add(EncoderType.Caesar, questionByTestings);
 
             List<QuestionByTesting> questionByTr =
             GetQuestinByTrithemius();
 
-            Testings.Add(EncodingType.Trithemius, questionByTestings);
+            Testings.Add(EncoderType.Trithemius, questionByTestings);
 
             List<QuestionByTesting> questinByDiffiHelman
                 = GetQuestinByDiffiHelman();
-            Testings.Add(EncodingType.DiffiHelman, questinByDiffiHelman);
+            Testings.Add(EncoderType.DiffiHelman, questinByDiffiHelman);
 
             
             List<QuestionByTesting> questionByTestingsElgamal =
                 GetQuestinByElgamal();
-            Testings.Add(EncodingType.Elgamal, questionByTestingsElgamal);
+            Testings.Add(EncoderType.Elgamal, questionByTestingsElgamal);
             
             
 
@@ -72,7 +72,7 @@ namespace CryptographyEx.Core.Holder
                     {3,"Для генерації псевдовипадкових чисел" }
                 },
                 Answer = 2,
-                EncodingType = EncodingType.Elgamal,
+                EncodingType = EncoderType.Elgamal,
                 AnswerType = AnswerType.Defoult
             });
             questionByTestings.Add(new QuestionByTesting()
@@ -85,7 +85,7 @@ namespace CryptographyEx.Core.Holder
                     {3,"Для шифрування і дешифрування текстів" }
                 },
                 Answer = 3,
-                EncodingType = EncodingType.Elgamal,
+                EncodingType = EncoderType.Elgamal,
                 AnswerType = AnswerType.Defoult
             });
 
@@ -99,7 +99,7 @@ namespace CryptographyEx.Core.Holder
                     {3,"P (0<P<a)" }
                 },
                 Answer = 1,
-                EncodingType = EncodingType.Elgamal,
+                EncodingType = EncoderType.Elgamal,
                 AnswerType = AnswerType.Defoult
             });
 
@@ -114,7 +114,7 @@ namespace CryptographyEx.Core.Holder
                     {3,"g^(ln xy)mod n" }
                 },
                 Answer = 2,
-                EncodingType = EncodingType.Elgamal,
+                EncodingType = EncoderType.Elgamal,
                 AnswerType = AnswerType.Defoult
             });
             questionByTestings.Add(new QuestionByTesting()
@@ -128,7 +128,7 @@ namespace CryptographyEx.Core.Holder
                     {3,"g^(ln xy)mod n" }
                 },
                 Answer = 2,
-                EncodingType = EncodingType.Elgamal,
+                EncodingType = EncoderType.Elgamal,
                 AnswerType = AnswerType.Defoult
             });
 
@@ -150,7 +150,7 @@ namespace CryptographyEx.Core.Holder
                     {3, "передстановка букв повідомлення по будь-якому правилу" }
                 },
                 Answer = 2,
-                EncodingType = EncodingType.Caesar,
+                EncodingType = EncoderType.Caesar,
                 AnswerType = AnswerType.Defoult
             });
 
@@ -164,7 +164,7 @@ namespace CryptographyEx.Core.Holder
                     {3, "постійне" }
                 },
                   Answer = 3,
-                  EncodingType = EncodingType.Caesar,
+                  EncodingType = EncoderType.Caesar,
                   AnswerType = AnswerType.Defoult
               }
             );
@@ -188,7 +188,7 @@ namespace CryptographyEx.Core.Holder
 
                 },
                 Answer = 1,
-                EncodingType = EncodingType.Trithemius,
+                EncodingType = EncoderType.Trithemius,
                 AnswerType = AnswerType.Defoult
                 
             });
@@ -203,7 +203,7 @@ namespace CryptographyEx.Core.Holder
 
                 },
                 Answer = 2,
-                EncodingType = EncodingType.Trithemius,
+                EncodingType = EncoderType.Trithemius,
                 AnswerType = AnswerType.Defoult
 
             });
@@ -218,7 +218,7 @@ namespace CryptographyEx.Core.Holder
 
                 },
                 Answer = 3,
-                EncodingType = EncodingType.Trithemius,
+                EncodingType = EncoderType.Trithemius,
                 AnswerType = AnswerType.Defoult
 
             });
@@ -233,7 +233,7 @@ namespace CryptographyEx.Core.Holder
 
                 },
                 Answer = 2,
-                EncodingType = EncodingType.Trithemius,
+                EncodingType = EncoderType.Trithemius,
                 AnswerType = AnswerType.Defoult
 
             });
@@ -248,7 +248,7 @@ namespace CryptographyEx.Core.Holder
 
                 },
                 Answer = 1,
-                EncodingType = EncodingType.Trithemius,
+                EncodingType = EncoderType.Trithemius,
                 AnswerType = AnswerType.Defoult
 
             });
@@ -263,7 +263,7 @@ namespace CryptographyEx.Core.Holder
 
                 },
                 Answer = 1,
-                EncodingType = EncodingType.Trithemius,
+                EncodingType = EncoderType.Trithemius,
                 AnswerType = AnswerType.Defoult
 
             });
@@ -278,7 +278,7 @@ namespace CryptographyEx.Core.Holder
 
                 },
                 Answer = 1,
-                EncodingType = EncodingType.Trithemius,
+                EncodingType = EncoderType.Trithemius,
                 AnswerType = AnswerType.Defoult
 
             });
@@ -293,7 +293,7 @@ namespace CryptographyEx.Core.Holder
 
                 },
                 Answer = 1,
-                EncodingType = EncodingType.Trithemius,
+                EncodingType = EncoderType.Trithemius,
                 AnswerType = AnswerType.Defoult
 
             });
@@ -317,7 +317,7 @@ namespace CryptographyEx.Core.Holder
                     {3,"Два варіанти" }
                 },
                 Answer = 2,
-                EncodingType = EncodingType.DiffiHelman,
+                EncodingType = EncoderType.DiffiHelman,
                 AnswerType = AnswerType.Defoult
             });
             questionByTestings.Add(new QuestionByTesting()
@@ -330,7 +330,7 @@ namespace CryptographyEx.Core.Holder
                     {3,"Можливі два варіанти" }
                 },
                 Answer = 2,
-                EncodingType = EncodingType.DiffiHelman,
+                EncodingType = EncoderType.DiffiHelman,
                 AnswerType = AnswerType.Defoult
             });
             questionByTestings.Add(new QuestionByTesting()
@@ -343,7 +343,7 @@ namespace CryptographyEx.Core.Holder
                     {3,"Тільки великі прості числа" }
                 },
                 Answer = 1,
-                EncodingType = EncodingType.DiffiHelman,
+                EncodingType = EncoderType.DiffiHelman,
                 AnswerType = AnswerType.Defoult
             });
             questionByTestings.Add(new QuestionByTesting()
@@ -356,7 +356,7 @@ namespace CryptographyEx.Core.Holder
                     {3,"n" }
                 },
                 Answer = 3,
-                EncodingType = EncodingType.DiffiHelman,
+                EncodingType = EncoderType.DiffiHelman,
                 AnswerType = AnswerType.Defoult
             });
             questionByTestings.Add(new QuestionByTesting()
@@ -369,7 +369,7 @@ namespace CryptographyEx.Core.Holder
                     {3,"Два варіанти" }
                 },
                 Answer = 3,
-                EncodingType = EncodingType.DiffiHelman,
+                EncodingType = EncoderType.DiffiHelman,
                 AnswerType = AnswerType.Defoult
             });
 

@@ -42,7 +42,7 @@ namespace CryptographyEx.WinFormsUI.View
         private void Init()
         {
             lbAllQuestions.Text = EncodingNameHolder.GetCountByTest
-                (EncodingType.Elgamal).ToString();
+                (EncoderType.Elgamal).ToString();
             btnCheck.Visible = true;
             button1.Visible = false;
 
@@ -52,7 +52,7 @@ namespace CryptographyEx.WinFormsUI.View
         private void InitQuestion()
         {
             if (_countQuestion >= EncodingNameHolder.GetCountByTest
-                (EncodingType.Elgamal))
+                (EncoderType.Elgamal))
             {
                 _encodersForm.panelQuestion.Controls.Remove(this);
 
@@ -61,7 +61,7 @@ namespace CryptographyEx.WinFormsUI.View
 
             IElgamalQuestion elgamalQuestion =(IElgamalQuestion)_mainPresentation
                 .GenerateQuestion
-                (_codingType, EncodingType.Elgamal);
+                (_codingType, EncoderType.Elgamal);
 
             tbA.Text = elgamalQuestion.A.ToString();
             tbP.Text = elgamalQuestion.P.ToString();
@@ -124,7 +124,7 @@ namespace CryptographyEx.WinFormsUI.View
                     Answer = answer
                 },
                 CodingType = _codingType,
-                EncodingType = EncodingType.Elgamal
+                EncodingType = EncoderType.Elgamal
             },MonoAlphabet.ENG, PolyAlphabet.Default,
             Convert.ToInt32(tbP.Text), Convert.ToInt32(tbA.Text),
             Convert.ToInt32(tbB.Text),
@@ -139,7 +139,7 @@ namespace CryptographyEx.WinFormsUI.View
                 CodingType = _codingType,
                 CorrectAnswer = answerType.Item2,
                 Answer = answer,
-                Name = EncodingNameHolder.GetNameByType(EncodingType.Elgamal),
+                Name = EncodingNameHolder.GetNameByType(EncoderType.Elgamal),
                 GuidId = _guid,
                 Mark = AnswerType.Correct == answerType.Item1 ? 1 : 0,
                 Question = descript

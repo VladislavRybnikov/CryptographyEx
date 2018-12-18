@@ -103,9 +103,39 @@ namespace CryptographyEx.WinFormsUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap assessment_clipart_summative_assessment_2 {
+            get {
+                object obj = ResourceManager.GetObject("assessment-clipart-summative-assessment-2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Calculator_PNG_Picture {
             get {
                 object obj = ResourceManager.GetObject("Calculator-PNG-Picture", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cryptography_png_8 {
+            get {
+                object obj = ResourceManager.GetObject("cryptography-png-8", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap function_png_4 {
+            get {
+                object obj = ResourceManager.GetObject("function-png-4", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -126,6 +156,28 @@ namespace CryptographyEx.WinFormsUI.Properties {
         internal static System.Drawing.Bitmap key_icon_0 {
             get {
                 object obj = ResourceManager.GetObject("key-icon-0", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap kisspng_search_engine_optimization_pay_per_click_digital_m_marketing_5ab9180be56b49_1900141615220797559397 {
+            get {
+                object obj = ResourceManager.GetObject("kisspng-search-engine-optimization-pay-per-click-digital-m-marketing-5ab9180be56b" +
+                        "49.1900141615220797559397", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap kisspng_test_sat_university_education_student_checklist_5ace5bd3ae7d08_4334855215234733637147 {
+            get {
+                object obj = ResourceManager.GetObject("kisspng-test-sat-university-education-student-checklist-5ace5bd3ae7d08.4334855215" +
+                        "234733637147", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

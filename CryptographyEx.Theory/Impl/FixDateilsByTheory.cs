@@ -24,7 +24,7 @@ namespace CryptographyEx.Theory.Impl
             throw new NotImplementedException();
         }
 
-        public DataResult<TheoryEntity> GetTheory(EncodingType encodingType)
+        public DataResult<TheoryEntity> GetTheory(EncoderType encodingType)
         {
             DataResult<TheoryEntity> methodResult = new DataResult<TheoryEntity>();
 

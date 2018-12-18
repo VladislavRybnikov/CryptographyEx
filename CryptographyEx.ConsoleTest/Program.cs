@@ -15,28 +15,28 @@ namespace CryptographyEx.ConsoleTest
     {
         static void Main(string[] args)
         {
-            var ENG_ALPHA = Alphabet.CreateMono(MonoAlphabet.ENG);
-            var UTF16 = Alphabet.CreateMono(MonoAlphabet.UTF16);
+            var ENG_ALPHA = Alphabet.GetMono(MonoAlphabet.ENG);
+            var UTF16 = Alphabet.GetMono(MonoAlphabet.UTF16);
 
             IAlphabetEncoder caesar = EncoderFactory
-                .CreateEncoder(EncodingType.Caesar)
+                .CreateEncoder(EncoderType.Caesar)
                 .SetMonoAlphabet(UTF16)
                 .Configure(1);
 
             IAlphabetEncoder trithemius = EncoderFactory
-                .CreateEncoder(EncodingType.Trithemius)
+                .CreateEncoder(EncoderType.Trithemius)
                 .SetMonoAlphabet(ENG_ALPHA)
                 .Configure(2, new Func<int, int>(x => x + 1));
 
             IAlphabetEncoder vigener = EncoderFactory
-                .CreateEncoder(EncodingType.Vigenere)
+                .CreateEncoder(EncoderType.Vigenere)
                 .Configure("Lemon");
 
             IAlphabetEncoder diffiHelman = EncoderFactory
-                .CreateEncoder(EncodingType.DiffiHelman)
+                .CreateEncoder(EncoderType.DiffiHelman)
                 .Configure(5,23,new List<int>() {23,43 });
             IAlphabetEncoder elgamal = EncoderFactory
-             .CreateEncoder(EncodingType.Elgamal)
+             .CreateEncoder(EncoderType.Elgamal)
              .Configure(11, 2,8,9); 
 
             IBitEncoder des = EncoderFactory

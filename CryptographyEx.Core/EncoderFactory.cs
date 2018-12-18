@@ -21,24 +21,24 @@ namespace CryptographyEx.Core
             throw new Exception("Not implemented encoding.");
         }
 
-        public static IAlphabetEncoder CreateEncoder(EncodingType encoding)
+        public static IAlphabetEncoder CreateEncoder(EncoderType encoding)
             {
             switch (encoding)
             {
-                case EncodingType.Caesar:
+                case EncoderType.Caesar:
                     return new CaesarEncoder();
 
-                case EncodingType.Trithemius:
+                case EncoderType.Trithemius:
                     return new TrithemiusEncoder();
 
-                case EncodingType.Stierlitz:
+                case EncoderType.Stierlitz:
                     return new StierlitzEncoder();
 
-                case EncodingType.Vigenere:
+                case EncoderType.Vigenere:
                     return new VigenereEncoder();
-                case EncodingType.DiffiHelman:
+                case EncoderType.DiffiHelman:
                     return new DiffiHelmanEncoder();    
-                case EncodingType.Elgamal:
+                case EncoderType.Elgamal:
                     return new ElgamalEncoder();
             }
 

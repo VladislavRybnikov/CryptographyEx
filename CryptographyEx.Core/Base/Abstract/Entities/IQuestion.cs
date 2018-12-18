@@ -15,7 +15,7 @@ namespace CryptographyEx.Core.Base.Abstract.Entities
 
         CodingType CodingType { get; set; }
 
-        EncodingType EncodingType { get; set; }
+        EncoderType EncodingType { get; set; }
     }
 
 

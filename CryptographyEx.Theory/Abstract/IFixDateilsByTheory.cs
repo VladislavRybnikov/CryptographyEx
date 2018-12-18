@@ -12,6 +12,6 @@ namespace CryptographyEx.Theory.Abstract
     public interface IFixDateilsByTheory
     {
         Result FixTheory(TheorysByCript theorysBy);
-        DataResult<TheoryEntity> GetTheory(EncodingType encodingType);
+        DataResult<TheoryEntity> GetTheory(EncoderType encodingType);
     }
 }

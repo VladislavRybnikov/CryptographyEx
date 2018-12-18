@@ -15,7 +15,7 @@ namespace CryptographyEx.Core.Presentation
     {
         private static Random _random { get; set; } =new Random();
 
-        public IQuestionValue GenerateQuestion(CodingType codingType, EncodingType encodingType)
+        public IQuestionValue GenerateQuestion(CodingType codingType, EncoderType encodingType)
         {
             IQuestionValue value = new QuestionValue();
 
@@ -25,7 +25,7 @@ namespace CryptographyEx.Core.Presentation
 
             switch (encodingType)
             {
-                case EncodingType.Caesar:
+                case EncoderType.Caesar:
 
                     for (int i = 0; i <= countNumber; i++)
                     {
@@ -36,7 +36,7 @@ namespace CryptographyEx.Core.Presentation
                     value.Description =  question.ToString();
                     break;
 
-                case EncodingType.Vigenere:
+                case EncoderType.Vigenere:
                     for (int i = 0; i <= countNumber; i++)
                     {
                         char symbol = (char)_random.Next(65, 91);
@@ -46,7 +46,7 @@ namespace CryptographyEx.Core.Presentation
                     value.Description =  question.ToString();
                     break;
 
-                case EncodingType.DiffiHelman:
+                case EncoderType.DiffiHelman:
                     value = new DiffiHelmanQuestion();
                     IDiffiHelmanQuestion diffiHelman = (IDiffiHelmanQuestion)value;
                      primes = GetPrimes(203);
@@ -57,7 +57,7 @@ namespace CryptographyEx.Core.Presentation
                     diffiHelman.Y = _random.Next(11, 100);
                     value = diffiHelman;
                     break;
-                case EncodingType.Elgamal:
+                case EncoderType.Elgamal:
                     primes = GetPrimes(203);
                     value = new ElgamalQuestion();
                     IElgamalQuestion elgmal = (IElgamalQuestion)value;
@@ -89,7 +89,7 @@ namespace CryptographyEx.Core.Presentation
         {
             IAlphabetEncoder encoder = EncoderFactory
                       .CreateEncoder(currentQuestion.EncodingType)
-                      .SetMonoAlphabet(Alphabet.CreateMono(mono))
+                      .SetMonoAlphabet(Alphabet.GetMono(mono))
                       .Configure(args);
             string answer = String.Empty;
 

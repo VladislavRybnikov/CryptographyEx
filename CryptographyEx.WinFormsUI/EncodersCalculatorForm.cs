@@ -1,4 +1,5 @@
-﻿using CryptographyEx.WinFormsUI.Holders;
+﻿using CryptographyEx.Core.Base.Const;
+using CryptographyEx.WinFormsUI.Holders;
 using CryptographyEx.WinFormsUI.View.Calculators;
 using CryptographyEx.WinFormsUI.View.Calculators.Base;
 using System;
@@ -33,16 +34,35 @@ namespace CryptographyEx.WinFormsUI
 
         private void EncodersCalculatorForm_Load(object sender, EventArgs e)
         {
-            var caesrCntrl = new CaesarCalculatorControl();
-            var baseCntrl = new BaseCalculatorControl(caesrCntrl, this);
-            baseCntrl.panel1.Controls.Add(caesrCntrl);
+            ChangeEncoder();
+        }
+
+        private void ChangeEncoder()
+        {
+            panel2.Controls.Clear();
+            UserControl cntrl = null;
+            var type = EncodingTypes.GetEncodingType(comboBox1.Text);
+
+            switch (type)
+            {
+                case EncoderType.Caesar:
+                    cntrl = new CaesarCalculatorControl();
+                    break;
+                case EncoderType.Trithemius:
+                    cntrl = new TrithemiusCalculatorControl();
+                    break;
+
+            }
+
+            var baseCntrl = new BaseCalculatorControl(cntrl, this, type);
+            baseCntrl.panel1.Controls.Add(cntrl);
 
             panel2.Controls.Add(baseCntrl);
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            ChangeEncoder();
         }
     }
 }

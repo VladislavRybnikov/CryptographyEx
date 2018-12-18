@@ -45,7 +45,7 @@ namespace CryptographyEx.WinFormsUI.View
             string valueConfig = "2394287410";
             lbKey.Text = valueConfig;
             lbAllQuestions.Text = EncodingNameHolder.GetCountByTest
-                (EncodingType.Vigenere).ToString();
+                (EncoderType.Vigenere).ToString();
             btnCheck.Visible = true;
             btnNext.Visible = false;
 
@@ -55,7 +55,7 @@ namespace CryptographyEx.WinFormsUI.View
         private void InitQuestion()
         {
             if (_countQuestion >= EncodingNameHolder.GetCountByTest
-                (EncodingType.Vigenere))
+                (EncoderType.Vigenere))
             {
                 _encodersForm.panelQuestion.Controls.Remove(this);
 
@@ -63,7 +63,7 @@ namespace CryptographyEx.WinFormsUI.View
             }
 
             lbDescription.Text = _mainPresentation.GenerateQuestion
-                (_codingType, EncodingType.Vigenere).Description;
+                (_codingType, EncoderType.Vigenere).Description;
 
             tbAnswer.Text = string.Empty;
             _countQuestion++;
@@ -104,7 +104,7 @@ namespace CryptographyEx.WinFormsUI.View
                     Answer = tbAnswer.Text
                 },
                 CodingType = _codingType,
-                EncodingType = EncodingType.Vigenere
+                EncodingType = EncoderType.Vigenere
             },
             MonoAlphabet.ENG,
             PolyAlphabet.Default,
@@ -121,7 +121,7 @@ namespace CryptographyEx.WinFormsUI.View
                 CodingType = _codingType,
                 CorrectAnswer = answerType.Item2,
                 Answer = tbAnswer.Text,
-                Name = EncodingNameHolder.GetNameByType(EncodingType.Vigenere),
+                Name = EncodingNameHolder.GetNameByType(EncoderType.Vigenere),
                 GuidId = _guid,
                 Mark = AnswerType.Correct == answerType.Item1 ? 1 : 0,
                 Question = lbDescription.Text

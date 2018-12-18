@@ -12,7 +12,7 @@ namespace CryptographyEx.Core.Entities
        public IAnswerValue Answer { get; set; }
 
        public CodingType CodingType { get; set; }
-       public EncodingType EncodingType { get; set; }
+       public EncoderType EncodingType { get; set; }
     }
 
     public class QuestionByTesting
@@ -26,7 +26,7 @@ namespace CryptographyEx.Core.Entities
 
         public AnswerType AnswerType { get; set; }
 
-        public EncodingType EncodingType { get; set; }
+        public EncoderType EncodingType { get; set; }
     }
 
     public class QuestionValue : IQuestionValue

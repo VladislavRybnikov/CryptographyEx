@@ -93,7 +93,7 @@ namespace CryptographyEx.WinFormsUI
             _guid = Guid.NewGuid();
             FileStream fs = null;
 
-            EncodingType enc = EncodingNameHolder.GetEncodingType
+            EncoderType enc = EncodingNameHolder.GetEncodingType
                          ((string)comboBoxEncoding.SelectedItem);
             fs = new FileStream($"Theory/{enc.ToString()}.txt", FileMode.Open);
 
@@ -104,16 +104,16 @@ namespace CryptographyEx.WinFormsUI
             switch (EncodingNameHolder.GetEncodingType
                          ((string)comboBoxEncoding.SelectedItem))
             {
-                case EncodingType.Caesar:
+                case EncoderType.Caesar:
                     
                     tabPage1.Controls.Clear();
                     tabPage1.Controls.Add(new DecodeEncodeControl(this));
                     break;
-                case EncodingType.Vigenere:
+                case EncoderType.Vigenere:
                     tabPage1.Controls.Clear();
                     tabPage1.Controls.Add(new DecodeEncodeControl(this));
                     break;
-                case EncodingType.DiffiHelman:
+                case EncoderType.DiffiHelman:
                     tabPage1.Controls.Clear();
                     tabPage1.Controls.Add(new DiffiHelmanControl(this));
                     break;
@@ -269,6 +269,11 @@ namespace CryptographyEx.WinFormsUI
         }
 
         private void yearLbl_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
         {
 
         }

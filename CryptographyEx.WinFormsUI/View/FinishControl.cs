@@ -21,5 +21,7 @@ namespace CryptographyEx.WinFormsUI.View
             _encodersForm = encodersForm;
             InitializeComponent();
         }
+
+        
     }
 }

@@ -45,13 +45,13 @@ namespace CryptographyEx.WinFormsUI.View
                            ((string)_encodersForm.comboBoxEncoding.SelectedItem))
             {
 
-                case EncodingType.Caesar:
+                case EncoderType.Caesar:
                     panelQuestion.Controls.Add(new CaesarControl(codingType, this));
                     break;
-                case EncodingType.Vigenere:
+                case EncoderType.Vigenere:
                     panelQuestion.Controls.Add(new VigenereControl(codingType, this));
                     break;
-                case EncodingType.Elgamal:
+                case EncoderType.Elgamal:
                     panelQuestion.Controls.Add(new ElgamalControl(codingType, this));
                     break;
             }

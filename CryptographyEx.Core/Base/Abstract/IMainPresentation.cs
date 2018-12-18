@@ -15,6 +15,6 @@ namespace CryptographyEx.Core.Base.Abstract
             PolyAlphabet poly,
             params object[] args);
 
-        IQuestionValue GenerateQuestion(CodingType codingType, EncodingType encodingType);
+        IQuestionValue GenerateQuestion(CodingType codingType, EncoderType encodingType);
     }
 }
