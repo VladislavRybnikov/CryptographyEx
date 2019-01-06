@@ -27,13 +27,10 @@ namespace CryptographyEx.Core
             {
                 case EncoderType.Caesar:
                     return new CaesarEncoder();
-
                 case EncoderType.Trithemius:
                     return new TrithemiusEncoder();
-
                 case EncoderType.Stierlitz:
                     return new StierlitzEncoder();
-
                 case EncoderType.Vigenere:
                     return new VigenereEncoder();
                 case EncoderType.DiffiHelman:

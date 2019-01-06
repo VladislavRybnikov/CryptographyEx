@@ -38,9 +38,9 @@ namespace CryptographyEx.Core.Calculators
             return this;
         }
 
-        public TrithemiusCalculator SetMappingFunction(MapFunction<int> transformation)
+        public TrithemiusCalculator SetMapFunction(MapFunction<int> map)
         {
-            _map = transformation;
+            _map = map;
             return this;
         }
 

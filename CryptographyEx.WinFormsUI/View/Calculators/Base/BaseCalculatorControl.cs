@@ -51,7 +51,7 @@ namespace CryptographyEx.WinFormsUI.View.Calculators.Base
 
                     (calc as TrithemiusCalculator).SetCodingType(tritemiusCntrl.CodingType)
                         .SetKey(tritemiusCntrl.Key)
-                        .SetMappingFunction(tritemiusCntrl.MappingFunctionAsString)
+                        .SetMapFunction(tritemiusCntrl.MappingFunctionAsString)
                         .SetAlphabet(tritemiusCntrl.MonoAlphabet);
 
                     input = tritemiusCntrl.Input;
