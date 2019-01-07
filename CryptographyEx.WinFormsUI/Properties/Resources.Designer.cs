@@ -93,6 +93,16 @@ namespace CryptographyEx.WinFormsUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap answer_right_png_8 {
+            get {
+                object obj = ResourceManager.GetObject("answer-right-png-8", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap arrow_35800_960_720 {
             get {
                 object obj = ResourceManager.GetObject("arrow-35800_960_720", resourceCulture);
@@ -188,6 +198,16 @@ namespace CryptographyEx.WinFormsUI.Properties {
         internal static System.Drawing.Bitmap terminal_512 {
             get {
                 object obj = ResourceManager.GetObject("terminal-512", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Yes_Check_Circle_svg {
+            get {
+                object obj = ResourceManager.GetObject("Yes_Check_Circle.svg", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

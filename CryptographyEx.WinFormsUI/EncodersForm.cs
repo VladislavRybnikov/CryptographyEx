@@ -26,6 +26,9 @@ namespace CryptographyEx.WinFormsUI
         private QuestionByTesting _currentquestionByTesting;
         private int _currentTask;
         private Guid _guid;
+
+        private Control _encodingControl;
+
         public EncodersForm()
         {
             InitializeComponent();
@@ -38,6 +41,8 @@ namespace CryptographyEx.WinFormsUI
             Init();
             var year = DateTime.Now.Year;
             yearLbl.Text = year.ToString();
+            Load += ChangeSize;
+            tabControl1.Click += ChangeSize;
         }
 
         private void Init()
@@ -80,9 +85,58 @@ namespace CryptographyEx.WinFormsUI
             tabControl1.Width = splitContainer1.Panel2.Width - 10;
             tabControl1.Height = splitContainer1.Panel2.Height - 10;
 
-            encodersLabel.Location = new Point(
-                (splitContainer1.Panel1.Width / 2) - encodersLabel.Width / 2,
-                encodersLabel.Location.Y);
+            void SetLocationCentred(Control container, Control element) 
+                => element.Location = new Point((container.Width / 2) - element.Width / 2, 
+                element.Location.Y);
+            void SetLocationRight(Control container, Control element) 
+                => element.Location = new Point(container.Width - element.Width - 10, element.Location.Y);
+
+            void SetControlLocationWithXY(Control element, int x, int y) => element.Location = new Point(x, y);
+            void SetPanel1ControlLocationWithY(Control element, int y)
+                => SetControlLocationWithXY(element, (splitContainer1.Panel1.Width / 2) - element.Width / 2, y);
+            void SetPanel2ControlLocationWithY(Control element, int y)
+                => SetControlLocationWithXY(element, (splitContainer1.Panel2.Width / 2) - element.Width / 2, y);
+
+            void SetPanel1ControlLocation(Control element) => SetPanel1ControlLocationWithY(element, element.Location.Y);
+            void SetPanel2ControlLocation(Control element) => SetPanel2ControlLocationWithY(element, element.Location.Y);
+
+            void SetControlSize(Control element, int width, int height) => element.Size = new Size(width, height);
+
+            SetPanel1ControlLocation(encodersLabel);
+            SetPanel1ControlLocation(panel4);
+            SetPanel1ControlLocation(panel1);
+            SetPanel1ControlLocation(panel10);
+
+            SetPanel1ControlLocationWithY(panel3, splitContainer1.Panel1.Height - 150);
+            SetPanel1ControlLocationWithY(lbNameEncoder, splitContainer1.Panel1.Height - 120 - panel3.Height);
+
+            SetControlLocationWithXY(_encodingControl, (int)((splitContainer1.Panel2.Width - _encodingControl.Width)/ 2 * 0.9) - 8,Height / 45);
+            
+            SetPanel2ControlLocation(panel9);
+
+            SetControlSize(tbTheory, splitContainer1.Panel2.Width - 30, Height - 150);
+            SetControlLocationWithXY(tbTheory, splitContainer1.Panel2.Width / 2 - tbTheory.Width / 2 - 10, tbTheory.Location.Y);
+            SetControlSize(panel9, tbTheory.Width, panel9.Height);
+            SetControlLocationWithXY(panel9, tbTheory.Location.X, panel9.Location.Y);
+            SetLocationCentred(panel9, label4);
+
+            SetControlSize(panel5, splitContainer1.Panel2.Width - 50, panel5.Height);
+            SetLocationCentred(panel5, label6);
+            SetLocationRight(panel5, panel11);
+            SetPanel2ControlLocationWithY(button1, (int)(panel2.Height * 0.8));
+
+            SetControlSize(cLB, (int)(panel2.Width * 0.8), cLB.Height);
+            SetControlLocationWithXY(cLB, cLB.Location.X, (int)(panel2.Height / 2 * 0.8));
+            SetControlLocationWithXY(panel8, panel8.Location.X, cLB.Location.Y - panel8.Height);
+            
+            
+        }
+
+        private void SelectEncodingControl(Control cntrl)
+        {
+            tabPage1.Controls.Clear();
+            tabPage1.Controls.Add(cntrl);
+            _encodingControl = cntrl;
         }
 
         private void comboBoxEncoding_SelectedIndexChanged(object sender, EventArgs e)
@@ -101,27 +155,27 @@ namespace CryptographyEx.WinFormsUI
             {
                 tbTheory.Text = sr.ReadToEnd();
             }
+
+            Control cntrl = null;
+
             switch (EncodingNameHolder.GetEncodingType
                          ((string)comboBoxEncoding.SelectedItem))
             {
                 case EncoderType.Caesar:
-                    
-                    tabPage1.Controls.Clear();
-                    tabPage1.Controls.Add(new DecodeEncodeControl(this));
+                    cntrl = new DecodeEncodeControl(this);
                     break;
                 case EncoderType.Vigenere:
-                    tabPage1.Controls.Clear();
-                    tabPage1.Controls.Add(new DecodeEncodeControl(this));
+                    cntrl = new DecodeEncodeControl(this);
                     break;
                 case EncoderType.DiffiHelman:
-                    tabPage1.Controls.Clear();
-                    tabPage1.Controls.Add(new DiffiHelmanControl(this));
+                    cntrl = new DiffiHelmanControl(this);
                     break;
                 default:
-                    tabPage1.Controls.Clear();
-                    tabPage1.Controls.Add(new EmptyEncoderControl());
+                    cntrl = new EmptyEncoderControl();
                     break;
             }
+            SelectEncodingControl(cntrl);
+
             tabPage3.Controls.Clear();
             _currentquestionByTesting = QuestionByTestingHolder.GetQuestionByTestings(EncodingNameHolder.GetEncodingType
                          ((string)comboBoxEncoding.SelectedItem)).FirstOrDefault(p => p.AnswerType == AnswerType.Defoult);
@@ -274,6 +328,21 @@ namespace CryptographyEx.WinFormsUI
         }
 
         private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void splitContainer1_Panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }

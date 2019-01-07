@@ -280,5 +280,11 @@
   <ItemGroup>
     <None Include="Resources\function-png-4.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\answer-right-png-8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Yes_Check_Circle.svg.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
