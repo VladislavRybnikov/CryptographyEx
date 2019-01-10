@@ -118,11 +118,17 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="answer-right-png-8" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\answer-right-png-8.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="programming-code-with-laptop-background_1134-61" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\programming-code-with-laptop-background_1134-61.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="kisspng-test-sat-university-education-student-checklist-5ace5bd3ae7d08.4334855215234733637147" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\kisspng-test-sat-university-education-student-checklist-5ace5bd3ae7d08.4334855215234733637147.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HiRes5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HiRes5.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Header_Encryption" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Header_Encryption.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="cryptography-png-8" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cryptography-png-8.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -130,14 +136,23 @@
   <data name="arrow-35800_960_720" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\arrow-35800_960_720.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="default-user" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\default-user.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="1_OOWSoWHeQ5kyJ4N0P2ptNA" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1_OOWSoWHeQ5kyJ4N0P2ptNA.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="11" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\11.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="202-2023990_free-turquoise-equal-sign-icon-flat-icon-gif-equal1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\202-2023990_free-turquoise-equal-sign-icon-flat-icon-gif-equal1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="terminal-512" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\terminal-512.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Header_Encryption" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Header_Encryption.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="2000px-KPI-wiki-logo.svg" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\2000px-KPI-wiki-logo.svg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -145,22 +160,34 @@
   <data name="assessment-clipart-summative-assessment-2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\assessment-clipart-summative-assessment-2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="800px_COLOURBOX23310792" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\800px_COLOURBOX23310792.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="kisspng-search-engine-optimization-pay-per-click-digital-m-marketing-5ab9180be56b49.1900141615220797559397" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\kisspng-search-engine-optimization-pay-per-click-digital-m-marketing-5ab9180be56b49.1900141615220797559397.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Yes_Check_Circle.svg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Yes_Check_Circle.svg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Calculator-PNG-Picture" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Calculator-PNG-Picture.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="function-png-4" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\function-png-4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="key-icon-0" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\key-icon-0.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="answer-right-png-8" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\answer-right-png-8.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="202-2023990_free-turquoise-equal-sign-icon-flat-icon-gif-equal" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\202-2023990_free-turquoise-equal-sign-icon-flat-icon-gif-equal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="key-icon-0" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\key-icon-0.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="800px_COLOURBOX23310717" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\800px_COLOURBOX23310717.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Yes_Check_Circle.svg" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Yes_Check_Circle.svg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="function-png-4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\function-png-4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="telegram-icon-7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\telegram-icon-7.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

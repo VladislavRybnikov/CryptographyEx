@@ -41,8 +41,10 @@ namespace CryptographyEx.WinFormsUI
             Init();
             var year = DateTime.Now.Year;
             yearLbl.Text = year.ToString();
+
             Load += ChangeSize;
             tabControl1.Click += ChangeSize;
+            comboBoxEncoding.SelectedIndexChanged += ChangeSize;
         }
 
         private void Init()
@@ -114,7 +116,7 @@ namespace CryptographyEx.WinFormsUI
             
             SetPanel2ControlLocation(panel9);
 
-            SetControlSize(tbTheory, splitContainer1.Panel2.Width - 30, Height - 150);
+            SetControlSize(tbTheory, splitContainer1.Panel2.Width - 50, Height - 150);
             SetControlLocationWithXY(tbTheory, splitContainer1.Panel2.Width / 2 - tbTheory.Width / 2 - 10, tbTheory.Location.Y);
             SetControlSize(panel9, tbTheory.Width, panel9.Height);
             SetControlLocationWithXY(panel9, tbTheory.Location.X, panel9.Location.Y);
@@ -128,8 +130,8 @@ namespace CryptographyEx.WinFormsUI
             SetControlSize(cLB, (int)(panel2.Width * 0.8), cLB.Height);
             SetControlLocationWithXY(cLB, cLB.Location.X, (int)(panel2.Height / 2 * 0.8));
             SetControlLocationWithXY(panel8, panel8.Location.X, cLB.Location.Y - panel8.Height);
-            
-            
+
+            SetControlSize(panel12, panel5.Width, Height - 150);
         }
 
         private void SelectEncodingControl(Control cntrl)
@@ -168,7 +170,10 @@ namespace CryptographyEx.WinFormsUI
                     cntrl = new DecodeEncodeControl(this);
                     break;
                 case EncoderType.DiffiHelman:
-                    cntrl = new DiffiHelmanControl(this);
+                    cntrl = new BaseEncodeControl(this);
+                    break;
+                case EncoderType.Trithemius:
+                    cntrl = new DecodeEncodeControl(this);
                     break;
                 default:
                     cntrl = new EmptyEncoderControl();
@@ -198,7 +203,7 @@ namespace CryptographyEx.WinFormsUI
             {
                 cLB.Items.Add($"{s.Key}-{s.Value}");
             }
-
+            
         }
 
         private void lvHistory_Click(object sender, EventArgs e)

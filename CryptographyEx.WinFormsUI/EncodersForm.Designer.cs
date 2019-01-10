@@ -29,58 +29,60 @@
         private void InitializeComponent()
         {
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.comboBoxEncoding = new System.Windows.Forms.ComboBox();
+            this.panel10 = new System.Windows.Forms.Panel();
             this.yearLbl = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.comboBoxEncoding = new System.Windows.Forms.ComboBox();
             this.lbNameEncoder = new System.Windows.Forms.Label();
             this.encodersLabel = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
             this.tbTheory = new System.Windows.Forms.TextBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.cLB = new System.Windows.Forms.CheckedListBox();
+            this.panel8 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.lbDescription = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
             this.lbCurrentTask = new System.Windows.Forms.Label();
+            this.panel6 = new System.Windows.Forms.Panel();
             this.lbAllQuestions = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lbCorrectAnswer = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.cLB = new System.Windows.Forms.CheckedListBox();
+            this.lbDescription = new System.Windows.Forms.Label();
             this.tPHistory = new System.Windows.Forms.TabPage();
             this.lvHistory = new System.Windows.Forms.ListView();
             this.NameCodding = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Mark = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
-            this.panel11 = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
+            this.panel12 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
+            this.panel10.SuspendLayout();
             this.panel4.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage2.SuspendLayout();
+            this.panel9.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.tPHistory.SuspendLayout();
-            this.panel5.SuspendLayout();
-            this.panel6.SuspendLayout();
             this.panel8.SuspendLayout();
-            this.panel9.SuspendLayout();
-            this.panel10.SuspendLayout();
+            this.panel5.SuspendLayout();
             this.panel11.SuspendLayout();
+            this.panel6.SuspendLayout();
+            this.tPHistory.SuspendLayout();
+            this.panel12.SuspendLayout();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -104,28 +106,19 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.tabControl1);
-            this.splitContainer1.Size = new System.Drawing.Size(861, 524);
-            this.splitContainer1.SplitterDistance = 231;
+            this.splitContainer1.Size = new System.Drawing.Size(884, 561);
+            this.splitContainer1.SplitterDistance = 237;
             this.splitContainer1.TabIndex = 0;
             // 
-            // panel4
+            // panel10
             // 
-            this.panel4.BackColor = System.Drawing.Color.RoyalBlue;
-            this.panel4.Controls.Add(this.comboBoxEncoding);
-            this.panel4.Location = new System.Drawing.Point(39, 225);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(147, 32);
-            this.panel4.TabIndex = 14;
-            this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
-            // 
-            // comboBoxEncoding
-            // 
-            this.comboBoxEncoding.FormattingEnabled = true;
-            this.comboBoxEncoding.Location = new System.Drawing.Point(7, 5);
-            this.comboBoxEncoding.Name = "comboBoxEncoding";
-            this.comboBoxEncoding.Size = new System.Drawing.Size(122, 21);
-            this.comboBoxEncoding.TabIndex = 8;
-            this.comboBoxEncoding.SelectedIndexChanged += new System.EventHandler(this.comboBoxEncoding_SelectedIndexChanged);
+            this.panel10.BackColor = System.Drawing.Color.LightBlue;
+            this.panel10.Controls.Add(this.yearLbl);
+            this.panel10.Controls.Add(this.label3);
+            this.panel10.Location = new System.Drawing.Point(64, 86);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(98, 32);
+            this.panel10.TabIndex = 15;
             // 
             // yearLbl
             // 
@@ -151,6 +144,25 @@
             this.label3.Size = new System.Drawing.Size(56, 29);
             this.label3.TabIndex = 11;
             this.label3.Text = "KPI -";
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.RoyalBlue;
+            this.panel4.Controls.Add(this.comboBoxEncoding);
+            this.panel4.Location = new System.Drawing.Point(39, 225);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(147, 32);
+            this.panel4.TabIndex = 14;
+            this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
+            // 
+            // comboBoxEncoding
+            // 
+            this.comboBoxEncoding.FormattingEnabled = true;
+            this.comboBoxEncoding.Location = new System.Drawing.Point(7, 5);
+            this.comboBoxEncoding.Name = "comboBoxEncoding";
+            this.comboBoxEncoding.Size = new System.Drawing.Size(122, 21);
+            this.comboBoxEncoding.TabIndex = 8;
+            this.comboBoxEncoding.SelectedIndexChanged += new System.EventHandler(this.comboBoxEncoding_SelectedIndexChanged);
             // 
             // lbNameEncoder
             // 
@@ -188,18 +200,9 @@
             this.tabControl1.TabIndex = 0;
             this.tabControl1.Click += new System.EventHandler(this.tabControl1_Click);
             // 
-            // tabPage1
-            // 
-            this.tabPage1.BackColor = System.Drawing.Color.White;
-            this.tabPage1.Location = new System.Drawing.Point(4, 25);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(606, 488);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Шифрування";
-            // 
             // tabPage2
             // 
+            this.tabPage2.BackColor = System.Drawing.Color.DarkSlateGray;
             this.tabPage2.Controls.Add(this.panel9);
             this.tabPage2.Controls.Add(this.tbTheory);
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
@@ -208,7 +211,28 @@
             this.tabPage2.Size = new System.Drawing.Size(606, 488);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Теорія";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // panel9
+            // 
+            this.panel9.BackColor = System.Drawing.Color.RoyalBlue;
+            this.panel9.Controls.Add(this.label4);
+            this.panel9.Location = new System.Drawing.Point(14, 14);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(580, 30);
+            this.panel9.TabIndex = 42;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label4.Location = new System.Drawing.Point(260, 2);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(69, 24);
+            this.label4.TabIndex = 37;
+            this.label4.Text = "Теорія";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // tbTheory
             // 
@@ -236,11 +260,9 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.panel8);
+            this.panel2.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.panel2.Controls.Add(this.panel12);
             this.panel2.Controls.Add(this.panel5);
-            this.panel2.Controls.Add(this.button1);
-            this.panel2.Controls.Add(this.cLB);
-            this.panel2.Controls.Add(this.lbDescription);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(3, 3);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
@@ -249,28 +271,15 @@
             this.panel2.TabIndex = 0;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
-            // button1
+            // panel8
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(278, 380);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(74, 30);
-            this.button1.TabIndex = 39;
-            this.button1.Text = "Далі";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
-            // 
-            // cLB
-            // 
-            this.cLB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.cLB.FormattingEnabled = true;
-            this.cLB.Location = new System.Drawing.Point(10, 171);
-            this.cLB.Margin = new System.Windows.Forms.Padding(2);
-            this.cLB.Name = "cLB";
-            this.cLB.Size = new System.Drawing.Size(577, 157);
-            this.cLB.Sorted = true;
-            this.cLB.TabIndex = 38;
+            this.panel8.AutoSize = true;
+            this.panel8.BackColor = System.Drawing.Color.CadetBlue;
+            this.panel8.Controls.Add(this.label2);
+            this.panel8.Location = new System.Drawing.Point(14, 79);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(343, 35);
+            this.panel8.TabIndex = 41;
             // 
             // label2
             // 
@@ -284,16 +293,51 @@
             this.label2.TabIndex = 37;
             this.label2.Text = "Виберіть правильну відповідь";
             // 
-            // lbDescription
+            // panel5
             // 
-            this.lbDescription.AutoSize = true;
-            this.lbDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lbDescription.Location = new System.Drawing.Point(55, 74);
-            this.lbDescription.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbDescription.Name = "lbDescription";
-            this.lbDescription.Size = new System.Drawing.Size(57, 24);
-            this.lbDescription.TabIndex = 36;
-            this.lbDescription.Text = "descr";
+            this.panel5.BackColor = System.Drawing.Color.RoyalBlue;
+            this.panel5.Controls.Add(this.label6);
+            this.panel5.Controls.Add(this.panel11);
+            this.panel5.Controls.Add(this.panel7);
+            this.panel5.Controls.Add(this.panel6);
+            this.panel5.Location = new System.Drawing.Point(16, 12);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(571, 34);
+            this.panel5.TabIndex = 40;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label6.Location = new System.Drawing.Point(259, 7);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(53, 24);
+            this.label6.TabIndex = 43;
+            this.label6.Text = "Тест";
+            // 
+            // panel11
+            // 
+            this.panel11.BackColor = System.Drawing.Color.RoyalBlue;
+            this.panel11.Controls.Add(this.label5);
+            this.panel11.Controls.Add(this.lbCurrentTask);
+            this.panel11.Location = new System.Drawing.Point(450, 3);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(118, 26);
+            this.panel11.TabIndex = 42;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label5.Location = new System.Drawing.Point(3, 3);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(96, 20);
+            this.label5.TabIndex = 42;
+            this.label5.Text = "Запитання:";
             // 
             // lbCurrentTask
             // 
@@ -306,6 +350,17 @@
             this.lbCurrentTask.Size = new System.Drawing.Size(18, 20);
             this.lbCurrentTask.TabIndex = 35;
             this.lbCurrentTask.Text = "0";
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.RoyalBlue;
+            this.panel6.Controls.Add(this.lbAllQuestions);
+            this.panel6.Controls.Add(this.label1);
+            this.panel6.Controls.Add(this.lbCorrectAnswer);
+            this.panel6.Location = new System.Drawing.Point(43, 1);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(65, 30);
+            this.panel6.TabIndex = 41;
             // 
             // lbAllQuestions
             // 
@@ -343,6 +398,40 @@
             this.lbCorrectAnswer.TabIndex = 32;
             this.lbCorrectAnswer.Text = "0";
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button1.Location = new System.Drawing.Point(264, 299);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(74, 30);
+            this.button1.TabIndex = 39;
+            this.button1.Text = "Далі";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // cLB
+            // 
+            this.cLB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.cLB.FormattingEnabled = true;
+            this.cLB.Location = new System.Drawing.Point(14, 114);
+            this.cLB.Margin = new System.Windows.Forms.Padding(2);
+            this.cLB.Name = "cLB";
+            this.cLB.Size = new System.Drawing.Size(536, 157);
+            this.cLB.Sorted = true;
+            this.cLB.TabIndex = 38;
+            // 
+            // lbDescription
+            // 
+            this.lbDescription.AutoSize = true;
+            this.lbDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lbDescription.Location = new System.Drawing.Point(59, 17);
+            this.lbDescription.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbDescription.Name = "lbDescription";
+            this.lbDescription.Size = new System.Drawing.Size(57, 24);
+            this.lbDescription.TabIndex = 36;
+            this.lbDescription.Text = "descr";
+            // 
             // tPHistory
             // 
             this.tPHistory.Controls.Add(this.lvHistory);
@@ -375,33 +464,23 @@
             // NameCodding
             // 
             this.NameCodding.Text = "Назва алгоритма";
+            this.NameCodding.Width = 200;
             // 
             // Mark
             // 
             this.Mark.Text = "Загальна оцінка";
+            this.Mark.Width = 224;
             // 
-            // panel5
+            // tabPage1
             // 
-            this.panel5.BackColor = System.Drawing.Color.RoyalBlue;
-            this.panel5.Controls.Add(this.label6);
-            this.panel5.Controls.Add(this.panel11);
-            this.panel5.Controls.Add(this.panel7);
-            this.panel5.Controls.Add(this.panel6);
-            this.panel5.Location = new System.Drawing.Point(16, 12);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(571, 34);
-            this.panel5.TabIndex = 40;
-            // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.RoyalBlue;
-            this.panel6.Controls.Add(this.lbAllQuestions);
-            this.panel6.Controls.Add(this.label1);
-            this.panel6.Controls.Add(this.lbCorrectAnswer);
-            this.panel6.Location = new System.Drawing.Point(43, 1);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(65, 30);
-            this.panel6.TabIndex = 41;
+            this.tabPage1.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.tabPage1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.tabPage1.Location = new System.Drawing.Point(4, 25);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(606, 488);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "Шифрування";
             // 
             // panel3
             // 
@@ -430,88 +509,26 @@
             this.panel7.Size = new System.Drawing.Size(36, 30);
             this.panel7.TabIndex = 41;
             // 
-            // panel8
+            // panel12
             // 
-            this.panel8.AutoSize = true;
-            this.panel8.BackColor = System.Drawing.Color.CadetBlue;
-            this.panel8.Controls.Add(this.label2);
-            this.panel8.Location = new System.Drawing.Point(10, 136);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(343, 35);
-            this.panel8.TabIndex = 41;
-            // 
-            // panel9
-            // 
-            this.panel9.BackColor = System.Drawing.Color.RoyalBlue;
-            this.panel9.Controls.Add(this.label4);
-            this.panel9.Location = new System.Drawing.Point(14, 14);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(580, 30);
-            this.panel9.TabIndex = 42;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label4.Location = new System.Drawing.Point(260, 2);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(69, 24);
-            this.label4.TabIndex = 37;
-            this.label4.Text = "Теорія";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
-            // 
-            // panel10
-            // 
-            this.panel10.BackColor = System.Drawing.Color.LightBlue;
-            this.panel10.Controls.Add(this.yearLbl);
-            this.panel10.Controls.Add(this.label3);
-            this.panel10.Location = new System.Drawing.Point(64, 86);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(98, 32);
-            this.panel10.TabIndex = 15;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label5.Location = new System.Drawing.Point(3, 3);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(96, 20);
-            this.label5.TabIndex = 42;
-            this.label5.Text = "Запитання:";
-            // 
-            // panel11
-            // 
-            this.panel11.BackColor = System.Drawing.Color.RoyalBlue;
-            this.panel11.Controls.Add(this.label5);
-            this.panel11.Controls.Add(this.lbCurrentTask);
-            this.panel11.Location = new System.Drawing.Point(450, 3);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(118, 26);
-            this.panel11.TabIndex = 42;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label6.Location = new System.Drawing.Point(259, 7);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(53, 24);
-            this.label6.TabIndex = 43;
-            this.label6.Text = "Тест";
+            this.panel12.BackColor = System.Drawing.Color.White;
+            this.panel12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel12.Controls.Add(this.cLB);
+            this.panel12.Controls.Add(this.panel8);
+            this.panel12.Controls.Add(this.button1);
+            this.panel12.Controls.Add(this.lbDescription);
+            this.panel12.Location = new System.Drawing.Point(16, 46);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(571, 345);
+            this.panel12.TabIndex = 42;
             // 
             // EncodersForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(861, 524);
+            this.ClientSize = new System.Drawing.Size(884, 561);
             this.Controls.Add(this.splitContainer1);
+            this.MinimumSize = new System.Drawing.Size(900, 600);
             this.Name = "EncodersForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EncodersForm";
@@ -522,26 +539,27 @@
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
+            this.panel10.ResumeLayout(false);
+            this.panel10.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
-            this.tabPage3.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            this.tPHistory.ResumeLayout(false);
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
-            this.panel8.ResumeLayout(false);
-            this.panel8.PerformLayout();
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
-            this.panel10.ResumeLayout(false);
-            this.panel10.PerformLayout();
+            this.tabPage3.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel8.ResumeLayout(false);
+            this.panel8.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
             this.panel11.ResumeLayout(false);
             this.panel11.PerformLayout();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
+            this.tPHistory.ResumeLayout(false);
+            this.panel12.ResumeLayout(false);
+            this.panel12.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -585,5 +603,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Panel panel12;
     }
 }

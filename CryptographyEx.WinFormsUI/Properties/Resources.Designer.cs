@@ -63,6 +63,36 @@ namespace CryptographyEx.WinFormsUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _1 {
+            get {
+                object obj = ResourceManager.GetObject("1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _1_OOWSoWHeQ5kyJ4N0P2ptNA {
+            get {
+                object obj = ResourceManager.GetObject("1_OOWSoWHeQ5kyJ4N0P2ptNA", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _11 {
+            get {
+                object obj = ResourceManager.GetObject("11", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _2000px_KPI_wiki_logo_svg {
             get {
                 object obj = ResourceManager.GetObject("2000px-KPI-wiki-logo.svg", resourceCulture);
@@ -86,6 +116,26 @@ namespace CryptographyEx.WinFormsUI.Properties {
         internal static System.Drawing.Bitmap _202_2023990_free_turquoise_equal_sign_icon_flat_icon_gif_equal1 {
             get {
                 object obj = ResourceManager.GetObject("202-2023990_free-turquoise-equal-sign-icon-flat-icon-gif-equal1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _800px_COLOURBOX23310717 {
+            get {
+                object obj = ResourceManager.GetObject("800px_COLOURBOX23310717", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _800px_COLOURBOX23310792 {
+            get {
+                object obj = ResourceManager.GetObject("800px_COLOURBOX23310792", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -143,6 +193,16 @@ namespace CryptographyEx.WinFormsUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap default_user {
+            get {
+                object obj = ResourceManager.GetObject("default-user", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap function_png_4 {
             get {
                 object obj = ResourceManager.GetObject("function-png-4", resourceCulture);
@@ -156,6 +216,16 @@ namespace CryptographyEx.WinFormsUI.Properties {
         internal static System.Drawing.Bitmap Header_Encryption {
             get {
                 object obj = ResourceManager.GetObject("Header_Encryption", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap HiRes5 {
+            get {
+                object obj = ResourceManager.GetObject("HiRes5", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -188,6 +258,26 @@ namespace CryptographyEx.WinFormsUI.Properties {
             get {
                 object obj = ResourceManager.GetObject("kisspng-test-sat-university-education-student-checklist-5ace5bd3ae7d08.4334855215" +
                         "234733637147", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap programming_code_with_laptop_background_1134_61 {
+            get {
+                object obj = ResourceManager.GetObject("programming-code-with-laptop-background_1134-61", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap telegram_icon_7 {
+            get {
+                object obj = ResourceManager.GetObject("telegram-icon-7", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

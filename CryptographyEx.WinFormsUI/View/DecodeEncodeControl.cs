@@ -54,6 +54,9 @@ namespace CryptographyEx.WinFormsUI.View
                 case EncoderType.Elgamal:
                     panelQuestion.Controls.Add(new ElgamalControl(codingType, this));
                     break;
+                case EncoderType.Trithemius:
+                    panelQuestion.Controls.Add(new TrithemiusControl(codingType, this));
+                    break;
             }
         }
     }

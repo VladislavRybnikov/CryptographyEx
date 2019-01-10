@@ -71,5 +71,11 @@ namespace CryptographyEx.WinFormsUI
             Hide();
             FormHolder.CalculatorForm.Show();
         }
+
+        private void aboutLabel_Click(object sender, EventArgs e)
+        {
+            var about = new AboutAppForm();
+            about.Show();
+        }
     }
 }
