@@ -90,6 +90,10 @@ namespace CryptographyEx.WinFormsUI.View
                 {
                     Answer = tbKey.Text
                 },
+                Description = new QuestionValue()
+                {
+                    Description = tbKey.Text
+                },
                 CodingType = CodingType.Decoding,
                 EncodingType = EncoderType.DiffiHelman
             }, MonoAlphabet.ENG, PolyAlphabet.Default,
