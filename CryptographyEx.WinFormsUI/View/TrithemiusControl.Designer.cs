@@ -36,7 +36,6 @@
             this.lbCurrentTask = new System.Windows.Forms.Label();
             this.btnCheck = new System.Windows.Forms.Button();
             this.lbCorrectAnsw = new System.Windows.Forms.Label();
-            this.numericUpDownStep = new System.Windows.Forms.NumericUpDown();
             this.label2 = new System.Windows.Forms.Label();
             this.lbAllQuestions = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -47,7 +46,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownStep)).BeginInit();
+            this.label8 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblAnswerInfo
@@ -138,25 +137,6 @@
             this.lbCorrectAnsw.Size = new System.Drawing.Size(175, 20);
             this.lbCorrectAnsw.TabIndex = 26;
             this.lbCorrectAnsw.Text = "Правильна відповідь:";
-            // 
-            // numericUpDownStep
-            // 
-            this.numericUpDownStep.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.numericUpDownStep.Location = new System.Drawing.Point(232, 205);
-            this.numericUpDownStep.Margin = new System.Windows.Forms.Padding(2);
-            this.numericUpDownStep.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDownStep.Name = "numericUpDownStep";
-            this.numericUpDownStep.Size = new System.Drawing.Size(90, 26);
-            this.numericUpDownStep.TabIndex = 25;
-            this.numericUpDownStep.Value = new decimal(new int[] {
-            5,
-            0,
-            0,
-            0});
             // 
             // label2
             // 
@@ -267,10 +247,22 @@
             this.label7.TabIndex = 36;
             this.label7.Text = "x + 1";
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label8.Location = new System.Drawing.Point(231, 205);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(21, 24);
+            this.label8.TabIndex = 37;
+            this.label8.Text = "0";
+            // 
             // TrithemiusControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -282,7 +274,6 @@
             this.Controls.Add(this.lbCurrentTask);
             this.Controls.Add(this.btnCheck);
             this.Controls.Add(this.lbCorrectAnsw);
-            this.Controls.Add(this.numericUpDownStep);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lbAllQuestions);
             this.Controls.Add(this.label1);
@@ -293,7 +284,6 @@
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "TrithemiusControl";
             this.Size = new System.Drawing.Size(425, 348);
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownStep)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -309,7 +299,6 @@
         private System.Windows.Forms.Label lbCurrentTask;
         private System.Windows.Forms.Button btnCheck;
         private System.Windows.Forms.Label lbCorrectAnsw;
-        private System.Windows.Forms.NumericUpDown numericUpDownStep;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lbAllQuestions;
         private System.Windows.Forms.Label label1;
@@ -320,5 +309,6 @@
         private System.Windows.Forms.Label label5;
         public System.Windows.Forms.Label label6;
         public System.Windows.Forms.Label label7;
+        public System.Windows.Forms.Label label8;
     }
 }
