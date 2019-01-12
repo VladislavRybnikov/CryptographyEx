@@ -6,55 +6,24 @@ using System.Text;
 
 namespace CryptographyEx.Core.Holder
 {
-    public static class EncodingNameHolder
+    public static class EncodingCountConfiguration
     {
-        public static Dictionary<EncoderType,string> Encoding { get; set; }
+        public const int Default = 5;
+
         public static Dictionary<EncoderType, int> EncodingCount { get; set; }
-        static EncodingNameHolder()
+        static EncodingCountConfiguration()
         {
-            Encoding = new Dictionary<EncoderType, string>();
-            EncodingCount = new Dictionary<EncoderType, int>();
-            InitEncoding();
-            InitEncodingCount();
-        }
-        private static void InitEncoding()
-        {
-            Encoding.Add(EncoderType.Caesar, "Caesar");
-            Encoding.Add(EncoderType.Des, "Des");
-            Encoding.Add(EncoderType.DiffiHelman, "Diffie-Hellman");
-            Encoding.Add(EncoderType.Elgamal, "EL-GAMAL + DIFFIE-HELLMAN");
-            Encoding.Add(EncoderType.Stierlitz, "Stierlitz");
-            Encoding.Add(EncoderType.Trithemius, "Trithemius");
-            Encoding.Add(EncoderType.Vigenere, "Vigenere");
-
-        }
-        private static void InitEncodingCount()
-        {
-           EncodingCount.Add(EncoderType.Caesar, 4);
-           EncodingCount.Add(EncoderType.Des,4);
-           EncodingCount.Add(EncoderType.DiffiHelman,4);
-           EncodingCount.Add(EncoderType.Elgamal, 4);
-           EncodingCount.Add(EncoderType.Stierlitz, 4);
-           EncodingCount.Add(EncoderType.Trithemius, 4);
-           EncodingCount.Add(EncoderType.Vigenere, 4);
-        }
-
-        public static string GetNameByType(EncoderType encodingType)
-        {
-
-            if (EncodingCount.ContainsKey(encodingType))
+            EncodingCount = new Dictionary<EncoderType, int>
             {
-                return Encoding[encodingType];
-            }
-
-            return null;
+                { EncoderType.Caesar, Default },
+                { EncoderType.Des, Default },
+                { EncoderType.DiffiHelman, Default },
+                { EncoderType.Elgamal, Default },
+                { EncoderType.Stierlitz, Default },
+                { EncoderType.Trithemius, Default },
+                { EncoderType.Vigenere, Default }
+            };
         }
-
-        public static List<string> GetNames()
-        {
-            return Encoding.Select(p => p.Value).ToList();
-        }
-
         public static int GetCountByTest(EncoderType encodingType)
         {
             if (EncodingCount.ContainsKey(encodingType))
@@ -63,17 +32,6 @@ namespace CryptographyEx.Core.Holder
             }
 
             return 0;
-        }
-
-
-        public static EncoderType GetEncodingType(string name)
-        {
-            if (Encoding.Values.Contains(name))
-            {
-                return Encoding.FirstOrDefault(p=>p.Value.Equals(name)).Key;
-            }
-
-            return EncoderType.Caesar;
         }
     }
 }

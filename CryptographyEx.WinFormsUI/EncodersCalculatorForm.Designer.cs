@@ -32,13 +32,13 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.AnswerLbl = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.AnswerLbl = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -83,6 +83,15 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(251, 59);
             this.panel3.TabIndex = 4;
+            // 
+            // AnswerLbl
+            // 
+            this.AnswerLbl.AutoSize = true;
+            this.AnswerLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.AnswerLbl.Location = new System.Drawing.Point(11, 22);
+            this.AnswerLbl.Name = "AnswerLbl";
+            this.AnswerLbl.Size = new System.Drawing.Size(0, 18);
+            this.AnswerLbl.TabIndex = 6;
             // 
             // panel4
             // 
@@ -140,15 +149,6 @@
             this.panel1.Size = new System.Drawing.Size(72, 84);
             this.panel1.TabIndex = 0;
             // 
-            // AnswerLbl
-            // 
-            this.AnswerLbl.AutoSize = true;
-            this.AnswerLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.AnswerLbl.Location = new System.Drawing.Point(11, 22);
-            this.AnswerLbl.Name = "AnswerLbl";
-            this.AnswerLbl.Size = new System.Drawing.Size(0, 18);
-            this.AnswerLbl.TabIndex = 6;
-            // 
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.SystemColors.ActiveCaption;
@@ -172,8 +172,9 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "EncodersCalculatorForm";
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "EncodersCalculatorForm";
+            this.Text = "Crypto Lab";
             this.Load += new System.EventHandler(this.EncodersCalculatorForm_Load);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();

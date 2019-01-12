@@ -33,7 +33,6 @@
             this.aboutLabel = new System.Windows.Forms.Label();
             this.exitLabel = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.exitPanel = new System.Windows.Forms.Panel();
@@ -41,7 +40,7 @@
             this.theoryPanel = new System.Windows.Forms.Panel();
             this.encodersPanel = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // encodersLabel
@@ -95,25 +94,13 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Algerian", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Maroon;
-            this.label5.Location = new System.Drawing.Point(160, 39);
+            this.label5.Font = new System.Drawing.Font("Elephant", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label5.Location = new System.Drawing.Point(118, 41);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(300, 41);
+            this.label5.Size = new System.Drawing.Size(261, 62);
             this.label5.TabIndex = 7;
-            this.label5.Text = "CRYPTOGRAPHY";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Jokerman", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(446, 50);
-            this.label6.Margin = new System.Windows.Forms.Padding(0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(68, 55);
-            this.label6.TabIndex = 8;
-            this.label6.Text = "Ex";
+            this.label5.Text = "🅒🅡🅨🅟🅣🅞";
             // 
             // panel3
             // 
@@ -176,14 +163,16 @@
             this.panel2.Size = new System.Drawing.Size(268, 115);
             this.panel2.TabIndex = 6;
             // 
-            // panel1
+            // label1
             // 
-            this.panel1.BackgroundImage = global::CryptographyEx.WinFormsUI.Properties.Resources._2000px_KPI_wiki_logo_svg;
-            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel1.Location = new System.Drawing.Point(-1, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(52, 55);
-            this.panel1.TabIndex = 5;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Elephant", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Teal;
+            this.label1.Location = new System.Drawing.Point(362, 41);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(144, 62);
+            this.label1.TabIndex = 13;
+            this.label1.Text = "🅛🅐🅑";
             // 
             // MainForm
             // 
@@ -191,16 +180,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightBlue;
             this.ClientSize = new System.Drawing.Size(639, 466);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.exitPanel);
             this.Controls.Add(this.aboutPanel);
             this.Controls.Add(this.theoryPanel);
             this.Controls.Add(this.encodersPanel);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.exitLabel);
             this.Controls.Add(this.aboutLabel);
             this.Controls.Add(this.theoryLabel);
@@ -221,16 +209,15 @@
         private System.Windows.Forms.Label theoryLabel;
         private System.Windows.Forms.Label aboutLabel;
         private System.Windows.Forms.Label exitLabel;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel encodersPanel;
         private System.Windows.Forms.Panel theoryPanel;
         private System.Windows.Forms.Panel aboutPanel;
         private System.Windows.Forms.Panel exitPanel;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Label label1;
     }
 }
 

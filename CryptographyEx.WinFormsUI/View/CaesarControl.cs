@@ -42,7 +42,7 @@ namespace CryptographyEx.WinFormsUI.View
 
         private void Init()
         {
-            lbAllQuestions.Text = EncodingNameHolder.GetCountByTest
+            lbAllQuestions.Text = EncodingCountConfiguration.GetCountByTest
                 (EncoderType.Caesar).ToString();
             btnCheck.Visible = true;
             button1.Visible = false;
@@ -72,7 +72,7 @@ namespace CryptographyEx.WinFormsUI.View
         {
             ClearAnswerInfo();
 
-            if(_countQuestion >= EncodingNameHolder.GetCountByTest
+            if(_countQuestion >= EncodingCountConfiguration.GetCountByTest
                 (EncoderType.Caesar))
             {
                 _encodersForm.panelQuestion.Controls.Remove(this);
@@ -143,7 +143,7 @@ namespace CryptographyEx.WinFormsUI.View
                 CodingType = _codingType,
                 CorrectAnswer = answerType.Item2,
                 Answer = tbAnswer.Text,
-                Name = EncodingNameHolder.GetNameByType(EncoderType.Caesar),
+                Name = StringConstants.EncodingTypes.GetName(EncoderType.Caesar),
                 GuidId = _guid,
                 Mark = AnswerType.Correct == answerType.Item1 ? 1 : 0,
                 Question = lbDescription.Text

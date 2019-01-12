@@ -10,24 +10,33 @@ using System.Windows.Forms;
 using CryptographyEx.Core.Base.Const;
 using CryptographyEx.Core.Holder;
 
+using static CryptographyEx.Core.Base.Const.StringConstants;
 namespace CryptographyEx.WinFormsUI.View
 {
     public partial class DecodeEncodeControl : UserControl
     {
         private EncodersForm _encodersForm;
 
-        public DecodeEncodeControl(EncodersForm encodersForm)
+        private readonly EncoderType _type;
+
+        public DecodeEncodeControl(EncoderType type)
         {
             InitializeComponent();
-            _encodersForm = encodersForm;
-            nameLabel.Text = _encodersForm.lbNameEncoder.Text;
+            _type = type;
+            nameLabel.Text = EncodingTypes.GetName(type);
+            InitEnconding();
         }
 
-        private void btnEncoding_Click(object sender, EventArgs e)
+        private void InitEnconding()
         {
             HelpbtnClickByTest(CodingType.Encoding);
             btnEncoding.BackColor = Color.Gray;
             btnDecoding.BackColor = Color.LightGray;
+        }
+
+        private void btnEncoding_Click(object sender, EventArgs e)
+        {
+            InitEnconding();
         }
 
         private void btnDecoding_Click(object sender, EventArgs e)
@@ -41,8 +50,7 @@ namespace CryptographyEx.WinFormsUI.View
         {
             panelQuestion.Controls.Clear();
 
-            switch (EncodingNameHolder.GetEncodingType
-                           ((string)_encodersForm.comboBoxEncoding.SelectedItem))
+            switch (_type)
             {
 
                 case EncoderType.Caesar:

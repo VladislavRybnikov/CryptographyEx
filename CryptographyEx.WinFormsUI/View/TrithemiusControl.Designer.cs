@@ -126,6 +126,7 @@
             this.btnCheck.TabIndex = 27;
             this.btnCheck.Text = "Перевірити";
             this.btnCheck.UseVisualStyleBackColor = true;
+            this.btnCheck.Click += new System.EventHandler(this.btnCheck_Click);
             // 
             // lbCorrectAnsw
             // 
@@ -281,7 +282,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.lbDescription);
             this.Controls.Add(this.tbAnswer);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "TrithemiusControl";
             this.Size = new System.Drawing.Size(425, 348);
             this.ResumeLayout(false);

@@ -18,6 +18,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using static CryptographyEx.Core.Base.Const.StringConstants;
 namespace CryptographyEx.WinFormsUI
 {
     public partial class EncodersForm : Form
@@ -49,7 +50,7 @@ namespace CryptographyEx.WinFormsUI
 
         private void Init()
         {
-            comboBoxEncoding.Items.AddRange(EncodingNameHolder.GetNames().ToArray());
+            comboBoxEncoding.Items.AddRange(EncodingTypes.GetAllNames().ToArray());
             comboBoxEncoding.SelectedItem = comboBoxEncoding.Items[0];
         }
 
@@ -149,8 +150,8 @@ namespace CryptographyEx.WinFormsUI
             _guid = Guid.NewGuid();
             FileStream fs = null;
 
-            EncoderType enc = EncodingNameHolder.GetEncodingType
-                         ((string)comboBoxEncoding.SelectedItem);
+            EncoderType enc = EncodingTypes.GetEncodingType(comboBoxEncoding.SelectedItem.ToString());
+
             fs = new FileStream($"Theory/{enc.ToString()}.txt", FileMode.Open);
 
             using (StreamReader sr = new StreamReader(fs))
@@ -158,32 +159,14 @@ namespace CryptographyEx.WinFormsUI
                 tbTheory.Text = sr.ReadToEnd();
             }
 
-            Control cntrl = null;
+            Control cntrl = enc == EncoderType.DiffiHelman ? new BaseEncodeControl(this, enc) 
+                : (Control)new DecodeEncodeControl(enc);
 
-            switch (EncodingNameHolder.GetEncodingType
-                         ((string)comboBoxEncoding.SelectedItem))
-            {
-                case EncoderType.Caesar:
-                    cntrl = new DecodeEncodeControl(this);
-                    break;
-                case EncoderType.Vigenere:
-                    cntrl = new DecodeEncodeControl(this);
-                    break;
-                case EncoderType.DiffiHelman:
-                    cntrl = new BaseEncodeControl(this);
-                    break;
-                case EncoderType.Trithemius:
-                    cntrl = new DecodeEncodeControl(this);
-                    break;
-                default:
-                    cntrl = new EmptyEncoderControl();
-                    break;
-            }
             SelectEncodingControl(cntrl);
 
             tabPage3.Controls.Clear();
-            _currentquestionByTesting = QuestionByTestingHolder.GetQuestionByTestings(EncodingNameHolder.GetEncodingType
-                         ((string)comboBoxEncoding.SelectedItem)).FirstOrDefault(p => p.AnswerType == AnswerType.Defoult);
+            _currentquestionByTesting = QuestionByTestingHolder.GetQuestionByTestings(enc)
+                .FirstOrDefault(p => p.AnswerType == AnswerType.Defoult);
 
             if (_currentquestionByTesting == null)
             {
@@ -193,8 +176,7 @@ namespace CryptographyEx.WinFormsUI
 
             tabPage3.Controls.Add(panel2);
             lbDescription.Text = _currentquestionByTesting.Description;
-            lbAllQuestions.Text = QuestionByTestingHolder.GetQuestionByTestings(EncodingNameHolder.GetEncodingType
-                         ((string)comboBoxEncoding.SelectedItem)).Count.ToString();
+            lbAllQuestions.Text = QuestionByTestingHolder.GetQuestionByTestings(enc).Count.ToString();
             _currentTask++;
             lbCurrentTask.Text = _currentTask.ToString();
             cLB.Items.Clear();
@@ -299,12 +281,13 @@ namespace CryptographyEx.WinFormsUI
                 Name = (string)comboBoxEncoding.SelectedItem
             });
 
+            var enc = EncodingTypes.GetEncodingType(comboBoxEncoding.SelectedItem.ToString());
 
-            lbCorrectAnswer.Text = QuestionByTestingHolder.GetQuestionByTestings(EncodingNameHolder.GetEncodingType
-                         ((string)comboBoxEncoding.SelectedItem)).Count(p => p.AnswerType == AnswerType.Correct).ToString();
+            lbCorrectAnswer.Text = QuestionByTestingHolder.GetQuestionByTestings(enc)
+                .Count(p => p.AnswerType == AnswerType.Correct).ToString();
 
-            _currentquestionByTesting = QuestionByTestingHolder.GetQuestionByTestings(EncodingNameHolder.GetEncodingType
-                       ((string)comboBoxEncoding.SelectedItem)).FirstOrDefault(p => p.AnswerType == AnswerType.Defoult);
+            _currentquestionByTesting = QuestionByTestingHolder.GetQuestionByTestings(enc)
+                .FirstOrDefault(p => p.AnswerType == AnswerType.Defoult);
 
             if (_currentquestionByTesting == null)
             {

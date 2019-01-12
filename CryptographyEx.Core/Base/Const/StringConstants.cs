@@ -25,7 +25,7 @@ namespace CryptographyEx.Core.Base.Const
             public static EncoderType[] GetAllEncodingTypes() => _data.Select(x => x.Key).ToArray();
             public static string GetName(EncoderType type) => _data[type];
             public static EncoderType GetEncodingType(string Name) 
-                => _data.FirstOrDefault(x => x.Value == Name).Key;
+                => _data.FirstOrDefault(x => x.Value.Equals(Name)).Key;
         }
 
         public static class MonoAlphabets

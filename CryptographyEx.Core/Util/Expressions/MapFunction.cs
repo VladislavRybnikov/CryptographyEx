@@ -12,6 +12,7 @@ namespace CryptographyEx.Core.Util.Expressions
         private const char Minus = '-';
         private const char Divide = '/';
         private const char Multiply = '*';
+        private const string X_Var = "x";
 
         private Expression<Func<T, T>> _expr;
         
@@ -31,9 +32,9 @@ namespace CryptographyEx.Core.Util.Expressions
             var operands = chars.Where(x => x != operation).ToArray();
 
             var xTuple = operands.Select((x, i) => Tuple.Create(i, x))
-                .First(x => x.Item2 == "x");
+                .First(x => x.Item2 == X_Var);
 
-            var paramExpression = Expression.Variable(typeof(int), "x");
+            var paramExpression = Expression.Variable(typeof(int), X_Var);
 
             Expression GetOperandExpression(int index)
              => xTuple.Item1 == index ? paramExpression
