@@ -56,7 +56,7 @@ namespace CryptographyEx.WinFormsUI.View
             {
                 _encodersForm.panelQuestion.Controls.Remove(this);
 
-                _encodersForm.panelQuestion.Controls.Add(new FinishControl(_encodersForm,null));
+                _encodersForm.panelQuestion.Controls.Add(new FinishControl(_countCorrectQuestion, _countQuestion));
             }
 
             IElgamalQuestion elgamalQuestion =(IElgamalQuestion)_mainPresentation

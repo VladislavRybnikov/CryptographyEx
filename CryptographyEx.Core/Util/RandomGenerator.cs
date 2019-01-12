@@ -31,15 +31,14 @@ namespace CryptographyEx.Core.Util
         }
 
         public static int NextKey() => _random.Next(1, 5);
-
-        public static string NextENGMessage()
+        
+        public static string NextENGMessage(int count = 3)
         {
-            var count = _random.Next(4, 6);
             var alpha = new ENGMonoAlphabet();
 
             return new string(Enumerable.Range(1, count).Select(x => _random.Next(0, alpha.Length - 1))
                 .Select(x => new ENGMonoAlphabet().Value[x]).ToArray());
         }
-        
+
     }
 }

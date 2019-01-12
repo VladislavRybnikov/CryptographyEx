@@ -8,6 +8,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Linq;
 using CryptographyEx.Core.Base;
+using CryptographyEx.Core.Util;
 
 namespace CryptographyEx.Core.Presentation
 {
@@ -26,24 +27,11 @@ namespace CryptographyEx.Core.Presentation
             switch (encodingType)
             {
                 case EncoderType.Caesar:
-
-                    for (int i = 0; i <= countNumber; i++)
-                    {
-                        char symbol = (char)_random.Next(65, 91);
-
-                        question.Append(symbol);
-                    }
-                    value.Description =  question.ToString();
+                    value.Description =  RandomGenerator.NextENGMessage(5);
                     break;
 
                 case EncoderType.Vigenere:
-                    for (int i = 0; i <= countNumber; i++)
-                    {
-                        char symbol = (char)_random.Next(65, 91);
-
-                        question.Append(symbol);
-                    }
-                    value.Description =  question.ToString();
+                    value.Description =  RandomGenerator.NextENGMessage(5);
                     break;
 
                 case EncoderType.DiffiHelman:

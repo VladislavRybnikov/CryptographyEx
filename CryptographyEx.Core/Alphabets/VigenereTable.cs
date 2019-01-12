@@ -15,8 +15,8 @@ namespace CryptographyEx.Core.Alphabets
 
         private static char[][] Table()
         {
-            var mono = new UTF16Alphabet().Value
-                .Take(new UTF16Alphabet().Length - 1);
+            var mono = new ENGMonoAlphabet().Value
+                .Take(new ENGMonoAlphabet().Length - 1);
 
             char[] ReplacePart(int fromIndex)
             {

@@ -43,27 +43,29 @@ namespace CryptographyEx.ConsoleTest
                 .CreateBitEncoder(BitEncodingType.Des)
                 .Configure("чр3Ъ");
 
-            Console.WriteLine(caesar.Encode("Azb12365.,&^%$@"));
+            //Console.WriteLine(caesar.Encode("Azb12365.,&^%$@"));
 
-            Console.WriteLine(trithemius.Decode(trithemius.Encode("Azb")));
+            //Console.WriteLine(trithemius.Decode(trithemius.Encode("Azb")));
 
-            Console.WriteLine(vigener.Encode("ATTACKATDAWN"));
-            Console.WriteLine(diffiHelman.Decode(null));
-            Console.WriteLine(elgamal.Decode("5"));
-            Console.WriteLine(elgamal.Encode("6,9"));
+            //Console.WriteLine("Vigenere:  " + vigener.Encode("ATTACKATDAWN"));
+            //Console.WriteLine(diffiHelman.Decode(null));
+            //Console.WriteLine(elgamal.Decode("5"));
+            //Console.WriteLine(elgamal.Encode("6,9"));
 
-            string input = "Input";
+            //string input = "Input";
 
-            BitMessage mess = BitMessage.Parse(input);
-            string binary = mess.ToBinaryString();
+            //BitMessage mess = BitMessage.Parse(input);
+            //string binary = mess.ToBinaryString();
 
-            string output = mess.ToString();
+            //string output = mess.ToString();
 
-            Console.WriteLine($"\n{input}\n{binary}\n{output}");
-            byte[] b = new UnicodeEncoding().GetBytes(des.Encode("Do you know"));
-            string str = new UnicodeEncoding().GetString(b);
-            Console.WriteLine(str);
-            b.ToList().ForEach(x => Console.WriteLine(x));
+            //Console.WriteLine($"\n{input}\n{binary}\n{output}");
+            //byte[] b = new UnicodeEncoding().GetBytes(des.Encode("Do you know"));
+            //string str = new UnicodeEncoding().GetString(b);
+            //Console.WriteLine(str);
+            //b.ToList().ForEach(x => Console.WriteLine(x));
+
+            Console.WriteLine(Math.Round(1.0 / 7.0 * 100));
 
             Console.ReadLine();
         }

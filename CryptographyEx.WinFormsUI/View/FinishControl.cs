@@ -7,21 +7,28 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CryptographyEx.Core.Entities;
 
 namespace CryptographyEx.WinFormsUI.View
 {
     public partial class FinishControl : UserControl
     {
-        private DecodeEncodeControl _dencodersForm;
-        private EncodersForm _encodersForm;
+        private Mark _mark;
 
-        public FinishControl(DecodeEncodeControl dencodersForm, EncodersForm encodersForm)
+        public FinishControl(int correctAnswers, int questions)
         {
-            _dencodersForm =dencodersForm;
-            _encodersForm = encodersForm;
             InitializeComponent();
+
+            _mark = new Mark(correctAnswers, questions);
+
+            InitView();
         }
 
-        
+        public void InitView()
+        {
+            label3.Text += _mark.Questions;
+            label2.Text += _mark.Correct;
+            label4.Text += _mark.Total;
+        }
     }
 }

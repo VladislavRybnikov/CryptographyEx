@@ -22,8 +22,8 @@ namespace CryptographyEx.WinFormsUI.View
         private CodingType _codingType;
         private IMainPresentation _mainPresentation;
         private DecodeEncodeControl _encodersForm;
-        private int _countQuestion;
-        private int _countCorrectQuestion;
+        private int _questionCount;
+        private int _correctQuestionCount;
         private IHistoryPresentation _historyPresentation;
         private Guid _guid;
 
@@ -32,8 +32,8 @@ namespace CryptographyEx.WinFormsUI.View
             InitializeComponent();
             _guid = Guid.NewGuid();
             _historyPresentation = new HistoryPresentation();
-            _countQuestion = 0;
-            _countCorrectQuestion = 0;
+            _questionCount = 0;
+            _correctQuestionCount = 0;
             _codingType = codingType;
             _mainPresentation = new MainPresentation();
             _encodersForm = encodersForm;
@@ -72,20 +72,21 @@ namespace CryptographyEx.WinFormsUI.View
         {
             ClearAnswerInfo();
 
-            if(_countQuestion >= EncodingCountConfiguration.GetCountByTest
+            if(_questionCount >= EncodingCountConfiguration.GetCountByTest
                 (EncoderType.Caesar))
             {
                 _encodersForm.panelQuestion.Controls.Remove(this);
 
-                _encodersForm.panelQuestion.Controls.Add(new FinishControl(_encodersForm,null));
+                _encodersForm.panelQuestion.Controls
+                    .Add(new FinishControl(_correctQuestionCount, _questionCount));
             }
 
             lbDescription.Text = _mainPresentation.GenerateQuestion
                 (_codingType,EncoderType.Caesar).Description;
 
             tbAnswer.Text = string.Empty;
-            _countQuestion++;
-            lbCurrentTask.Text = _countQuestion.ToString();
+            _questionCount++;
+            lbCurrentTask.Text = _questionCount.ToString();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -126,7 +127,7 @@ namespace CryptographyEx.WinFormsUI.View
 
             if (answerType.Item1 == AnswerType.Correct)
             {
-                _countCorrectQuestion++;
+                _correctQuestionCount++;
                 lblAnswerInfo.ForeColor = Color.Green;
                 lblAnswerInfo.Text = Messages.Right;
             }

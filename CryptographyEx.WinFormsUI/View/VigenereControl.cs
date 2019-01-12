@@ -13,6 +13,7 @@ using CryptographyEx.Core.Holder;
 using CryptographyEx.Core.Entities;
 using CryptographyEx.Core.Presentation;
 using System.Diagnostics;
+using CryptographyEx.Core.Util;
 
 namespace CryptographyEx.WinFormsUI.View
 {
@@ -42,8 +43,6 @@ namespace CryptographyEx.WinFormsUI.View
 
         private void Init()
         {
-            string valueConfig = "2394287410";
-            lbKey.Text = valueConfig;
             lbAllQuestions.Text = EncodingCountConfiguration.GetCountByTest
                 (EncoderType.Vigenere).ToString();
             btnCheck.Visible = true;
@@ -54,12 +53,16 @@ namespace CryptographyEx.WinFormsUI.View
 
         private void InitQuestion()
         {
+            string valueConfig = RandomGenerator.NextENGMessage(3);
+            lbKey.Text = valueConfig;
+
             if (_countQuestion >= EncodingCountConfiguration.GetCountByTest
                 (EncoderType.Vigenere))
             {
                 _encodersForm.panelQuestion.Controls.Remove(this);
 
-                _encodersForm.panelQuestion.Controls.Add(new FinishControl(_encodersForm,null));
+                _encodersForm.panelQuestion.Controls
+                    .Add(new FinishControl(_countCorrectQuestion, _countQuestion));
             }
 
             lbDescription.Text = _mainPresentation.GenerateQuestion
@@ -107,7 +110,7 @@ namespace CryptographyEx.WinFormsUI.View
                 EncodingType = EncoderType.Vigenere
             },
             MonoAlphabet.ENG,
-            PolyAlphabet.Default,
+            PolyAlphabet.VigenereTable,
             valueConfig);
 
 

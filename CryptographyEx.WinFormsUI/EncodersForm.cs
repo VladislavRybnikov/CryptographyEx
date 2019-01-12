@@ -292,7 +292,7 @@ namespace CryptographyEx.WinFormsUI
             if (_currentquestionByTesting == null)
             {
                 tabPage3.Controls.Clear();
-                tabPage3.Controls.Add(new FinishControl(null, this));
+                //tabPage3.Controls.Add(new FinishControl(null, this));
                 _currentTask = 0;
                 // _currentquestionByTesting = null;
 

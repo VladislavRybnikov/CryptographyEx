@@ -61,7 +61,7 @@
             // 
             // btnCheck
             // 
-            this.btnCheck.Location = new System.Drawing.Point(210, 331);
+            this.btnCheck.Location = new System.Drawing.Point(146, 305);
             this.btnCheck.Margin = new System.Windows.Forms.Padding(2);
             this.btnCheck.Name = "btnCheck";
             this.btnCheck.Size = new System.Drawing.Size(80, 24);
@@ -115,7 +115,7 @@
             // 
             // btnNext
             // 
-            this.btnNext.Location = new System.Drawing.Point(294, 331);
+            this.btnNext.Location = new System.Drawing.Point(230, 305);
             this.btnNext.Margin = new System.Windows.Forms.Padding(2);
             this.btnNext.Name = "btnNext";
             this.btnNext.Size = new System.Drawing.Size(70, 24);

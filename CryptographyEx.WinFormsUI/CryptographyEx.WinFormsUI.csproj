@@ -325,5 +325,8 @@
   <ItemGroup>
     <None Include="Resources\telegram-icon-7.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\assessment-png-1.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
