@@ -18,11 +18,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using static CryptographyEx.WinFormsUI.Util.ControlResizer;
 using static CryptographyEx.Core.Base.Const.StringConstants;
+using CryptographyEx.WinFormsUI.Util;
+
 namespace CryptographyEx.WinFormsUI
 {
     public partial class EncodersForm : Form
     {
+        private List<ControlWithResizes> _controlsWithResizes = new List<ControlWithResizes>();
+
         private Control _testingCach;
 
         private readonly IHistoryPresentation _historyPresentation;
@@ -68,12 +73,14 @@ namespace CryptographyEx.WinFormsUI
                 tabPage3.Controls.Clear();
                 tabPage3.Controls.Add(_testingCach);
             }
+            if (_currentquestionByTesting == null) return;
+
             lbDescription.Text = _currentquestionByTesting.Description;
 
             _testingCount = QuestionByTestingHolder.GetQuestionByTestings(enc).Count;
 
             lbAllQuestions.Text = _testingCount.ToString();
-            _currentTask++;
+            _currentTask = 0;
             lbCurrentTask.Text = _currentTask.ToString();
             cLB.Items.Clear();
 
@@ -122,35 +129,18 @@ namespace CryptographyEx.WinFormsUI
         {
             tabControl1.Width = splitContainer1.Panel2.Width - 10;
             tabControl1.Height = splitContainer1.Panel2.Height - 10;
+            
+            SetPanelControlLocation(splitContainer1.Panel1, encodersLabel);
+            SetPanelControlLocation(splitContainer1.Panel1, panel4);
+            SetPanelControlLocation(splitContainer1.Panel1, panel1);
+            SetPanelControlLocation(splitContainer1.Panel1, panel10);
 
-            void SetLocationCentred(Control container, Control element) 
-                => element.Location = new Point((container.Width / 2) - element.Width / 2, 
-                element.Location.Y);
-            void SetLocationRight(Control container, Control element) 
-                => element.Location = new Point(container.Width - element.Width - 10, element.Location.Y);
-
-            void SetControlLocationWithXY(Control element, int x, int y) => element.Location = new Point(x, y);
-            void SetPanel1ControlLocationWithY(Control element, int y)
-                => SetControlLocationWithXY(element, (splitContainer1.Panel1.Width / 2) - element.Width / 2, y);
-            void SetPanel2ControlLocationWithY(Control element, int y)
-                => SetControlLocationWithXY(element, (splitContainer1.Panel2.Width / 2) - element.Width / 2, y);
-
-            void SetPanel1ControlLocation(Control element) => SetPanel1ControlLocationWithY(element, element.Location.Y);
-            void SetPanel2ControlLocation(Control element) => SetPanel2ControlLocationWithY(element, element.Location.Y);
-
-            void SetControlSize(Control element, int width, int height) => element.Size = new Size(width, height);
-
-            SetPanel1ControlLocation(encodersLabel);
-            SetPanel1ControlLocation(panel4);
-            SetPanel1ControlLocation(panel1);
-            SetPanel1ControlLocation(panel10);
-
-            SetPanel1ControlLocationWithY(panel3, splitContainer1.Panel1.Height - 150);
-            SetPanel1ControlLocationWithY(lbNameEncoder, splitContainer1.Panel1.Height - 120 - panel3.Height);
+            SetPanelControlLocationWithY(splitContainer1.Panel1, panel3, splitContainer1.Panel1.Height - 150);
+            SetPanelControlLocationWithY(splitContainer1.Panel1, lbNameEncoder, splitContainer1.Panel1.Height - 120 - panel3.Height);
 
             SetControlLocationWithXY(_encodingControl, (int)((splitContainer1.Panel2.Width - _encodingControl.Width)/ 2 * 0.9) - 8,Height / 45);
             
-            SetPanel2ControlLocation(panel9);
+            SetPanelControlLocation(splitContainer1.Panel2, panel9);
 
             SetControlSize(tbTheory, splitContainer1.Panel2.Width - 50, Height - 150);
             SetControlLocationWithXY(tbTheory, splitContainer1.Panel2.Width / 2 - tbTheory.Width / 2 - 10, tbTheory.Location.Y);
@@ -161,13 +151,15 @@ namespace CryptographyEx.WinFormsUI
             SetControlSize(panel5, splitContainer1.Panel2.Width - 50, panel5.Height);
             SetLocationCentred(panel5, label6);
             SetLocationRight(panel5, panel11);
-            SetPanel2ControlLocationWithY(button1, (int)(panel2.Height * 0.8));
+            SetPanelControlLocationWithY(splitContainer1.Panel2, button1, (int)(panel2.Height * 0.8));
 
             SetControlSize(cLB, (int)(panel2.Width * 0.8), cLB.Height);
             SetControlLocationWithXY(cLB, cLB.Location.X, (int)(panel2.Height / 2 * 0.8));
             SetControlLocationWithXY(panel8, panel8.Location.X, cLB.Location.Y - panel8.Height);
 
             SetControlSize(panel12, panel5.Width, Height - 150);
+
+            _controlsWithResizes?.ForEach(cntrl => cntrl.Resize());
         }
 
         private void SelectEncodingControl(Control cntrl)
@@ -196,6 +188,7 @@ namespace CryptographyEx.WinFormsUI
 
             Control cntrl = enc == EncoderType.DiffiHelman ? new BaseEncodeControl(this, enc) 
                 : (Control)new DecodeEncodeControl(enc);
+
 
             SelectEncodingControl(cntrl);
             GetAnotherTest();
@@ -311,9 +304,25 @@ namespace CryptographyEx.WinFormsUI
             if (_currentquestionByTesting == null)
             {
                 _testingCach = panel2;
-
+                lbCorrectAnswer.Text = "0";
                 tabPage3.Controls.Clear();
-                tabPage3.Controls.Add(new TestingResultControl(correct, _testingCount, this));
+                var testingCntrl = new TestingResultControl(correct, _testingCount, this);
+                tabPage3.Controls.Add(testingCntrl);
+
+                // Resize
+                var cntrlResize = new ControlWithResizes
+                {
+                    Control = testingCntrl,
+                    Resizes =
+                    {
+                        SetLocationCentredToParrent,
+                        cntrl => SetYIndentToForm(this, cntrl, 0.07)
+                    }
+                };
+                _controlsWithResizes.Add(cntrlResize);
+
+                cntrlResize.Resize();
+
                 _currentTask = 0;
                 _currentquestionByTesting = null;
                 QuestionByTestingHolder.UpdateResult();

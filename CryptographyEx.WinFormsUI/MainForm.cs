@@ -41,6 +41,10 @@ namespace CryptographyEx.WinFormsUI
                 x.Key.MouseLeave += (s, e) => LabelMouseLeave(x);
 
             });
+
+            label3.Text = GlobalConfigurations.Version;
+
+            label2.Visible = GlobalConfigurations.VersionType == VersionType.Beta;
         }
 
         private void EncodersLabel_Click(object sender, EventArgs e)

@@ -34,8 +34,10 @@
             this.label3 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.comboBoxEncoding = new System.Windows.Forms.ComboBox();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.lbNameEncoder = new System.Windows.Forms.Label();
             this.encodersLabel = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
@@ -55,6 +57,7 @@
             this.panel11 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.lbCurrentTask = new System.Windows.Forms.Label();
+            this.panel7 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.lbAllQuestions = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -63,9 +66,6 @@
             this.lvHistory = new System.Windows.Forms.ListView();
             this.NameCodding = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Mark = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel7 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -164,6 +164,15 @@
             this.comboBoxEncoding.TabIndex = 8;
             this.comboBoxEncoding.SelectedIndexChanged += new System.EventHandler(this.comboBoxEncoding_SelectedIndexChanged);
             // 
+            // panel3
+            // 
+            this.panel3.BackgroundImage = global::CryptographyEx.WinFormsUI.Properties.Resources.assessment_clipart_summative_assessment_2;
+            this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel3.Location = new System.Drawing.Point(35, 411);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(160, 96);
+            this.panel3.TabIndex = 13;
+            // 
             // lbNameEncoder
             // 
             this.lbNameEncoder.AutoSize = true;
@@ -185,6 +194,15 @@
             this.encodersLabel.Size = new System.Drawing.Size(158, 29);
             this.encodersLabel.TabIndex = 7;
             this.encodersLabel.Text = "Оберіть шифр";
+            // 
+            // panel1
+            // 
+            this.panel1.BackgroundImage = global::CryptographyEx.WinFormsUI.Properties.Resources._2000px_KPI_wiki_logo_svg;
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.Location = new System.Drawing.Point(87, 25);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(52, 55);
+            this.panel1.TabIndex = 6;
             // 
             // tabControl1
             // 
@@ -249,6 +267,7 @@
             // 
             this.tbTheory.AcceptsReturn = true;
             this.tbTheory.AcceptsTab = true;
+            this.tbTheory.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.tbTheory.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.tbTheory.Location = new System.Drawing.Point(14, 44);
             this.tbTheory.Margin = new System.Windows.Forms.Padding(2);
@@ -284,7 +303,7 @@
             // 
             // panel12
             // 
-            this.panel12.BackColor = System.Drawing.Color.White;
+            this.panel12.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.panel12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel12.Controls.Add(this.cLB);
             this.panel12.Controls.Add(this.panel8);
@@ -297,6 +316,7 @@
             // 
             // cLB
             // 
+            this.cLB.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.cLB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.cLB.FormattingEnabled = true;
             this.cLB.Location = new System.Drawing.Point(14, 114);
@@ -409,6 +429,15 @@
             this.lbCurrentTask.TabIndex = 35;
             this.lbCurrentTask.Text = "0";
             // 
+            // panel7
+            // 
+            this.panel7.BackgroundImage = global::CryptographyEx.WinFormsUI.Properties.Resources.Yes_Check_Circle_svg;
+            this.panel7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel7.Location = new System.Drawing.Point(1, 1);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(36, 30);
+            this.panel7.TabIndex = 41;
+            // 
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.Transparent;
@@ -469,6 +498,7 @@
             // 
             // lvHistory
             // 
+            this.lvHistory.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.lvHistory.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.NameCodding,
             this.Mark});
@@ -494,33 +524,6 @@
             // 
             this.Mark.Text = "Загальна оцінка";
             this.Mark.Width = 224;
-            // 
-            // panel3
-            // 
-            this.panel3.BackgroundImage = global::CryptographyEx.WinFormsUI.Properties.Resources.assessment_clipart_summative_assessment_2;
-            this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel3.Location = new System.Drawing.Point(35, 411);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(160, 96);
-            this.panel3.TabIndex = 13;
-            // 
-            // panel1
-            // 
-            this.panel1.BackgroundImage = global::CryptographyEx.WinFormsUI.Properties.Resources._2000px_KPI_wiki_logo_svg;
-            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel1.Location = new System.Drawing.Point(87, 25);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(52, 55);
-            this.panel1.TabIndex = 6;
-            // 
-            // panel7
-            // 
-            this.panel7.BackgroundImage = global::CryptographyEx.WinFormsUI.Properties.Resources.Yes_Check_Circle_svg;
-            this.panel7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel7.Location = new System.Drawing.Point(1, 1);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(36, 30);
-            this.panel7.TabIndex = 41;
             // 
             // EncodersForm
             // 

@@ -16,7 +16,7 @@ namespace CryptographyEx.Core.Entities
             Questions = questions;
             Correct = correct;
 
-            Total = (int)Math.Round((double)(correct / questions * 100));
+            Total = (int)(Correct / Questions * 100.0);
         }
 
         public static implicit operator double(Mark m) => m.Total;

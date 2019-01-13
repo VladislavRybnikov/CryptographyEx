@@ -32,14 +32,14 @@ namespace CryptographyEx.Core.Encoders
                 }
                 else
                 {
-                    throw new ArgumentException("Wring arguments");
+                    throw new ArgumentException("Wrong arguments");
                 }
 
 
             }
             catch (Exception ex)
             {
-                throw new ArgumentException("Wring arguments", ex);
+                throw new ArgumentException("Wrong arguments", ex);
             }
         }
 
@@ -63,11 +63,11 @@ namespace CryptographyEx.Core.Encoders
                 throw new Exception("Encoder doesn't configurated!");
             }
 
-            if (int.TryParse(message, out int kode))
+            if (int.TryParse(message, out int code))
             {
                 long y = (long)Math.Pow(_g, _x) % _p;
                 long a = (long)Math.Pow(_g, _k) % _p;
-                long b = (long)Math.Pow(y, _k) * kode % _p;
+                long b = (long)Math.Pow(y, _k) * code % _p;
 
                 return $"({a},{b})";
             }

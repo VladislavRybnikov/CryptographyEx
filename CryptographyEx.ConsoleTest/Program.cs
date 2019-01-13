@@ -2,6 +2,7 @@
 using CryptographyEx.Core.Alphabets;
 using CryptographyEx.Core.Base.Abstract;
 using CryptographyEx.Core.Base.Const;
+using CryptographyEx.Core.Entities;
 using CryptographyEx.Core.Messages;
 using System;
 using System.Collections.Generic;
@@ -64,8 +65,8 @@ namespace CryptographyEx.ConsoleTest
             //string str = new UnicodeEncoding().GetString(b);
             //Console.WriteLine(str);
             //b.ToList().ForEach(x => Console.WriteLine(x));
-
-            Console.WriteLine(Math.Round(1.0 / 7.0 * 100));
+            var mark = new Mark(1, 5);
+            Console.WriteLine(mark.Total);
 
             Console.ReadLine();
         }

@@ -64,6 +64,7 @@
     <Compile Include="EncodersForm.Designer.cs">
       <DependentUpon>EncodersForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="GlobalConfigurations.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -73,6 +74,8 @@
     <Compile Include="Holders\FormHolder.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Util\ControlResizer.cs" />
+    <Compile Include="Util\ControlWithResizes.cs" />
     <Compile Include="View\BaseEncodeControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
