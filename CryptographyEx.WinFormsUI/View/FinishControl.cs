@@ -24,6 +24,15 @@ namespace CryptographyEx.WinFormsUI.View
             InitView();
         }
 
+        public FinishControl(Mark mark)
+        {
+            InitializeComponent();
+
+            _mark = mark;
+
+            InitView();
+        }
+
         public void InitView()
         {
             label3.Text += _mark.Questions;

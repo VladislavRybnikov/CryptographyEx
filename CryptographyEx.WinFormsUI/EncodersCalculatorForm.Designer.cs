@@ -35,11 +35,13 @@
             this.AnswerLbl = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -56,6 +58,7 @@
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.SystemColors.Control;
             this.panel2.Location = new System.Drawing.Point(13, 93);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(450, 305);
@@ -69,7 +72,7 @@
             this.listBox1.ForeColor = System.Drawing.Color.Green;
             this.listBox1.FormattingEnabled = true;
             this.listBox1.ItemHeight = 18;
-            this.listBox1.Location = new System.Drawing.Point(12, 431);
+            this.listBox1.Location = new System.Drawing.Point(12, 428);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(450, 108);
             this.listBox1.TabIndex = 3;
@@ -98,7 +101,7 @@
             this.panel4.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panel4.Controls.Add(this.label3);
             this.panel4.Controls.Add(this.panel5);
-            this.panel4.Location = new System.Drawing.Point(12, 404);
+            this.panel4.Location = new System.Drawing.Point(12, 401);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(450, 29);
             this.panel4.TabIndex = 0;
@@ -111,16 +114,6 @@
             this.label3.Size = new System.Drawing.Size(110, 13);
             this.label3.TabIndex = 7;
             this.label3.Text = "Термінал обчислень";
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.panel5.BackgroundImage = global::CryptographyEx.WinFormsUI.Properties.Resources.terminal_512;
-            this.panel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel5.Location = new System.Drawing.Point(5, 2);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(29, 26);
-            this.panel5.TabIndex = 1;
             // 
             // label1
             // 
@@ -140,15 +133,6 @@
             this.label2.TabIndex = 6;
             this.label2.Text = "Тип кодування";
             // 
-            // panel1
-            // 
-            this.panel1.BackgroundImage = global::CryptographyEx.WinFormsUI.Properties.Resources.Calculator_PNG_Picture;
-            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel1.Location = new System.Drawing.Point(4, 3);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(72, 84);
-            this.panel1.TabIndex = 0;
-            // 
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.SystemColors.ActiveCaption;
@@ -159,11 +143,55 @@
             this.panel6.Size = new System.Drawing.Size(135, 40);
             this.panel6.TabIndex = 1;
             // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.panel5.BackgroundImage = global::CryptographyEx.WinFormsUI.Properties.Resources.terminal_512;
+            this.panel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel5.Location = new System.Drawing.Point(5, 2);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(29, 26);
+            this.panel5.TabIndex = 1;
+            // 
+            // panel1
+            // 
+            this.panel1.BackgroundImage = global::CryptographyEx.WinFormsUI.Properties.Resources.Calculator_PNG_Picture;
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.Location = new System.Drawing.Point(4, 3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(72, 84);
+            this.panel1.TabIndex = 0;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Elephant", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.Teal;
+            this.label7.Location = new System.Drawing.Point(268, 537);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(107, 45);
+            this.label7.TabIndex = 19;
+            this.label7.Text = "🅛🅐🅑";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Elephant", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label8.Location = new System.Drawing.Point(84, 537);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(194, 45);
+            this.label8.TabIndex = 18;
+            this.label8.Text = "🅒🅡🅨🅟🅣🅞";
+            // 
             // EncodersCalculatorForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(478, 542);
+            this.BackColor = System.Drawing.SystemColors.Control;
+            this.ClientSize = new System.Drawing.Size(474, 582);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel4);
@@ -201,5 +229,7 @@
         public System.Windows.Forms.ListBox listBox1;
         public System.Windows.Forms.Label AnswerLbl;
         private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
     }
 }

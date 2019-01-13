@@ -133,6 +133,12 @@
     <Compile Include="View\FinishControl.Designer.cs">
       <DependentUpon>FinishControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\TestingResultControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\TestingResultControl.Designer.cs">
+      <DependentUpon>TestingResultControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\TrithemiusControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -214,6 +220,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\FinishControl.resx">
       <DependentUpon>FinishControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\TestingResultControl.resx">
+      <DependentUpon>TestingResultControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\TrithemiusControl.resx">
       <DependentUpon>TrithemiusControl.cs</DependentUpon>

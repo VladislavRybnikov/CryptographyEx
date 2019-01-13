@@ -54,8 +54,6 @@ namespace CryptographyEx.Core.Holder
             List<QuestionByTesting> questionByTestingsElgamal =
                 GetQuestinByElgamal();
             Testings.Add(EncoderType.Elgamal, questionByTestingsElgamal);
-            
-            
 
         }
         

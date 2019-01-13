@@ -23,10 +23,13 @@ namespace CryptographyEx.WinFormsUI
 {
     public partial class EncodersForm : Form
     {
+        private Control _testingCach;
+
         private readonly IHistoryPresentation _historyPresentation;
         private QuestionByTesting _currentquestionByTesting;
         private int _currentTask;
         private Guid _guid;
+        private int _testingCount;
 
         private Control _encodingControl;
 
@@ -46,6 +49,38 @@ namespace CryptographyEx.WinFormsUI
             Load += ChangeSize;
             tabControl1.Click += ChangeSize;
             comboBoxEncoding.SelectedIndexChanged += ChangeSize;
+        }
+
+        public void GetAnotherTest()
+        {
+            EncoderType enc = EncodingTypes.GetEncodingType(comboBoxEncoding.SelectedItem.ToString());
+
+           _currentquestionByTesting = QuestionByTestingHolder.GetQuestionByTestings(enc)
+                .FirstOrDefault(p => p.AnswerType == AnswerType.Defoult);
+
+            //if (_currentquestionByTesting == null)
+            //{
+            //    return;
+            //}
+
+            if (_testingCach != null)
+            {
+                tabPage3.Controls.Clear();
+                tabPage3.Controls.Add(_testingCach);
+            }
+            lbDescription.Text = _currentquestionByTesting.Description;
+
+            _testingCount = QuestionByTestingHolder.GetQuestionByTestings(enc).Count;
+
+            lbAllQuestions.Text = _testingCount.ToString();
+            _currentTask++;
+            lbCurrentTask.Text = _currentTask.ToString();
+            cLB.Items.Clear();
+
+            foreach (var s in _currentquestionByTesting.Questions)
+            {
+                cLB.Items.Add($"{s.Key}-{s.Value}");
+            }
         }
 
         private void Init()
@@ -163,29 +198,7 @@ namespace CryptographyEx.WinFormsUI
                 : (Control)new DecodeEncodeControl(enc);
 
             SelectEncodingControl(cntrl);
-
-            tabPage3.Controls.Clear();
-            _currentquestionByTesting = QuestionByTestingHolder.GetQuestionByTestings(enc)
-                .FirstOrDefault(p => p.AnswerType == AnswerType.Defoult);
-
-            if (_currentquestionByTesting == null)
-            {
-                return;
-            }
-
-
-            tabPage3.Controls.Add(panel2);
-            lbDescription.Text = _currentquestionByTesting.Description;
-            lbAllQuestions.Text = QuestionByTestingHolder.GetQuestionByTestings(enc).Count.ToString();
-            _currentTask++;
-            lbCurrentTask.Text = _currentTask.ToString();
-            cLB.Items.Clear();
-
-            foreach (var s in _currentquestionByTesting.Questions)
-            {
-                cLB.Items.Add($"{s.Key}-{s.Value}");
-            }
-            
+            GetAnotherTest();
         }
 
         private void lvHistory_Click(object sender, EventArgs e)
@@ -254,6 +267,11 @@ namespace CryptographyEx.WinFormsUI
 
             string answer = (string)cLB.SelectedItem;
 
+            if (answer == null)
+            {
+                return;
+            }
+
             if (answer != null)
             {
                 string[] splitAnswe = answer.Split('-');
@@ -282,20 +300,23 @@ namespace CryptographyEx.WinFormsUI
             });
 
             var enc = EncodingTypes.GetEncodingType(comboBoxEncoding.SelectedItem.ToString());
+            var correct = QuestionByTestingHolder.GetQuestionByTestings(enc)
+                .Count(p => p.AnswerType == AnswerType.Correct);
 
-            lbCorrectAnswer.Text = QuestionByTestingHolder.GetQuestionByTestings(enc)
-                .Count(p => p.AnswerType == AnswerType.Correct).ToString();
+            lbCorrectAnswer.Text = correct.ToString();
 
             _currentquestionByTesting = QuestionByTestingHolder.GetQuestionByTestings(enc)
                 .FirstOrDefault(p => p.AnswerType == AnswerType.Defoult);
 
             if (_currentquestionByTesting == null)
             {
-                tabPage3.Controls.Clear();
-                //tabPage3.Controls.Add(new FinishControl(null, this));
-                _currentTask = 0;
-                // _currentquestionByTesting = null;
+                _testingCach = panel2;
 
+                tabPage3.Controls.Clear();
+                tabPage3.Controls.Add(new TestingResultControl(correct, _testingCount, this));
+                _currentTask = 0;
+                _currentquestionByTesting = null;
+                QuestionByTestingHolder.UpdateResult();
                 return;
             }
 
