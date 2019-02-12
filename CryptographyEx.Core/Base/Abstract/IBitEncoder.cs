@@ -6,8 +6,8 @@ using System.Text;
 namespace CryptographyEx.Core.Base.Abstract
 {
     public interface IBitEncoder : IBaseGenericEncoder<BitMessage>,
-        IBaseGenericEncoder<string>
+        IBaseGenericEncoder<string>, IAlphabetEncoder
     {
-        IBitEncoder Configure(params object[] args);
+        IAlphabetEncoder Configure(params object[] args);
     }
 }

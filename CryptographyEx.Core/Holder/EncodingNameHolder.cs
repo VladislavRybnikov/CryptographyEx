@@ -21,7 +21,8 @@ namespace CryptographyEx.Core.Holder
                 { EncoderType.Elgamal, Default },
                 { EncoderType.Stierlitz, Default },
                 { EncoderType.Trithemius, Default },
-                { EncoderType.Vigenere, Default }
+                { EncoderType.Vigenere, Default },
+                 { EncoderType.RSA, Default }
             };
         }
         public static int GetCountByTest(EncoderType encodingType)

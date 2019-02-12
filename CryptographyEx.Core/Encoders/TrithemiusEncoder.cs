@@ -63,7 +63,7 @@ namespace CryptographyEx.Core.Encoders
                 .FirstOrDefault(y => y.value == x)
                 .index;
 
-                x = _alphabet.Value[(_alphabet.Length + index - key)
+                    x = _alphabet.Value[(_alphabet.Length + index - key)
                     % (_alphabet.Length)];
 
                 key = _encodeFunc(key);

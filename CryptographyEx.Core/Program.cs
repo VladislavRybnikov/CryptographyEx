@@ -39,7 +39,7 @@ namespace CryptographyEx.ConsoleTest
              .CreateEncoder(EncoderType.Elgamal)
              .Configure(11, 2,8,9); 
 
-            IBitEncoder des = EncoderFactory
+            IAlphabetEncoder des = EncoderFactory
                 .CreateBitEncoder(BitEncodingType.Des)
                 .Configure("чр3Ъ");
 

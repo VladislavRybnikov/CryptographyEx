@@ -12,7 +12,11 @@ namespace CryptographyEx.Core.Base.Const
         Stierlitz,
         Des,
         DiffiHelman,
-        Elgamal
+        Elgamal,
+        RSA,
+        SHA1,
+        MD5,
+        DSA
 
     }
 }

@@ -17,7 +17,11 @@ namespace CryptographyEx.Core.Base.Const
                     { EncoderType.Elgamal, "Шифр Ельгамала"},
                     { EncoderType.Stierlitz, "Шифр Штірліца" },
                     { EncoderType.Trithemius, "Шифр Трітеміуса" },
-                    { EncoderType.Vigenere, "Шифр Виженера"}
+                    { EncoderType.Vigenere, "Шифр Виженера"},
+                    { EncoderType.SHA1, "Шифр SHA1" },
+                    { EncoderType.RSA, "Шифр RSA"},
+                      { EncoderType.MD5, "Шифр MD5"},
+                         { EncoderType.DSA, "Шифр DSA"}
 
                 };
 

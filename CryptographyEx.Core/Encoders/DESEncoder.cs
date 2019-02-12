@@ -1,4 +1,5 @@
-﻿using CryptographyEx.Core.Base.Abstract;
+﻿using CryptographyEx.Core.Base;
+using CryptographyEx.Core.Base.Abstract;
 using CryptographyEx.Core.Base.Structures;
 using CryptographyEx.Core.Messages;
 using System;
@@ -137,12 +138,22 @@ namespace CryptographyEx.Core.Encoders
                 .ToString();
         }
 
-        public IBitEncoder Configure(params object[] args)
+        public IAlphabetEncoder Configure(params object[] args)
         {
             _key = args[0].ToString();
             _configurated = true;
 
             return this;
+        }
+
+        public IAlphabetEncoder SetMonoAlphabet(IMonoAlphabet alphabet)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IAlphabetEncoder SetPolyAplhabet(IPolyAlphabet alphabet)
+        {
+            throw new NotImplementedException();
         }
     }
 }

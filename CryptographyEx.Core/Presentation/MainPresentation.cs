@@ -45,6 +45,16 @@ namespace CryptographyEx.Core.Presentation
                     diffiHelman.Y = _random.Next(11, 100);
                     value = diffiHelman;
                     break;
+                case EncoderType.RSA:
+                    value = new DiffiHelmanQuestion();
+                    IDiffiHelmanQuestion diffiHelman1 = (IDiffiHelmanQuestion)value;
+                    primes = GetPrimes(40);
+                    diffiHelman1.N = primes[_random.Next(2, primes.Count)];
+                    diffiHelman1.Q = _random.Next(2, diffiHelman1.N - 1);
+                    diffiHelman1.X = _random.Next(11, 40);
+                    value = diffiHelman1;
+                    break;
+       
                 case EncoderType.Elgamal:
                     primes = GetPrimes(203);
                     value = new ElgamalQuestion();

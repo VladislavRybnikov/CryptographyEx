@@ -9,7 +9,7 @@ namespace CryptographyEx.Core
 {
     public static class EncoderFactory
     {
-        public static IBitEncoder CreateBitEncoder
+        public static IAlphabetEncoder CreateBitEncoder
             (BitEncodingType encoding)
         {
             switch (encoding)
@@ -34,9 +34,17 @@ namespace CryptographyEx.Core
                 case EncoderType.Vigenere:
                     return new VigenereEncoder();
                 case EncoderType.DiffiHelman:
-                    return new DiffiHelmanEncoder();    
+                    return new DiffiHelmanEncoder();
+                case EncoderType.SHA1:
+                    return new SHA1Encoder();
+                case EncoderType.MD5:
+                    return new MD5Encoder();
+                case EncoderType.DSA:
+                    return new DSAEncoder();
                 case EncoderType.Elgamal:
                     return new ElgamalEncoder();
+                case EncoderType.RSA:
+                    return new RSAEncoder();
             }
 
             throw new Exception("Not implemented encoding.");
