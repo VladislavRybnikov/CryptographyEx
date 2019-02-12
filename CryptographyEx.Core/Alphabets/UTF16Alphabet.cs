@@ -12,11 +12,12 @@ namespace CryptographyEx.Core.Alphabets
             {
                 List<char> value = new List<char>();
 
-                for (int i = 1; i < 256; i++)
+                for (int i = 1; i < 1072; i++)
                 {
                     value.Add((char)i);
                 }
 
+               
                 return value.ToArray();
             }
         }

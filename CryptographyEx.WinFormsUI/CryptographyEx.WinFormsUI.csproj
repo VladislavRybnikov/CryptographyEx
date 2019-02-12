@@ -32,8 +32,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -43,6 +46,7 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AboutAppForm.cs">
@@ -124,6 +128,12 @@
     <Compile Include="View\DiffiHelmanControl.Designer.cs">
       <DependentUpon>DiffiHelmanControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\DSAControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\DSAControl.Designer.cs">
+      <DependentUpon>DSAControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\ElgamalControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -147,6 +157,24 @@
     </Compile>
     <Compile Include="View\ShtirlitzControl.Designer.cs">
       <DependentUpon>ShtirlitzControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\MD5Control.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\MD5Control.Designer.cs">
+      <DependentUpon>MD5Control.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\RSAControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\RSAControl.Designer.cs">
+      <DependentUpon>RSAControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\SHA1Control.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\SHA1Control.Designer.cs">
+      <DependentUpon>SHA1Control.cs</DependentUpon>
     </Compile>
     <Compile Include="View\TestingResultControl.cs">
       <SubType>UserControl</SubType>
@@ -230,6 +258,9 @@
     <EmbeddedResource Include="View\DiffiHelmanControl.resx">
       <DependentUpon>DiffiHelmanControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\DSAControl.resx">
+      <DependentUpon>DSAControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\ElgamalControl.resx">
       <DependentUpon>ElgamalControl.cs</DependentUpon>
     </EmbeddedResource>
@@ -241,6 +272,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\ShtirlitzControl.resx">
       <DependentUpon>ShtirlitzControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\MD5Control.resx">
+      <DependentUpon>MD5Control.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\RSAControl.resx">
+      <DependentUpon>RSAControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\SHA1Control.resx">
+      <DependentUpon>SHA1Control.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\TestingResultControl.resx">
       <DependentUpon>TestingResultControl.cs</DependentUpon>

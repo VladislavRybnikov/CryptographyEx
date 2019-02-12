@@ -10,31 +10,30 @@ using System.Windows.Forms;
 using CryptographyEx.Core.Base.Const;
 using CryptographyEx.Core.Base.Abstract;
 using CryptographyEx.Core.Presentation;
-using CryptographyEx.Core.Base.Abstract.Entities;
 using CryptographyEx.Core.Holder;
-using CryptographyEx.Core.Entities;
 using CryptographyEx.WinFormsUI.Const;
+using CryptographyEx.Core.Entities;
 
 namespace CryptographyEx.WinFormsUI.View
 {
-    public partial class CaesarControl : UserControl
+    public partial class SHA1Control : UserControl
     {
         private CodingType _codingType;
         private IMainPresentation _mainPresentation;
-        private DecodeEncodeControl _encodersForm;
+        private EncodersForm _encodersForm;
         private int _questionCount;
         private int _correctQuestionCount;
         private IHistoryPresentation _historyPresentation;
         private Guid _guid;
 
-        public CaesarControl(CodingType codingType, DecodeEncodeControl encodersForm)
+        public SHA1Control(EncodersForm encodersForm )
         {
             InitializeComponent();
             _guid = Guid.NewGuid();
             _historyPresentation = new HistoryPresentation();
             _questionCount = 0;
             _correctQuestionCount = 0;
-            _codingType = codingType;
+          
             _mainPresentation = new MainPresentation();
             _encodersForm = encodersForm;
             Init();
@@ -47,17 +46,10 @@ namespace CryptographyEx.WinFormsUI.View
             btnCheck.Visible = true;
             button1.Visible = false;
 
-            switch (_codingType)
-            {
-                case CodingType.Encoding:
+
                     upLabel.Text = Messages.InMessage;
                     downLabel.Text = Messages.OutMessage;
-                    break;
-                case CodingType.Decoding:
-                    upLabel.Text = Messages.OutMessage;
-                    downLabel.Text = Messages.InMessage;
-                    break;
-            }
+
 
             InitQuestion();
         }
@@ -72,31 +64,20 @@ namespace CryptographyEx.WinFormsUI.View
         {
             ClearAnswerInfo();
 
-            if(_questionCount >= EncodingCountConfiguration.GetCountByTest
+            if (_questionCount >= EncodingCountConfiguration.GetCountByTest
                 (EncoderType.Caesar))
             {
-                _encodersForm.panelQuestion.Controls.Remove(this);
-
-                _encodersForm.panelQuestion.Controls
-                    .Add(new FinishControl(_correctQuestionCount, _questionCount));
+                _encodersForm.tabPage1.Controls.Remove(this);
             }
 
             lbDescription.Text = _mainPresentation.GenerateQuestion
-                (_codingType,EncoderType.Caesar).Description;
+                (CodingType.Encoding, EncoderType.Caesar).Description;
 
             tbAnswer.Text = string.Empty;
             _questionCount++;
             lbCurrentTask.Text = _questionCount.ToString();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            ClearAnswerInfo();
-            btnCheck.Visible = true;
-            button1.Visible = false;
-          
-            InitQuestion();
-        }
 
         private void numericUpDownStep_ValueChanged(object sender, EventArgs e)
         {
@@ -105,7 +86,7 @@ namespace CryptographyEx.WinFormsUI.View
 
         private void btnCheck_Click(object sender, EventArgs e)
         {
-            int valueConfig = (int)numericUpDownStep.Value;
+
 
             Tuple<AnswerType, string> answerType = _mainPresentation.CheckAnswer(new Question()
             {
@@ -117,12 +98,12 @@ namespace CryptographyEx.WinFormsUI.View
                 {
                     Answer = tbAnswer.Text
                 },
-                CodingType = _codingType,
-                EncodingType = EncoderType.Caesar
+                CodingType = CodingType.Encoding,
+                EncodingType = EncoderType.SHA1
             },
             MonoAlphabet.ENG,
-            PolyAlphabet.Default,
-            valueConfig);
+            PolyAlphabet.Default
+            );
 
 
             if (answerType.Item1 == AnswerType.Correct)
@@ -141,10 +122,10 @@ namespace CryptographyEx.WinFormsUI.View
             //lbCorrectAnswer.Text = _countCorrectQuestion.ToString();
             _historyPresentation.AddHistory(new RequestHistory()
             {
-                CodingType = _codingType,
+                CodingType = CodingType.Encoding,
                 CorrectAnswer = answerType.Item2,
                 Answer = tbAnswer.Text,
-                Name = StringConstants.EncodingTypes.GetName(EncoderType.Caesar),
+                Name = StringConstants.EncodingTypes.GetName(EncoderType.SHA1),
                 GuidId = _guid,
                 Mark = AnswerType.Correct == answerType.Item1 ? 1 : 0,
                 Question = lbDescription.Text
@@ -154,74 +135,16 @@ namespace CryptographyEx.WinFormsUI.View
             button1.Visible = true;
         }
 
-        private void CaesarControl_Load(object sender, EventArgs e)
+
+
+        private void button1_Click(object sender, EventArgs e)
         {
+            ClearAnswerInfo();
+            btnCheck.Visible = true;
+            button1.Visible = false;
 
+            InitQuestion();
         }
-
-        private void downLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void upLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lbCurrentTask_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblAnswerInfo_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lbCorrectAnsw_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lbAllQuestions_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lbCorrectAnswer_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lbDescription_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tbAnswer_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+    
     }
 }

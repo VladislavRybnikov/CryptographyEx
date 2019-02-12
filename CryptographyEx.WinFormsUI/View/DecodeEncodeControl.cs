@@ -56,6 +56,12 @@ namespace CryptographyEx.WinFormsUI.View
                 case EncoderType.Caesar:
                     panelQuestion.Controls.Add(new CaesarControl(codingType, this));
                     break;
+                case EncoderType.RSA:
+                    panelQuestion.Controls.Add(new RSAControl(codingType, this));
+                    break;
+                case EncoderType.DSA:
+                    panelQuestion.Controls.Add(new DSAControl(codingType, this));
+                    break;
                 case EncoderType.Vigenere:
                     panelQuestion.Controls.Add(new VigenereControl(codingType, this));
                     break;

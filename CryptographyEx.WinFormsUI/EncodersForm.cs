@@ -178,15 +178,21 @@ namespace CryptographyEx.WinFormsUI
             FileStream fs = null;
 
             EncoderType enc = EncodingTypes.GetEncodingType(comboBoxEncoding.SelectedItem.ToString());
+            string path = $"Theory/{enc.ToString()}.txt";
 
-            fs = new FileStream($"Theory/{enc.ToString()}.txt", FileMode.Open);
-
-            using (StreamReader sr = new StreamReader(fs))
+            if (File.Exists(path))
             {
-                tbTheory.Text = sr.ReadToEnd();
+                fs = new FileStream(path, FileMode.Open);
+
+                using (StreamReader sr = new StreamReader(fs))
+                {
+                    tbTheory.Text = sr.ReadToEnd();
+                }
             }
 
-            Control cntrl = enc == EncoderType.DiffiHelman ? new BaseEncodeControl(this, enc) 
+            Control cntrl = (enc == EncoderType.DiffiHelman ||
+                (enc == EncoderType.SHA1) ||
+                 (enc == EncoderType.MD5)) ? new BaseEncodeControl(this, enc) 
                 : (Control)new DecodeEncodeControl(enc);
 
 

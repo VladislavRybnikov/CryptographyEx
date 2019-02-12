@@ -8,12 +8,25 @@ using CryptographyEx.Core.Base.Const;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.IO;
 using System.Xml.Serialization;
+using System.Net;
+using System.Net.Sockets;
+using CryptographyEx.Core.Alphabets;
 
 namespace CryptographyEx.Core.Presentation
 {
     public class HistoryPresentation : IHistoryPresentation
     {
-        public void AddHistory(RequestHistory requestHistory)
+        //private readonly IAlphabetEncoder _dsa;
+        //public HistoryPresentation()
+        //{
+   
+        //    _dsa = EncoderFactory
+        //   .CreateEncoder(EncoderType.Trithemius)
+        //     .SetMonoAlphabet(Alphabet.GetMono(MonoAlphabet.UTF16))
+        //   .Configure(79, new Func<int, int>(x => x +2));
+        //}
+
+            public void AddHistory(RequestHistory requestHistory)
         {
             if (!HistoryHolder.HistoryCodingEntity.Any(p => p.Name.ToLower()
              .Equals(requestHistory?.Name?.ToLower())))
@@ -158,14 +171,40 @@ namespace CryptographyEx.Core.Presentation
             {
                 formatter.Serialize(fs, historyEntity.HistoryCodingEntity);
             }
+
+            Decode();
+        }
+
+        private void Decode()
+        {
+            
+//string encode = null;
+//            using (StreamReader sr = new StreamReader(("history.xml")))
+//            {
+
+//                encode= _dsa.Encode(sr.ReadToEnd());
+//            }
+//            using (StreamWriter sw = new StreamWriter("history.xml"))
+//            {
+//                sw.Write(encode);
+//            }
         }
 
         public void Deserialize()
         {
+            if (File.Exists("history.xml")) { 
+            //string encode = null;
+            //using (StreamReader sr = new StreamReader(("history.xml")))
+            //{
+
+            //    encode = _dsa.Decode(sr.ReadToEnd());
+            //}
+            //using (StreamWriter sw = new StreamWriter("history.xml"))
+            //{
+            //    sw.Write(encode);
+            //}
             XmlSerializer formatter = new XmlSerializer(typeof(List<HistoryCodingEntity>));
 
-            if (File.Exists("history.xml"))
-            {
                 try
                 {
                     using (FileStream fs = new FileStream("history.xml", FileMode.OpenOrCreate))
@@ -178,8 +217,8 @@ namespace CryptographyEx.Core.Presentation
                 {
 
                 }
+                Decode();
             }
-           // }
         }
     }
 }

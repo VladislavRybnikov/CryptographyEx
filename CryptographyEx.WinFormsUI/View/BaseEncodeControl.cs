@@ -37,7 +37,13 @@ namespace CryptographyEx.WinFormsUI.View
                 case EncoderType.DiffiHelman:
                     panelQuestion.Controls.Add(new DiffiHelmanControl(_encodersForm));
                     break;
-                  
+                case EncoderType.SHA1:
+                    panelQuestion.Controls.Add(new SHA1Control(_encodersForm));
+                    break;
+                case EncoderType.MD5:
+                    panelQuestion.Controls.Add(new MD5Control(_encodersForm));
+                    break;
+
             }
         }
     }
