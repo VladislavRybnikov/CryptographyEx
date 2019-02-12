@@ -37,7 +37,7 @@
             // 
             this.panel1.Location = new System.Drawing.Point(3, 41);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(444, 220);
+            this.panel1.Size = new System.Drawing.Size(444, 192);
             this.panel1.TabIndex = 0;
             // 
             // label1
@@ -57,7 +57,7 @@
             this.button1.BackgroundImage = global::CryptographyEx.WinFormsUI.Properties.Resources._202_2023990_free_turquoise_equal_sign_icon_flat_icon_gif_equal1;
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button1.ForeColor = System.Drawing.SystemColors.Control;
-            this.button1.Location = new System.Drawing.Point(202, 265);
+            this.button1.Location = new System.Drawing.Point(203, 236);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(54, 37);
             this.button1.TabIndex = 1;
@@ -72,7 +72,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.panel1);
             this.Name = "BaseCalculatorControl";
-            this.Size = new System.Drawing.Size(450, 305);
+            this.Size = new System.Drawing.Size(450, 276);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -213,6 +213,16 @@ namespace CryptographyEx.WinFormsUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap FIG_VIG_Table {
+            get {
+                object obj = ResourceManager.GetObject("FIG-VIG-Table", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap function_png_4 {
             get {
                 object obj = ResourceManager.GetObject("function-png-4", resourceCulture);

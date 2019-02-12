@@ -65,6 +65,12 @@ namespace CryptographyEx.WinFormsUI.View
                 case EncoderType.Trithemius:
                     panelQuestion.Controls.Add(new TrithemiusControl(codingType, this));
                     break;
+                case EncoderType.Stierlitz:
+                    panelQuestion.Controls.Add(new ShtirlitzControl());
+                    break;
+                case EncoderType.Des:
+                    panelQuestion.Controls.Add(new DesControl());
+                    break;
             }
         }
     }

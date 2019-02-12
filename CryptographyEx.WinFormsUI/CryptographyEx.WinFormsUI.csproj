@@ -112,6 +112,12 @@
     <Compile Include="View\DecodeEncodeControl.Designer.cs">
       <DependentUpon>DecodeEncodeControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\DesControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\DesControl.Designer.cs">
+      <DependentUpon>DesControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\DiffiHelmanControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -135,6 +141,12 @@
     </Compile>
     <Compile Include="View\FinishControl.Designer.cs">
       <DependentUpon>FinishControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ShtirlitzControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ShtirlitzControl.Designer.cs">
+      <DependentUpon>ShtirlitzControl.cs</DependentUpon>
     </Compile>
     <Compile Include="View\TestingResultControl.cs">
       <SubType>UserControl</SubType>
@@ -212,6 +224,9 @@
     <EmbeddedResource Include="View\DecodeEncodeControl.resx">
       <DependentUpon>DecodeEncodeControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\DesControl.resx">
+      <DependentUpon>DesControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\DiffiHelmanControl.resx">
       <DependentUpon>DiffiHelmanControl.cs</DependentUpon>
     </EmbeddedResource>
@@ -223,6 +238,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\FinishControl.resx">
       <DependentUpon>FinishControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ShtirlitzControl.resx">
+      <DependentUpon>ShtirlitzControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\TestingResultControl.resx">
       <DependentUpon>TestingResultControl.cs</DependentUpon>
@@ -339,6 +357,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\assessment-png-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FIG-VIG-Table.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -61,12 +61,13 @@ namespace CryptographyEx.ConsoleTest
             //string output = mess.ToString();
 
             //Console.WriteLine($"\n{input}\n{binary}\n{output}");
-            //byte[] b = new UnicodeEncoding().GetBytes(des.Encode("Do you know"));
+            byte[] b = new UnicodeEncoding().GetBytes(des.Encode("Do you know"));
+            b.Select(x => x % 2).Select(x => x.ToString()).ToList().ForEach(Console.Write);
             //string str = new UnicodeEncoding().GetString(b);
             //Console.WriteLine(str);
             //b.ToList().ForEach(x => Console.WriteLine(x));
-            var mark = new Mark(1, 5);
-            Console.WriteLine(mark.Total);
+            
+            //Console.WriteLine(mark.Total);
 
             Console.ReadLine();
         }

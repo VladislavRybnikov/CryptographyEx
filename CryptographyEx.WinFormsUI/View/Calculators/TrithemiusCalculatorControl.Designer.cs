@@ -90,7 +90,7 @@
             this.upLabel.AutoSize = true;
             this.upLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.upLabel.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.upLabel.Location = new System.Drawing.Point(160, 116);
+            this.upLabel.Location = new System.Drawing.Point(160, 110);
             this.upLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.upLabel.Name = "upLabel";
             this.upLabel.Size = new System.Drawing.Size(102, 16);
@@ -100,7 +100,7 @@
             // numericUpDownStep
             // 
             this.numericUpDownStep.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.numericUpDownStep.Location = new System.Drawing.Point(235, 187);
+            this.numericUpDownStep.Location = new System.Drawing.Point(235, 164);
             this.numericUpDownStep.Margin = new System.Windows.Forms.Padding(2);
             this.numericUpDownStep.Minimum = new decimal(new int[] {
             1,
@@ -121,7 +121,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(98, 187);
+            this.label2.Location = new System.Drawing.Point(98, 164);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(127, 20);
@@ -131,7 +131,7 @@
             // inputTextBox
             // 
             this.inputTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.inputTextBox.Location = new System.Drawing.Point(108, 134);
+            this.inputTextBox.Location = new System.Drawing.Point(108, 128);
             this.inputTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.inputTextBox.Name = "inputTextBox";
             this.inputTextBox.Size = new System.Drawing.Size(213, 28);
@@ -143,7 +143,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label4.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label4.Location = new System.Drawing.Point(120, 62);
+            this.label4.Location = new System.Drawing.Point(120, 56);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(201, 16);
@@ -153,7 +153,7 @@
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox1.Location = new System.Drawing.Point(148, 80);
+            this.textBox1.Location = new System.Drawing.Point(148, 74);
             this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(174, 28);
@@ -164,7 +164,7 @@
             // 
             this.panel1.BackgroundImage = global::CryptographyEx.WinFormsUI.Properties.Resources.function_png_4;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel1.Location = new System.Drawing.Point(94, 80);
+            this.panel1.Location = new System.Drawing.Point(94, 74);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(30, 28);
             this.panel1.TabIndex = 36;
@@ -174,7 +174,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label5.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label5.Location = new System.Drawing.Point(125, 83);
+            this.label5.Location = new System.Drawing.Point(125, 77);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(19, 20);
@@ -198,7 +198,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.inputTextBox);
             this.Name = "TrithemiusCalculatorControl";
-            this.Size = new System.Drawing.Size(441, 268);
+            this.Size = new System.Drawing.Size(441, 202);
             this.Load += new System.EventHandler(this.TrithemiusControl_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownStep)).EndInit();
             this.ResumeLayout(false);

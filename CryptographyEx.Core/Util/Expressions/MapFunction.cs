@@ -81,7 +81,12 @@ namespace CryptographyEx.Core.Util.Expressions
         {
             _expr = expr;
         }
-        
+
+        public override string ToString()
+        {
+            return _expr.ToString();
+        }
+
         public static implicit operator string(MapFunction<T> map) => map._expr.ToString();
         public static implicit operator MapFunction<T>(string map) => new MapFunction<T>(map);
         public static implicit operator MapFunction<T>(Expression<Func<T, T>> expr) => new MapFunction<T>(expr);
